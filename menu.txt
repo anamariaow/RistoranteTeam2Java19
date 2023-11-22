@@ -1,2 +1,2 @@
-Nome ristorante: Ristorante Team2
+Nome ristorante: Un Ristorante qualsiasi
 Menù:
