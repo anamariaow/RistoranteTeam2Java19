@@ -1,6 +1,12 @@
 Nome ristorante: Un Ristorante qualsiasi
 Menù: Pesce
 Bevande: Acqua naturale, Acqua frizzante, Vino della casa, Bibite analcoliche
+
+Antipasti :
+insalta di mare
+crudites di mare
+Polipetti affogati
+
 Primi piatti :
 Trepoline con le rape
 Spaghetti all'assassina
