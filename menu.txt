@@ -1,5 +1,6 @@
 Nome ristorante: Un Ristorante qualsiasi
-Menù:
+Menù: Pesce
+Bevande: Acqua naturale, Acqua frizzante, Vino della casa, Bibite analcoliche
 Primi piatti :
 Trepoline con le rape
 Spaghetti all'assassina
