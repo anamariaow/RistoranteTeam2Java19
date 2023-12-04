@@ -12,6 +12,10 @@ public class Main {
         SecondiPiatti polpo = new SecondiPiatti(12, "Polpo alla luciana");
         SecondiPiatti gamberoni = new SecondiPiatti(15, "Gamberoni al forno");
 
+        Contorni patate = new Contorni(7, "Patate al limone");
+        Contorni carote = new Contorni(6, "Carote alla vinaigrette");
+        Contorni carciofi = new Contorni(6, "Carciofi allo zest d'arancia");
+
         Bevande acqua = new Bevande(3,"Acqua naturale/frizzante");
         Bevande vino = new Bevande(10, "Vino della casa");
         Bevande bibite = new Bevande(6, "Bibite analcoliche");
@@ -21,6 +25,7 @@ public class Main {
         System.out.println("Primi piatti :" + "\n\r" + trepoline + "\n\r" + assassina + "\n\r" + scoglio);
         System.out.println();
         System.out.println("Secondi piatti :" + "\n\r" + orata + "\n\r" + polpo + "\n\r" + gamberoni);
+        System.out.println("Contorni :" + "\n\r" + patate + "\n\r" + carote + "\n\r" + carciofi);
         System.out.println("Bibite :" + "\n\r" + acqua + "\n\r" + vino + "\n\r" + bibite);
     }
 }
