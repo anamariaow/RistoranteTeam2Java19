@@ -12,6 +12,8 @@ public class Main {
         SecondiPiatti polpo = new SecondiPiatti(12, "Polpo alla luciana");
         SecondiPiatti gamberoni = new SecondiPiatti(15, "Gamberoni al forno");
 
+        System.out.println("Antipasti :" + "\n\r" + insaltaDiMare + "\n\r" + cruditesDiMare + "\n\r" + polipettiAffogati);
+        System.out.println();
         System.out.println("Primi piatti :" + "\n\r" + trepoline + "\n\r" + assassina + "\n\r" + scoglio);
         System.out.println();
         System.out.println("Secondi piatti :" + "\n\r" + orata + "\n\r" + polpo + "\n\r" + gamberoni);
