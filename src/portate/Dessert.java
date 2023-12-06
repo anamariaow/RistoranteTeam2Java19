@@ -1,3 +1,5 @@
+package portate;
+
 public class Dessert {
    public String nome;
    public double prezzo;
@@ -8,7 +10,7 @@ public class Dessert {
 
    @Override
    public String toString() {
-      return "Dessert{" +
+      return "portate.Dessert{" +
               "nome='" + nome + '\'' +
               ", prezzo=" + prezzo +
               '}';

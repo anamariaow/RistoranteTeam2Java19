@@ -1,7 +1,9 @@
-public class SecondiPiatti {
+package portate;
+
+public class PrimiPiatti {
     public int prezzo;
     public String nomePiatto;
-    public SecondiPiatti(int prezzo,String nomePiatto) {
+    public PrimiPiatti(int prezzo,String nomePiatto) {
         this.prezzo = prezzo;
         this.nomePiatto = nomePiatto;
     }
@@ -10,4 +12,3 @@ public class SecondiPiatti {
         return nomePiatto + " " + prezzo + " Є";
     }
 }
-

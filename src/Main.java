@@ -1,3 +1,5 @@
+import portate.*;
+
 public class Main {
     public static void main(String[] args) {
         Antipasti insaltaDiMare = new Antipasti(10,"insalta di mare");
@@ -25,6 +27,9 @@ public class Main {
         System.out.println("Primi piatti :" + "\n\r" + trepoline + "\n\r" + assassina + "\n\r" + scoglio);
         System.out.println();
         System.out.println("Secondi piatti :" + "\n\r" + orata + "\n\r" + polpo + "\n\r" + gamberoni);
+        System.out.println();
+        System.out.println("portate.Contorni :" + "\n\r" + patate + "\n\r" + carote + "\n\r" + carciofi);
+        System.out.println();
         System.out.println();
         System.out.println("Contorni :" + "\n\r" + patate + "\n\r" + carote + "\n\r" + carciofi);
         System.out.println();

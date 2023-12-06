@@ -1,3 +1,5 @@
+package portate;
+
 public class Contorni {
     public int prezzo;
     public String nomePiatto;
