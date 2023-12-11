@@ -1,14 +1,11 @@
 package portate;
 
-public class PrimiPiatti {
+public class PrimiPiatti extends Portate {
     public boolean contieneLattosio;
     public boolean contieneGlutine;
-    public double prezzo;
-    public String nomePiatto;
 
-    public PrimiPiatti(int prezzo, String nomePiatto, boolean contieneLattosio, boolean contieneGlutine) {
-        this.prezzo = prezzo;
-        this.nomePiatto = nomePiatto;
+    public PrimiPiatti(double prezzo, String nomePiatto, boolean contieneLattosio, boolean contieneGlutine) {
+        super(prezzo, nomePiatto);
         this.contieneLattosio = contieneLattosio;
         this.contieneGlutine = contieneGlutine;
     }
