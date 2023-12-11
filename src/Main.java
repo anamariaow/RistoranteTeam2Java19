@@ -18,9 +18,9 @@ public class Main {
         Contorni carote = new Contorni(6, "Carote alla vinaigrette");
         Contorni carciofi = new Contorni(6, "Carciofi allo zest d'arancia");
 
-        Bevande acqua = new Bevande(3,"Acqua naturale/frizzante");
-        Bevande vino = new Bevande(10, "Vino della casa");
-        Bevande bibite = new Bevande(6, "Bibite analcoliche");
+        Bevande acqua = new Bevande(3.0,"Acqua naturale/frizzante", false, true);
+        Bevande vino = new Bevande(10.0, "Vino della casa", true, true);
+        Bevande bibite = new Bevande(6.0, "Bibite analcoliche", false, true);
 
         System.out.println("Antipasti :" + "\n\r" + insaltaDiMare + "\n\r" + cruditesDiMare + "\n\r" + polipettiAffogati);
         System.out.println();
