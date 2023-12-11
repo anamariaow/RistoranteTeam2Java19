@@ -1,17 +1,15 @@
 package portate;
 
-public class SecondiPiatti {
+public class SecondiPiatti extends Portate {
 
 
     //TODO i campi sono uguali per tutte le classi, quindi possiamo fare una classe padre, ovviamente
     //le classi figlio dovranno poi avere dei field aggiutivi ad esempio dessert avrà un campo percentualeZucchero
-    public double prezzo;
-    public String nomePiatto;
     public boolean senzaGlutine;
     public boolean senzaLattosio;
-    public SecondiPiatti(double prezzo,String nomePiatto, boolean senzaGlutine, boolean senzaLattosio) {
-        this.prezzo = prezzo;
-        this.nomePiatto = nomePiatto;
+
+    public SecondiPiatti(double prezzo, String nomePiatto, boolean senzaGlutine, boolean senzaLattosio) {
+        super(prezzo, nomePiatto);
         this.senzaGlutine = senzaGlutine;
         this.senzaLattosio = senzaLattosio;
     }
