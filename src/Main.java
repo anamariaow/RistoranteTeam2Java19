@@ -42,7 +42,7 @@ public class Main {
         System.out.println();
         System.out.println("Contorni :" + "\n\r" + patate + "\n\r" + carote + "\n\r" + carciofi);
         System.out.println();
-        System.out.println("Dessert:" + "\n\r" + dessertMango + "\n\r" + dessertMaracuya + "\n\r" + dessertNoce);
+        System.out.println("Dessert :" + "\n\r" + dessertMango + "\n\r" + dessertMaracuya + "\n\r" + dessertNoce);
         System.out.println();
         System.out.println("Bibite :" + "\n\r" + acqua + "\n\r" + vino + "\n\r" + bibite);
         System.out.println();
