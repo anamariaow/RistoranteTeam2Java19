@@ -10,9 +10,9 @@ public class Main {
         PrimiPiatti assassina = new PrimiPiatti(14, "Spaghetti all'assassina con polpo",true,true);
         PrimiPiatti scoglio = new PrimiPiatti(12, "Spaghetti allo scoglio",false,true);
 
-        SecondiPiatti orata = new SecondiPiatti(17.0, "Orata al cartoccio",true,true);
-        SecondiPiatti polpo = new SecondiPiatti(12.0, "Polpo alla luciana",false,true);
-        SecondiPiatti gamberoni = new SecondiPiatti(15.0, "Gamberoni al forno",true,true);
+        SecondiPiatti orata = new SecondiPiatti(17.0,"Orata al cartoccio",true,true);
+        SecondiPiatti polpo = new SecondiPiatti(12.0,"Polpo alla luciana",false,true);
+        SecondiPiatti gamberoni = new SecondiPiatti(15.0,"Gamberoni al forno",true,true);
 
         Contorni patate = new Contorni(7.0, "Patate al limone", true, true);
         Contorni carote = new Contorni(6.0, "Carote alla vinaigrette", true, true);
