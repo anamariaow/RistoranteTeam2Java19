@@ -2,6 +2,7 @@ import portate.*;
 
 public class Main {
     public static void main(String[] args) {
+        Chef chef1 = new Chef("Simon Timon", 45, 3);
         Antipasti insaltaDiMare = new Antipasti(10, "insalta di mare");
         Antipasti cruditesDiMare = new Antipasti(11, "insalta di mare");
         Antipasti polipettiAffogati = new Antipasti(9, "Polipetti affogati");
@@ -26,7 +27,10 @@ public class Main {
         Bevande vino = new Bevande(10.0, "Vino della casa", true, true);
         Bevande bibite = new Bevande(6.0, "Bibite analcoliche", false, true);
 
-        System.out.println("Menù a carico del grande chef suricato dell'antica prateria");
+        System.out.println();
+        System.out.println("~Un Ristorante Qualsiasi~");
+        System.out.println(chef1);
+        System.out.println("Menù a carico del grande chef suricato dell'antica prateria.");
         System.out.println();
         System.out.println(TipoMenù.PESCE.descrizione);
         System.out.println();
