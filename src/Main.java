@@ -14,9 +14,9 @@ public class Main {
         SecondiPiatti polpo = new SecondiPiatti(12.0, "Polpo alla luciana",false,true);
         SecondiPiatti gamberoni = new SecondiPiatti(15.0, "Gamberoni al forno",true,true);
 
-        Contorni patate = new Contorni(7, "Patate al limone");
-        Contorni carote = new Contorni(6, "Carote alla vinaigrette");
-        Contorni carciofi = new Contorni(6, "Carciofi allo zest d'arancia");
+        Contorni patate = new Contorni(7.0, "Patate al limone", true, true);
+        Contorni carote = new Contorni(6.0, "Carote alla vinaigrette", true, true);
+        Contorni carciofi = new Contorni(6.5, "Carciofi allo zest d'arancia", true, false);
 
         Bevande acqua = new Bevande(3.0, "Acqua naturale/frizzante", false, true);
         Bevande vino = new Bevande(10.0, "Vino della casa", true, true);

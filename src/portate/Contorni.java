@@ -1,11 +1,12 @@
 package portate;
 
-public class Contorni {
-    public int prezzo;
-    public String nomePiatto;
-    public Contorni(int prezzo,String nomePiatto) {
-        this.prezzo = prezzo;
-        this.nomePiatto = nomePiatto;
+public class Contorni extends Portate{
+    public boolean vegan;
+    public boolean diStagione;
+    public Contorni(double prezzo,String nomePiatto, boolean vegan, boolean diStagione) {
+        super(prezzo, nomePiatto);
+        this.vegan = vegan;
+        this.diStagione = diStagione;
     }
 
     @Override
