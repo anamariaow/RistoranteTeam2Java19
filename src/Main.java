@@ -18,6 +18,10 @@ public class Main {
         Contorni carote = new Contorni(6.0, "Carote alla vinaigrette", true, true);
         Contorni carciofi = new Contorni(6.5, "Carciofi allo zest d'arancia", true, false);
 
+        Dessert dessertMango= new Dessert(10.50,"Mousse di Mango",true,false);
+        Dessert dessertMaracuya= new Dessert(8.50,"Mousse di Maracuya",true,false);
+        Dessert dessertNoce= new Dessert(5.50,"Mousse di Noce",true,true);
+
         Bevande acqua = new Bevande(3.0, "Acqua naturale/frizzante", false, true);
         Bevande vino = new Bevande(10.0, "Vino della casa", true, true);
         Bevande bibite = new Bevande(6.0, "Bibite analcoliche", false, true);
@@ -28,11 +32,12 @@ public class Main {
         System.out.println();
         System.out.println("Secondi piatti :" + "\n\r" + orata + "\n\r" + polpo + "\n\r" + gamberoni);
         System.out.println();
-        System.out.println("portate.Contorni :" + "\n\r" + patate + "\n\r" + carote + "\n\r" + carciofi);
-        System.out.println();
-        System.out.println();
         System.out.println("Contorni :" + "\n\r" + patate + "\n\r" + carote + "\n\r" + carciofi);
         System.out.println();
+        System.out.println("Dessert:" + "\n\r" +  dessertMango + "\n\r" + dessertMaracuya + "\n\r" + dessertNoce );
+        System.out.println();
         System.out.println("Bibite :" + "\n\r" + acqua + "\n\r" + vino + "\n\r" + bibite);
+        System.out.println();
+
     }
 }

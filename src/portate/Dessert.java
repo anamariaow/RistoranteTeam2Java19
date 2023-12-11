@@ -1,18 +1,17 @@
 package portate;
 
-public class Dessert {
-   public String nome;
-   public double prezzo;
-   public Dessert(String nome,double prezzo){
-      this.nome=nome;
-      this.prezzo=prezzo;
+public class Dessert extends Portate {
+
+   public boolean senzaZuchero;
+   public boolean senzalatte;
+   public Dessert(double prezzo,String nomePiatto, boolean senzaZuchero,boolean senzalatte){
+      super(prezzo,nomePiatto);
+      this.senzaZuchero=senzaZuchero;
+      this.senzalatte=senzalatte;
    }
 
    @Override
    public String toString() {
-      return "portate.Dessert{" +
-              "nome='" + nome + '\'' +
-              ", prezzo=" + prezzo +
-              '}';
+      return "Dessert :" + nomePiatto + " " + prezzo + "Є" +"  "+ "Senza zuchero" + " "+ senzaZuchero+ " " + "Senza Latte" + " " + senzalatte;
    }
 }
