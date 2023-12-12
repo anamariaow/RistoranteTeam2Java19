@@ -1,17 +1,18 @@
 package portate;
 
-public class Antipasti {
-    public int prezzo;
-    public String nomePiatto;
+public class Antipasti extends Portate{
 
-    public Antipasti(int prezzo, String nomePiatto) {
-        this.prezzo = prezzo;
-        this.nomePiatto = nomePiatto;
+    private String allergeni;
+
+    private Boolean surgelato;
+
+
+    public Antipasti(double prezzo, String nomePiatto,String allergeni,Boolean surgelato) {
+        super(prezzo, nomePiatto);
+        this.allergeni = allergeni;
+        this.surgelato = surgelato;
     }
 
-    @Override
-    public String toString() {
-        return nomePiatto + " " + prezzo + " Є";
-    }
+
 }
 

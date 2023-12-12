@@ -3,9 +3,9 @@ import portate.*;
 public class Main {
     public static void main(String[] args) {
         Chef chef1 = new Chef("Simon Timon", 45, 3);
-        Antipasti insaltaDiMare = new Antipasti(10, "insalta di mare");
-        Antipasti cruditesDiMare = new Antipasti(11, "insalta di mare");
-        Antipasti polipettiAffogati = new Antipasti(9, "Polipetti affogati");
+        Antipasti insaltaDiMare = new Antipasti(10, "insalta di mare","gamberi",true);
+        Antipasti cruditesDiMare = new Antipasti(11, "insalta di mare","gamberi",true);
+        Antipasti polipettiAffogati = new Antipasti(9, "Polipetti affogati","nessuno",false);
 
         PrimiPiatti trepoline = new PrimiPiatti(10.0, "Trepoline con rape e cozze", false, true);
         PrimiPiatti assassina = new PrimiPiatti(14.0, "Spaghetti all'assassina con polpo", true, true);
