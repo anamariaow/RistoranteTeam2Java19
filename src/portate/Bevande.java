@@ -8,7 +8,7 @@ public class Bevande extends Portate {
         this.bevandaAlcolica = bevandaAlcolica;
         this.frizzante = frizzante;
     }
-
+//TODO spostare toString nella classe Portate
         @Override
         public String toString() {
             return nomePiatto + " " + prezzo + " Є";

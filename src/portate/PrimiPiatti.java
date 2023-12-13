@@ -11,7 +11,8 @@ public class PrimiPiatti extends Portate {
     }
 
     @Override
-    public String toString() {
-        return nomePiatto + " " + prezzo + " Є";
+    public void stampaDettagli() {
+        super.stampaDettagli();
+        System.out.println("lattosio "+ contieneLattosio+ " Glutine " +  contieneLattosio);
     }
 }

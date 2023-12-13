@@ -2,6 +2,9 @@ import portate.*;
 
 public class Main {
     public static void main(String[] args) {
+        //TODO e ora tutta questa logica dove la mettiamo? va creata una classe menu che avrà tutti i campi e le funzionalità per stampare un menu
+
+
         Chef chef1 = new Chef("Simon Timon", 45, 3);
         Antipasti insaltaDiMare = new Antipasti(10, "insalta di mare","gamberi",true);
         Antipasti cruditesDiMare = new Antipasti(11, "insalta di mare","gamberi",true);
@@ -27,6 +30,8 @@ public class Main {
         Bevande vino = new Bevande(10.0, "Vino della casa", true, true);
         Bevande bibite = new Bevande(6.0, "Bibite analcoliche", false, true);
 
+
+
         System.out.println();
         System.out.println("~Un Ristorante Qualsiasi~");
         System.out.println(chef1);
@@ -36,7 +41,12 @@ public class Main {
         System.out.println();
         System.out.println("Antipasti :" + "\n\r" + insaltaDiMare + "\n\r" + cruditesDiMare + "\n\r" + polipettiAffogati);
         System.out.println();
-        System.out.println("Primi piatti :" + "\n\r" + trepoline + "\n\r" + assassina + "\n\r" + scoglio);
+
+        System.out.println("Primi piatti :");
+        trepoline.stampaDettagli();
+        assassina.stampaDettagli();
+        scoglio.stampaDettagli();
+
         System.out.println();
         System.out.println("Secondi piatti :" + "\n\r" + orata + "\n\r" + polpo + "\n\r" + gamberoni);
         System.out.println();
