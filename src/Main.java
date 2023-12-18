@@ -54,7 +54,7 @@ public class Main {
         System.out.println();
         System.out.println("Secondi piatti :" + "\n\r" + orata + "\n\r" + polpo + "\n\r" + gamberoni);
         System.out.println();
-        System.out.println("Contorni :" + "\n\r" + patate + "\n\r" + carote + "\n\r" + carciofi);
+        System.out.println("Contorni :" + "\n\r" + patate + AllergeniEnum.ARACHIDI.getDescrizione() + "\n\r" + carote + AllergeniEnum.SENAPE.getDescrizione() + "\n\r" + carciofi + AllergeniEnum.SEDANO.getDescrizione());
         System.out.println();
         System.out.println("Dessert :" + "\n\r" + dessertMango + "\n\r" + dessertMaracuya + "\n\r" + dessertNoce);
         System.out.println();
