@@ -1,5 +1,8 @@
 import portate.*;
 
+import java.time.OffsetDateTime;
+import java.time.ZonedDateTime;
+
 public class Main {
     public static void main(String[] args) {
         //TODO e ora tutta questa logica dove la mettiamo? va creata una classe menu che avrà tutti i campi e le funzionalità per stampare un menu
@@ -30,6 +33,8 @@ public class Main {
         Bevande vino = new Bevande(10.0, "Vino della casa", true, true);
         Bevande bibite = new Bevande(6.0, "Bibite analcoliche", false, true);
 
+        ZonedDateTime dataCreazione = ZonedDateTime.parse("2023-11-22T15:25:00+01:00[Europe/Rome]");
+        ZonedDateTime dataUltimaModifica = ZonedDateTime.parse("2023-12-18T13:00:00+01:00[Europe/Rome]");
 
 
         System.out.println();
@@ -56,6 +61,8 @@ public class Main {
         System.out.println();
         System.out.println("Bibite :" + "\n\r" + acqua + "\n\r" + vino + "\n\r" + bibite);
         System.out.println();
+        System.out.println("Data di creazione : " + dataCreazione);
+        System.out.println("Data Ultima modifica : " + dataUltimaModifica);
 
     }
 }
