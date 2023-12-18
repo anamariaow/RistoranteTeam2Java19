@@ -1,12 +1,28 @@
 package portate;
 
 public abstract class Portate {
-    public double prezzo;
-    public String nomePiatto;
-//TODO getter e setter e modificare public con private
+    private Double prezzo;
+    private String nomePiatto;
+
 //TODO aggiungere metodo void per stampare
-    public Portate(double prezzo, String nomePiatto) {
+    public Portate(Double prezzo, String nomePiatto) {
         this.prezzo = prezzo;
+        this.nomePiatto = nomePiatto;
+    }
+
+    public Double getPrezzo() {
+        return prezzo;
+    }
+
+    public void setPrezzo(Double prezzo) {
+        this.prezzo = prezzo;
+    }
+
+    public String getNomePiatto() {
+        return nomePiatto;
+    }
+
+    public void setNomePiatto(String nomePiatto) {
         this.nomePiatto = nomePiatto;
     }
 
