@@ -4,7 +4,6 @@ public abstract class Portate {
     private Double prezzo;
     private String nomePiatto;
 
-//TODO aggiungere metodo void per stampare
     public Portate(Double prezzo, String nomePiatto) {
         this.prezzo = prezzo;
         this.nomePiatto = nomePiatto;
@@ -28,6 +27,12 @@ public abstract class Portate {
 
     public void stampaDettagli(){
         System.out.println(nomePiatto + " " + prezzo + " Є");
-
+    }
+    @Override
+    public String toString() {
+        return "Portate{" +
+                "prezzo=" + prezzo +
+                ", nomePiatto='" + nomePiatto + '\'' +
+                '}';
     }
 }
