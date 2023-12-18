@@ -6,7 +6,6 @@ public class Main {
     public static void main(String[] args) {
         //TODO e ora tutta questa logica dove la mettiamo? va creata una classe menu che avrà tutti i campi e le funzionalità per stampare un menu
 
-
         Chef chef1 = new Chef("Simon Timon", 45, 3);
         Antipasti insaltaDiMare = new Antipasti(10.0, "insalta di mare");
         Antipasti cruditesDiMare = new Antipasti(11.0, "insalta di mare");
