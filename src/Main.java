@@ -1,6 +1,5 @@
 import portate.*;
 
-import java.time.OffsetDateTime;
 import java.time.ZonedDateTime;
 
 public class Main {
@@ -9,29 +8,29 @@ public class Main {
 
 
         Chef chef1 = new Chef("Simon Timon", 45, 3);
-        Antipasti insaltaDiMare = new Antipasti(10.0, "insalta di mare","gamberi",true);
-        Antipasti cruditesDiMare = new Antipasti(11.0, "insalta di mare","gamberi",true);
-        Antipasti polipettiAffogati = new Antipasti(9.0, "Polipetti affogati","nessuno",false);
+        Antipasti insaltaDiMare = new Antipasti(10.0, "insalta di mare");
+        Antipasti cruditesDiMare = new Antipasti(11.0, "insalta di mare");
+        Antipasti polipettiAffogati = new Antipasti(9.0, "Polipetti affogati");
 
-        PrimiPiatti trepoline = new PrimiPiatti(10.0, "Trepoline con rape e cozze", false, true);
-        PrimiPiatti assassina = new PrimiPiatti(14.0, "Spaghetti all'assassina con polpo", true, true);
-        PrimiPiatti scoglio = new PrimiPiatti(12.0, "Spaghetti allo scoglio", false, true);
+        PrimiPiatti trepoline = new PrimiPiatti(10.0, "Trepoline con rape e cozze");
+        PrimiPiatti assassina = new PrimiPiatti(14.0, "Spaghetti all'assassina con polpo");
+        PrimiPiatti scoglio = new PrimiPiatti(12.0, "Spaghetti allo scoglio");
 
-        SecondiPiatti orata = new SecondiPiatti(17.0, "Orata al cartoccio", true, true);
-        SecondiPiatti polpo = new SecondiPiatti(12.0, "Polpo alla luciana", false, true);
-        SecondiPiatti gamberoni = new SecondiPiatti(15.0, "Gamberoni al forno", true, true);
+        SecondiPiatti orata = new SecondiPiatti(17.0, "Orata al cartoccio");
+        SecondiPiatti polpo = new SecondiPiatti(12.0, "Polpo alla luciana");
+        SecondiPiatti gamberoni = new SecondiPiatti(15.0, "Gamberoni al forno");
 
-        Contorni patate = new Contorni(7.0, "Patate al limone", true, true);
-        Contorni carote = new Contorni(6.0, "Carote alla vinaigrette", true, true);
-        Contorni carciofi = new Contorni(6.5, "Carciofi allo zest d'arancia", true, false);
+        Contorni patate = new Contorni(7.0, "Patate al limone");
+        Contorni carote = new Contorni(6.0, "Carote alla vinaigrette");
+        Contorni carciofi = new Contorni(6.5, "Carciofi allo zest d'arancia");
 
-        Dessert dessertMango = new Dessert(10.50, "Mousse di Mango", true, false);
-        Dessert dessertMaracuya = new Dessert(8.50, "Mousse di Maracuya", true, false);
-        Dessert dessertNoce = new Dessert(5.50, "Mousse di Noce", true, true);
+        Dessert dessertMango = new Dessert(10.50, "Mousse di Mango");
+        Dessert dessertMaracuya = new Dessert(8.50, "Mousse di Maracuya");
+        Dessert dessertNoce = new Dessert(5.50, "Mousse di Noce");
 
-        Bevande acqua = new Bevande(3.0, "Acqua naturale/frizzante", false, true);
-        Bevande vino = new Bevande(10.0, "Vino della casa", true, true);
-        Bevande bibite = new Bevande(6.0, "Bibite analcoliche", false, true);
+        Bevande acqua = new Bevande(3.0, "Acqua naturale/frizzante");
+        Bevande vino = new Bevande(10.0, "Vino della casa");
+        Bevande bibite = new Bevande(6.0, "Bibite analcoliche");
 
         ZonedDateTime dataCreazione = ZonedDateTime.parse("2023-11-22T15:25:00+01:00[Europe/Rome]");
         ZonedDateTime dataUltimaModifica = ZonedDateTime.parse("2023-12-18T13:00:00+01:00[Europe/Rome]");
