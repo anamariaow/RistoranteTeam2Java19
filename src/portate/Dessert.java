@@ -2,17 +2,34 @@ package portate;
 
 public class Dessert extends Portate {
 
-    public boolean senzaZuchero;
-    public boolean senzalatte;
+    public Boolean senzaZuchero;
+    public Boolean senzalatte;
 
-    public Dessert(double prezzo, String nomePiatto, boolean senzaZuchero, boolean senzalatte) {
+    public Dessert(Double prezzo, String nomePiatto, Boolean senzaZuchero, Boolean senzalatte) {
         super(prezzo, nomePiatto);
         this.senzaZuchero = senzaZuchero;
         this.senzalatte = senzalatte;
     }
-//TODO questo toString deve stare nella classe padre, mettere private, getter e setter
+
+    public Boolean getSenzaZuchero() {
+        return senzaZuchero;
+    }
+
+    public void setSenzaZuchero(Boolean senzaZuchero) {
+        this.senzaZuchero = senzaZuchero;
+    }
+
+    public Boolean getSenzalatte() {
+        return senzalatte;
+    }
+
+    public void setSenzalatte(Boolean senzalatte) {
+        this.senzalatte = senzalatte;
+    }
+
+    //TODO questo toString deve stare nella classe padre, mettere private, getter e setter
     @Override
     public String toString() {
-        return "Dessert :" + nomePiatto + " " + prezzo + "Є" + "  " + "Senza zuchero" + " " + senzaZuchero + " " + "Senza Latte" + " " + senzalatte;
+        return "Dessert :" + getNomePiatto() + " " + getPrezzo() + "Є" + "  " + "Senza zuchero" + " " + senzaZuchero + " " + "Senza Latte" + " " + senzalatte;
     }
 }

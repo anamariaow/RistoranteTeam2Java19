@@ -6,9 +6,9 @@ public class Main {
 
 
         Chef chef1 = new Chef("Simon Timon", 45, 3);
-        Antipasti insaltaDiMare = new Antipasti(10, "insalta di mare","gamberi",true);
-        Antipasti cruditesDiMare = new Antipasti(11, "insalta di mare","gamberi",true);
-        Antipasti polipettiAffogati = new Antipasti(9, "Polipetti affogati","nessuno",false);
+        Antipasti insaltaDiMare = new Antipasti(10.0, "insalta di mare","gamberi",true);
+        Antipasti cruditesDiMare = new Antipasti(11.0, "insalta di mare","gamberi",true);
+        Antipasti polipettiAffogati = new Antipasti(9.0, "Polipetti affogati","nessuno",false);
 
         PrimiPiatti trepoline = new PrimiPiatti(10.0, "Trepoline con rape e cozze", false, true);
         PrimiPiatti assassina = new PrimiPiatti(14.0, "Spaghetti all'assassina con polpo", true, true);
@@ -37,7 +37,7 @@ public class Main {
         System.out.println(chef1);
         System.out.println("Menù a carico del grande chef suricato dell'antica prateria.");
         System.out.println();
-        System.out.println(TipoMenù.PESCE.descrizione);
+        System.out.println(TipoMenuEnum.PESCE.getDescrizione());
         System.out.println();
         System.out.println("Antipasti :" + "\n\r" + insaltaDiMare + "\n\r" + cruditesDiMare + "\n\r" + polipettiAffogati);
         System.out.println();
