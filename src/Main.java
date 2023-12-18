@@ -1,68 +1,62 @@
-import portate.*;
-
-import java.time.OffsetDateTime;
-import java.time.ZonedDateTime;
-
 public class Main {
     public static void main(String[] args) {
-        //TODO e ora tutta questa logica dove la mettiamo? va creata una classe menu che avrà tutti i campi e le funzionalità per stampare un menu
-
-
-        Chef chef1 = new Chef("Simon Timon", 45, 3);
-        Antipasti insaltaDiMare = new Antipasti(10.0, "insalta di mare","gamberi",true);
-        Antipasti cruditesDiMare = new Antipasti(11.0, "insalta di mare","gamberi",true);
-        Antipasti polipettiAffogati = new Antipasti(9.0, "Polipetti affogati","nessuno",false);
-
-        PrimiPiatti trepoline = new PrimiPiatti(10.0, "Trepoline con rape e cozze", false, true);
-        PrimiPiatti assassina = new PrimiPiatti(14.0, "Spaghetti all'assassina con polpo", true, true);
-        PrimiPiatti scoglio = new PrimiPiatti(12.0, "Spaghetti allo scoglio", false, true);
-
-        SecondiPiatti orata = new SecondiPiatti(17.0, "Orata al cartoccio", true, true);
-        SecondiPiatti polpo = new SecondiPiatti(12.0, "Polpo alla luciana", false, true);
-        SecondiPiatti gamberoni = new SecondiPiatti(15.0, "Gamberoni al forno", true, true);
-
-        Contorni patate = new Contorni(7.0, "Patate al limone", true, true);
-        Contorni carote = new Contorni(6.0, "Carote alla vinaigrette", true, true);
-        Contorni carciofi = new Contorni(6.5, "Carciofi allo zest d'arancia", true, false);
-
-        Dessert dessertMango = new Dessert(10.50, "Mousse di Mango", true, false);
-        Dessert dessertMaracuya = new Dessert(8.50, "Mousse di Maracuya", true, false);
-        Dessert dessertNoce = new Dessert(5.50, "Mousse di Noce", true, true);
-
-        Bevande acqua = new Bevande(3.0, "Acqua naturale/frizzante", false, true);
-        Bevande vino = new Bevande(10.0, "Vino della casa", true, true);
-        Bevande bibite = new Bevande(6.0, "Bibite analcoliche", false, true);
-
-        ZonedDateTime dataCreazione = ZonedDateTime.parse("2023-11-22T15:25:00+01:00[Europe/Rome]");
-        ZonedDateTime dataUltimaModifica = ZonedDateTime.parse("2023-12-18T13:00:00+01:00[Europe/Rome]");
-
 
         System.out.println();
+
         System.out.println("~Un Ristorante Qualsiasi~");
-        System.out.println(chef1);
+
+        System.out.println(Menu.chef1);
+
         System.out.println("Menù a carico del grande chef suricato dell'antica prateria.");
+
         System.out.println();
+
         System.out.println(TipoMenuEnum.PESCE.getDescrizione());
+
         System.out.println();
-        System.out.println("Antipasti :" + "\n\r" + insaltaDiMare + "\n\r" + cruditesDiMare + "\n\r" + polipettiAffogati);
-        System.out.println();
+
+        System.out.println("Antipasti :");
+        Menu.insaltaDiMare.stampaDettagli();
+        Menu.cruditesDiMare.stampaDettagli();
+        Menu.polipettiAffogati.stampaDettagli();
 
         System.out.println("Primi piatti :");
-        trepoline.stampaDettagli();
-        assassina.stampaDettagli();
-        scoglio.stampaDettagli();
+        Menu.trepoline.stampaDettagli();
+        Menu.assassina.stampaDettagli();
+        Menu.scoglio.stampaDettagli();
 
         System.out.println();
-        System.out.println("Secondi piatti :" + "\n\r" + orata + "\n\r" + polpo + "\n\r" + gamberoni);
+
+        System.out.println("Secondi piatti :");
+        Menu.orata.stampaDettagli();
+        Menu.polpo.stampaDettagli();
+        Menu.gamberoni.stampaDettagli();
+
         System.out.println();
-        System.out.println("Contorni :" + "\n\r" + patate + "\n\r" + carote + "\n\r" + carciofi);
+
+        System.out.println("Contorni :");
+        Menu.patate.stampaDettagli();
+        Menu.carote.stampaDettagli();
+        Menu.carciofi.stampaDettagli();
+
         System.out.println();
-        System.out.println("Dessert :" + "\n\r" + dessertMango + "\n\r" + dessertMaracuya + "\n\r" + dessertNoce);
+
+        System.out.println("Dessert :");
+        Menu.dessertMango.stampaDettagli();
+        Menu.dessertMaracuya.stampaDettagli();
+        Menu.dessertNoce.stampaDettagli();
+
         System.out.println();
-        System.out.println("Bibite :" + "\n\r" + acqua + "\n\r" + vino + "\n\r" + bibite);
+
+        System.out.println("Bibite :");
+        Menu.acqua.stampaDettagli();
+        Menu.vino.stampaDettagli();
+        Menu.bibite.stampaDettagli();
+
         System.out.println();
-        System.out.println("Data di creazione : " + dataCreazione);
-        System.out.println("Data Ultima modifica : " + dataUltimaModifica);
+
+        System.out.println("Data di creazione : " + Menu.dataCreazione);
+        System.out.println("Data Ultima modifica : " + Menu.dataUltimaModifica);
 
     }
 }
