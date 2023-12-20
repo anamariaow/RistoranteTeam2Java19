@@ -1,4 +1,5 @@
 public enum DrinksEnum {
+    //TODO boolean isAlcolico, isAnalcolico
     FRIZZANTE ("frizzante"),
     ALCOLICO ("alcolico"),
     ANALCOLICO ("Analcolico");
