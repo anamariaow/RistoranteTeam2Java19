@@ -4,8 +4,8 @@ import java.time.ZonedDateTime;
 
 public class Menu {
     static Chef chef1 = new Chef("Simon Timon", 45, 3);
-    static Antipasti insaltaDiMare = new Antipasti(10.0, "insalta di mare");
-    static Antipasti cruditesDiMare = new Antipasti(11.0, "insalta di mare");
+    static Antipasti insaltaDiMare = new Antipasti(10.0, "Insalta di mare");
+    static Antipasti cruditesDiMare = new Antipasti(11.0, "Crudités di mare");
     static Antipasti polipettiAffogati = new Antipasti(9.0, "Polipetti affogati");
 
     static PrimiPiatti trepoline = new PrimiPiatti(10.0, "Trepoline con rape e cozze");
@@ -24,7 +24,7 @@ public class Menu {
     static Dessert dessertMaracuya = new Dessert(8.50, "Mousse di Maracuya");
     static Dessert dessertNoce = new Dessert(5.50, "Mousse di Noce");
 
-    static Bevande acqua = new Bevande(3.0, "Acqua naturale/frizzante");
+    static Bevande acqua = new Bevande(3.0, "Acqua");
     static Bevande vino = new Bevande(10.0, "Vino della casa");
     static Bevande bibite = new Bevande(6.0, "Bibite analcoliche");
 
