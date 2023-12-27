@@ -1,4 +1,4 @@
-package portate;
+package prodotti;
 
 public class Bevande extends Portate {
     public Bevande(Double prezzo,String nomePiatto) {

@@ -1,4 +1,4 @@
-package portate;
+package prodotti;
 
 public abstract class Portate {
     private Double prezzo;

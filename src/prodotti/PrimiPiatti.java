@@ -1,4 +1,4 @@
-package portate;
+package prodotti;
 
 public class PrimiPiatti extends Portate {
 

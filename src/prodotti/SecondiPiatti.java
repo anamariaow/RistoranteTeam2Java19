@@ -1,4 +1,4 @@
-package portate;
+package prodotti;
 
 public class SecondiPiatti extends Portate {
 
