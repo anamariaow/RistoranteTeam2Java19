@@ -1,7 +1,7 @@
-package portate;
+package prodotti;
 
-public class Contorni extends Portate {
-    public Contorni(Double prezzo, String nomePiatto) {
+public class Antipasti extends Portate {
+    public Antipasti(Double prezzo, String nomePiatto) {
         super(prezzo, nomePiatto);
     }
 
@@ -10,4 +10,5 @@ public class Contorni extends Portate {
         super.stampaDettagli();
     }
 }
+
 
