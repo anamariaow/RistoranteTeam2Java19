@@ -1,12 +1,20 @@
 package prodotti;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public abstract class Portate {
     private Double prezzo;
     private String nomePiatto;
+     private ArrayList<AllergeniEnum> allergeniEnumArrayList;
 
-    public Portate(Double prezzo, String nomePiatto) {
+
+
+    public Portate(Double prezzo, String nomePiatto,ArrayList<AllergeniEnum> allergeniEnumArrayList) {
         this.prezzo = prezzo;
         this.nomePiatto = nomePiatto;
+        this.allergeniEnumArrayList=allergeniEnumArrayList;
+
     }
 
     public Double getPrezzo() {
@@ -25,14 +33,25 @@ public abstract class Portate {
         this.nomePiatto = nomePiatto;
     }
 
+    public ArrayList<AllergeniEnum> getAllergeniEnumArrayList() {
+        return allergeniEnumArrayList;
+    }
+
+    public void setAllergeniEnumArrayList(ArrayList<AllergeniEnum> allergeniEnumArrayList) {
+        this.allergeniEnumArrayList = allergeniEnumArrayList;
+    }
+
     public void stampaDettagli(){
+
         System.out.println(nomePiatto + " " + prezzo + " Є");
+        stampaAllergeni();
     }
-    @Override
-    public String toString() {
-        return "Portate{" +
-                "prezzo=" + prezzo +
-                ", nomePiatto='" + nomePiatto + '\'' +
-                '}';
+    public void stampaAllergeni(){
+        for (AllergeniEnum allergeniEnum : allergeniEnumArrayList ){
+            System.out.println("Allergeni Presenti : " + allergeniEnum.getDescrizione());
+        }
     }
+
+
+
 }

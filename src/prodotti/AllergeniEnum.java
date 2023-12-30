@@ -1,3 +1,5 @@
+package prodotti;
+
 public enum AllergeniEnum {
     SOIA ("contiene soia"),
     UOVA ("contiene uova"),

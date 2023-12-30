@@ -56,9 +56,9 @@ public class Menu {
 
         //commento questa linea di codice perche non funziona correttamente
         /*
-        System.out.println("Contorni :" + "\n\r" + patate + AllergeniEnum.ARACHIDI.getDescrizione() +
-                "\n\r" + carote + AllergeniEnum.SENAPE.getDescrizione() + "\n\r" + carciofi +
-                AllergeniEnum.SEDANO.getDescrizione());
+        System.out.println("Contorni :" + "\n\r" + patate + prodotti.AllergeniEnum.ARACHIDI.getDescrizione() +
+                "\n\r" + carote + prodotti.AllergeniEnum.SENAPE.getDescrizione() + "\n\r" + carciofi +
+                prodotti.AllergeniEnum.SEDANO.getDescrizione());
         */
 
         System.out.println("Contorni:");
