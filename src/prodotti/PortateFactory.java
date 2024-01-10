@@ -3,7 +3,7 @@ package prodotti;
 import java.util.ArrayList;
 
 public class PortateFactory {
-    public static Portate getPortate(String tipo, Double prezzo, String nomePiatto, ArrayList<AllergeniEnum> allergeniEnumArrayList){
+    public static Portate creaPortate(String tipo, Double prezzo, String nomePiatto, ArrayList<AllergeniEnum> allergeniEnumArrayList){
 
         Portate  portata = switch (tipo) {
             case "antipasto" -> new Antipasti(prezzo, nomePiatto, allergeniEnumArrayList);
