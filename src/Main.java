@@ -8,25 +8,25 @@ public class Main {
         //TODO e ora tutta questa logica dove la mettiamo? va creata una classe menu che avrà tutti i campi e le funzionalità per stampare un menu
 
         Chef chef1 = new Chef("Simon Timon", 45, 3);
-        Portate insalataDiMare = new Antipasti(10.0,"Insalata di mare", new ArrayList<>(List.of(AllergeniEnum.MOLLUSCHI,AllergeniEnum.CROSTACEI)));
-        Portate cruditesDiMare = new Antipasti(11.0,"Crudités di mare", new ArrayList<>(List.of(AllergeniEnum.CROSTACEI,AllergeniEnum.LUPINI,AllergeniEnum.MOLLUSCHI)));
-        Portate polipettiAffogati = new Antipasti(9.0,"Polipetti affogati", new ArrayList<>(List.of(AllergeniEnum.FRUTTAAGUSCIO)));
+        Portata insalataDiMare = new Antipasto(10.0,"Insalata di mare", new ArrayList<>(List.of(AllergeneEnum.MOLLUSCHI, AllergeneEnum.CROSTACEI)));
+        Portata cruditesDiMare = new Antipasto(11.0,"Crudités di mare", new ArrayList<>(List.of(AllergeneEnum.CROSTACEI, AllergeneEnum.LUPINI, AllergeneEnum.MOLLUSCHI)));
+        Portata polipettiAffogati = new Antipasto(9.0,"Polipetti affogati", new ArrayList<>(List.of(AllergeneEnum.FRUTTAAGUSCIO)));
 
-        Portate trepoline = new PrimiPiatti(10.0,"Trepoline con rape e cozze", new ArrayList<>(List.of(AllergeniEnum.MOLLUSCHI)));
-        Portate assassina = new PrimiPiatti(14.0,"Spaghetti all'assassina con polpo", new ArrayList<>(List.of(AllergeniEnum.GLUTINE,AllergeniEnum.FRUTTAAGUSCIO)));
-        Portate scoglio = new PrimiPiatti(12.0,"Spaghetti allo scoglio", new ArrayList<>(List.of(AllergeniEnum.MOLLUSCHI,AllergeniEnum.CROSTACEI,AllergeniEnum.GLUTINE)));
+        Portata trepoline = new Primo(10.0,"Trepoline con rape e cozze", new ArrayList<>(List.of(AllergeneEnum.MOLLUSCHI)));
+        Portata assassina = new Primo(14.0,"Spaghetti all'assassina con polpo", new ArrayList<>(List.of(AllergeneEnum.GLUTINE, AllergeneEnum.FRUTTAAGUSCIO)));
+        Portata scoglio = new Primo(12.0,"Spaghetti allo scoglio", new ArrayList<>(List.of(AllergeneEnum.MOLLUSCHI, AllergeneEnum.CROSTACEI, AllergeneEnum.GLUTINE)));
 
-        Portate orata = new SecondiPiatti(17.0,"Orata al cartoccio", new ArrayList<>(List.of(AllergeniEnum.SENAPE)));
-        Portate polpo = new SecondiPiatti(12.0,"Polpo alla luciana", new ArrayList<>(List.of(AllergeniEnum.SEDANO)));
-        Portate gamberoni = new SecondiPiatti(15.0,"Gamberoni al forno", new ArrayList<>(List.of(AllergeniEnum.CROSTACEI)));
+        Portata orata = new Secondo(17.0,"Orata al cartoccio", new ArrayList<>(List.of(AllergeneEnum.SENAPE)));
+        Portata polpo = new Secondo(12.0,"Polpo alla luciana", new ArrayList<>(List.of(AllergeneEnum.SEDANO)));
+        Portata gamberoni = new Secondo(15.0,"Gamberoni al forno", new ArrayList<>(List.of(AllergeneEnum.CROSTACEI)));
 
-        Portate patate = new Contorni(7.0,"Patate al limone", new ArrayList<>());
-        Portate carote = new Contorni(6.0,"Carote alla vinaigrette", new ArrayList<>(List.of(AllergeniEnum.SESAMO)));
-        Portate carciofi = new Contorni(6.5,"Carciofi allo zest d'arancia", new ArrayList<>());
+        Portata patate = new Contorno(7.0,"Patate al limone", new ArrayList<>());
+        Portata carote = new Contorno(6.0,"Carote alla vinaigrette", new ArrayList<>(List.of(AllergeneEnum.SESAMO)));
+        Portata carciofi = new Contorno(6.5,"Carciofi allo zest d'arancia", new ArrayList<>());
 
-        Portate dessertMango = new Dessert(10.50,"Mousse di Mango", new ArrayList<>(List.of(AllergeniEnum.LATTE)));
-        Portate dessertMaracuya = new Dessert(8.50,"Mousse di Maracuya", new ArrayList<>(List.of(AllergeniEnum.LATTE)));
-        Portate dessertNoce = new Dessert(5.50,"Mousse di Noce", new ArrayList<>(List.of(AllergeniEnum.LATTE,AllergeniEnum.FRUTTAAGUSCIO)));
+        Portata dessertMango = new Dessert(10.50,"Mousse di Mango", new ArrayList<>(List.of(AllergeneEnum.LATTE)));
+        Portata dessertMaracuya = new Dessert(8.50,"Mousse di Maracuya", new ArrayList<>(List.of(AllergeneEnum.LATTE)));
+        Portata dessertNoce = new Dessert(5.50,"Mousse di Noce", new ArrayList<>(List.of(AllergeneEnum.LATTE, AllergeneEnum.FRUTTAAGUSCIO)));
 
 
         //selezione di bevande non alcoliche

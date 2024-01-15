@@ -6,6 +6,7 @@ public abstract class Bevanda {
     private Double prezzo;
 
     public Bevanda(String nome, Double prezzo) {
+        super();
         this.nome = nome;
         this.prezzo = prezzo;
     }
@@ -25,7 +26,7 @@ public abstract class Bevanda {
     public void setPrezzo(Double prezzo) {
         this.prezzo = prezzo;
     }
-
+//to string non più, ma stampa allergeni
     @Override
     public String toString() {
         return "Bevanda: " + nome + ", " + prezzo + "€";
