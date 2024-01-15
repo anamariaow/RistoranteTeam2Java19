@@ -8,25 +8,25 @@ public class Main {
         //TODO e ora tutta questa logica dove la mettiamo? va creata una classe menu che avrà tutti i campi e le funzionalità per stampare un menu
 
         Chef chef1 = new Chef("Simon Timon", 45, 3);
-        Portate insalataDiMare = PortateFactory.creaPortate("antipasto",10.0,"Insalata di mare", new ArrayList<>(List.of(AllergeniEnum.MOLLUSCHI,AllergeniEnum.CROSTACEI)));
-        Portate cruditesDiMare = PortateFactory.creaPortate("antipasto",11.0,"Crudités di mare", new ArrayList<>(List.of(AllergeniEnum.CROSTACEI,AllergeniEnum.LUPINI,AllergeniEnum.MOLLUSCHI)));
-        Portate polipettiAffogati = PortateFactory.creaPortate("antipasto",9.0,"Polipetti affogati", new ArrayList<>(List.of(AllergeniEnum.FRUTTAAGUSCIO)));
+        Portate insalataDiMare = new Antipasti(10.0,"Insalata di mare", new ArrayList<>(List.of(AllergeniEnum.MOLLUSCHI,AllergeniEnum.CROSTACEI)));
+        Portate cruditesDiMare = new Antipasti(11.0,"Crudités di mare", new ArrayList<>(List.of(AllergeniEnum.CROSTACEI,AllergeniEnum.LUPINI,AllergeniEnum.MOLLUSCHI)));
+        Portate polipettiAffogati = new Antipasti(9.0,"Polipetti affogati", new ArrayList<>(List.of(AllergeniEnum.FRUTTAAGUSCIO)));
 
-        Portate trepoline = PortateFactory.creaPortate("primo piatto",10.0,"Trepoline con rape e cozze", new ArrayList<>(List.of(AllergeniEnum.MOLLUSCHI)));
-        Portate assassina = PortateFactory.creaPortate("primo piatto",14.0,"Spaghetti all'assassina con polpo", new ArrayList<>(List.of(AllergeniEnum.GLUTINE,AllergeniEnum.FRUTTAAGUSCIO)));
-        Portate scoglio = PortateFactory.creaPortate("primo piatto",12.0,"Spaghetti allo scoglio", new ArrayList<>(List.of(AllergeniEnum.MOLLUSCHI,AllergeniEnum.CROSTACEI,AllergeniEnum.GLUTINE)));
+        Portate trepoline = new PrimiPiatti(10.0,"Trepoline con rape e cozze", new ArrayList<>(List.of(AllergeniEnum.MOLLUSCHI)));
+        Portate assassina = new PrimiPiatti(14.0,"Spaghetti all'assassina con polpo", new ArrayList<>(List.of(AllergeniEnum.GLUTINE,AllergeniEnum.FRUTTAAGUSCIO)));
+        Portate scoglio = new PrimiPiatti(12.0,"Spaghetti allo scoglio", new ArrayList<>(List.of(AllergeniEnum.MOLLUSCHI,AllergeniEnum.CROSTACEI,AllergeniEnum.GLUTINE)));
 
-        Portate orata = PortateFactory.creaPortate("secondo piatto",17.0,"Orata al cartoccio", new ArrayList<>(List.of(AllergeniEnum.SENAPE)));
-        Portate polpo = PortateFactory.creaPortate("secondo piatto",12.0,"Polpo alla luciana", new ArrayList<>(List.of(AllergeniEnum.SEDANO)));
-        Portate gamberoni = PortateFactory.creaPortate("secondo piatto",15.0,"Gamberoni al forno", new ArrayList<>(List.of(AllergeniEnum.CROSTACEI)));
+        Portate orata = new SecondiPiatti(17.0,"Orata al cartoccio", new ArrayList<>(List.of(AllergeniEnum.SENAPE)));
+        Portate polpo = new SecondiPiatti(12.0,"Polpo alla luciana", new ArrayList<>(List.of(AllergeniEnum.SEDANO)));
+        Portate gamberoni = new SecondiPiatti(15.0,"Gamberoni al forno", new ArrayList<>(List.of(AllergeniEnum.CROSTACEI)));
 
-        Portate patate = PortateFactory.creaPortate("contorni",7.0,"Patate al limone", new ArrayList<>());
-        Portate carote = PortateFactory.creaPortate("contorni",6.0,"Carote alla vinaigrette", new ArrayList<>(List.of(AllergeniEnum.SESAMO)));
-        Portate carciofi = PortateFactory.creaPortate("contorni",6.5,"Carciofi allo zest d'arancia", new ArrayList<>());
+        Portate patate = new Contorni(7.0,"Patate al limone", new ArrayList<>());
+        Portate carote = new Contorni(6.0,"Carote alla vinaigrette", new ArrayList<>(List.of(AllergeniEnum.SESAMO)));
+        Portate carciofi = new Contorni(6.5,"Carciofi allo zest d'arancia", new ArrayList<>());
 
-        Portate dessertMango = PortateFactory.creaPortate("dessert",10.50,"Mousse di Mango", new ArrayList<>(List.of(AllergeniEnum.LATTE)));
-        Portate dessertMaracuya = PortateFactory.creaPortate("dessert",8.50,"Mousse di Maracuya", new ArrayList<>(List.of(AllergeniEnum.LATTE)));
-        Portate dessertNoce = PortateFactory.creaPortate("dessert",5.50,"Mousse di Noce", new ArrayList<>(List.of(AllergeniEnum.LATTE,AllergeniEnum.FRUTTAAGUSCIO)));
+        Portate dessertMango = new Dessert(10.50,"Mousse di Mango", new ArrayList<>(List.of(AllergeniEnum.LATTE)));
+        Portate dessertMaracuya = new Dessert(8.50,"Mousse di Maracuya", new ArrayList<>(List.of(AllergeniEnum.LATTE)));
+        Portate dessertNoce = new Dessert(5.50,"Mousse di Noce", new ArrayList<>(List.of(AllergeniEnum.LATTE,AllergeniEnum.FRUTTAAGUSCIO)));
 
 
         //selezione di bevande non alcoliche
