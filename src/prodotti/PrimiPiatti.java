@@ -9,6 +9,7 @@ public class PrimiPiatti extends Portate {
         super(prezzo, nomePiatto, allergeniEnumArrayList);
     }
 
+
     @Override
     public void stampaDettagli() {
         super.stampaDettagli();

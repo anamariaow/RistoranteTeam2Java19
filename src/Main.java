@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         //TODO e ora tutta questa logica dove la mettiamo? va creata una classe menu che avrà tutti i campi e le funzionalità per stampare un menu
 
         Chef chef1 = new Chef("Simon Timon", 45, 3);
@@ -39,7 +39,6 @@ public class Main {
         SoftDrink teCaldo = new SoftDrink("Té caldo", 4.00, 400);
 
         //delezione di vini spumanti
-        System.out.println("Bollicine: ");
         Vino domPerignong = new Vino("Champagne Brut Vintage - Dom Pérignon", 300.00, "Bollicina", "Uve: Pinot Nero Chardonnay, Abbinamento: Pesce e crostacei, Alcool: 12.5%", "Champagne, Francia", 2013);
         Vino deVilmont = new Vino("Champagne Brut Réserve Premier Cru - De Vilmont", 50.00, "Bollicina", "Uve: Chardonnay Pinot Nero Meunier, Abbinamento: Pesce e crostacei, Alcool: 12.5%", "Champagne, Francia", 2020);
         Vino veuveClicquot = new Vino("Champagne Brut Cuvée Saint Petersbourg - Veuve Clicquot", 70.00, "Bollicina", "Uve: Pinot Nero Chardonnay Meunier, Abbinamento: Pesce e crostacei, Alcool: 12%", "Champagne, Francia", 2020);
@@ -48,7 +47,6 @@ public class Main {
         Vino colVetoraz = new Vino("Prosecco Valdobbiadene Superiore Extra Dry - Col Vetoraz", 90.00, "Bollicina", "Uve: Timorasso, Abbinamento: Salumi, Alcool: 11.5%", "Veneto, Italia", 2022);
 
         //selezione di vini bianchi
-        System.out.println("Bianchi: ");
         Vino hofstatter = new Vino("Alto Adige Gewürztraminer Kolbenhof - Hofstatter", 50.00, "Bianco", "Uve: Gewürztraminer, Abbinamento: Pesce e crostacei, Alcool: 15%", "Alto Adige, Italia", 2021);
         Vino vignetiMassa = new Vino("Colli Tortonesi Timorasso Sterpi - Vigneti Massa", 70.00, "Bianco", "Uve: Timorasso, Abbinamento: Pesce e crostacei, Alcool: 15%", "Piemonte, Italia", 2021);
         Vino bossanova = new Vino("Trebbiano d'Abruzzo - Bossanova", 35.00, "Bianco", "Uve: Trebbiano, Abbinamenti: Pesce e crostacei, Alcool: 12%", "Abruzzo, Italia", 2022);
@@ -57,7 +55,6 @@ public class Main {
         Vino girlan = new Vino("Alto Adige Pinot Bianco Platt & Riegl - Girlan", 20.00, "Bianco", "Uve: Pinot Bianco, Abbinamento: Carni bianche e verdure, Alcool: 14%", "Alto Adige, Italia", 2022);
 
         //selezione di vini rossi
-        System.out.println("Rossi: ");
         Vino bennati = new Vino("Valpolicella Ripasso Superiore Sfojà - Bennati", 30.00, "Rosso", "Uve: Corvina Corvinone Rondinella, Abbinamento: Carni rosse, Alcool: 14%", "Veneto, Italia", 2021);
         Vino donnafugata = new Vino("Sicilia Mille e una Notte - Donnafugata", 80.00, "Rosso", "Uve: Nero d'Avola Petit Verdot Syrah, Abbinamento: Carni rosse, Alcool: 13.5%", "Sicilia, Italia", 2019);
         Vino pandolfa = new Vino("Rubicone Sangiovese Ginevra - Pandolfa", 25.00, "Rosato", "Uve: Sangiovese, Abbinamento: Carni bianche e verdure, Alcool: 12%", "Emilia Romagna, Italia", 2022);
@@ -77,11 +74,15 @@ public class Main {
         Drink myExperience = new Drink("My Experience", 10.00, "Fresh Cucumber, Lemon & Lime Juice, Mastiha, Americano Bianco, Keffir Leaves Gin", true);
         Drink goldie = new Drink("Goldie", 13.00, "Hennessy VS Cognac, Rye Whiskey, Pear distillate, Chartreuse Jaune, Agave, Cardamom Bitters, Palo Santo", true);
 
-//        Menu menu = new Menu(nome, TipoMenuEnum.PESCE);
+       Menu menu = new Menu(TipoMenuEnum.PESCE);
+
+       menu.addPortata(carciofi);
+       menu.addPortata(insalataDiMare);
+
+       menu.stampaMenu();
+
 //        //TODO nel menu add e remove, forse dobbiamo usare un set? vogliamo portate duplicate?
 //        menu.add( new Bevanda(3.0, "Acqua"));
-//
-//
 //        menu.stampaMenu();
 //
 //
@@ -90,7 +91,8 @@ public class Main {
 //        ristorante.stampaMenues();
 //        ristorante.stampaMenues(TipoMenuEnum.PESCE)
 //
-//        //TODO obbiettivo dopo è fare la classe cliente e creae un sistema di prenotazione(nel ristorante va messo un integer numero posti)
+//        //TODO obbiettivo dopo è fare la classe cliente e creare un sistema di prenotazione(nel ristorante va messo un integer numero posti)
 //        // obbiettivo fare una prenotazione e stampare il menu in base al Cliente
+
     }
 }

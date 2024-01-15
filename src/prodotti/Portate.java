@@ -1,19 +1,17 @@
 package prodotti;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public abstract class Portate {
     private Double prezzo;
     private String nomePiatto;
-     private ArrayList<AllergeniEnum> allergeniEnumArrayList;
+    private ArrayList<AllergeniEnum> allergeniEnumArrayList;
 
 
-
-    public Portate(Double prezzo, String nomePiatto,ArrayList<AllergeniEnum> allergeniEnumArrayList) {
+    public Portate(Double prezzo, String nomePiatto, ArrayList<AllergeniEnum> allergeniEnumArrayList) {
         this.prezzo = prezzo;
         this.nomePiatto = nomePiatto;
-        this.allergeniEnumArrayList=allergeniEnumArrayList;
+        this.allergeniEnumArrayList = allergeniEnumArrayList;
 
     }
 
@@ -41,17 +39,28 @@ public abstract class Portate {
         this.allergeniEnumArrayList = allergeniEnumArrayList;
     }
 
-    public void stampaDettagli(){
+    public void stampaDettagli() {
+        Integer lineLength = 40;
+        StringBuilder sb = new StringBuilder(lineLength);
+        sb.append(nomePiatto);
+        for (int i = 0; i + nomePiatto.length() + prezzo < lineLength; i++) {
+            sb.append(".");
+        }
+        sb.append(prezzo);
 
-        System.out.println(nomePiatto + " " + prezzo + " Є");
+        System.out.println(sb);
+
         stampaAllergeni();
     }
-    public void stampaAllergeni(){
-        for (AllergeniEnum allergeniEnum : allergeniEnumArrayList ){
-            System.out.println("Allergeni Presenti : " + allergeniEnum.getDescrizione());
+
+    public void stampaAllergeni() {
+        if (!allergeniEnumArrayList.isEmpty()) {
+            System.out.print("(");
+            for (AllergeniEnum allergeniEnum : allergeniEnumArrayList) {
+                System.out.print(allergeniEnum.getDescrizione() + ",");
+            }
+            System.out.println(")");
         }
     }
-
-
-
 }
+

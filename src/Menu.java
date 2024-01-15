@@ -1,85 +1,92 @@
 import prodotti.*;
 
 import java.time.ZonedDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Menu {
 
     //TODO ma questo oggetto come viene istanziato? quindi io non posso creare più menù
+    //TODO abbiamo bisogno di un nome  e tipo (p.e. "Menu invernale di pesce" con ENUM) e di una lista di portate, quindi costruttore getter e settere e i suoi metodi
+    private List<Portate> portateList;
+    private TipoMenuEnum tipoMenuEnum;
+    private final ZonedDateTime dataCreazione;
+    private ZonedDateTime dataUltimaModifica;
+    public Menu (TipoMenuEnum tipoMenuEnum) {
+        this.tipoMenuEnum = tipoMenuEnum;
+        this.portateList = new ArrayList<>();
+        this.dataCreazione = ZonedDateTime.now();
+        this.dataUltimaModifica = ZonedDateTime.now();
+        }
 
-   private  List<Portate> portateList = new ArrayList<>();
-     private ZonedDateTime dataCreazione = ZonedDateTime.parse("2023-11-22T15:25:00+01:00[Europe/Rome]");
-    private  ZonedDateTime dataUltimaModifica = ZonedDateTime.parse("2023-12-18T13:00:00+01:00[Europe/Rome]");
+    public List<Portate> getPortateList() {
+        return portateList;
+    }
+
+    public void setPortateList(List<Portate> portateList) {
+        this.portateList = portateList;
+    }
+
+    public TipoMenuEnum getTipoMenuEnum() {
+        return tipoMenuEnum;
+    }
+
+    public void setTipoMenuEnum(TipoMenuEnum tipoMenuEnum) {
+        this.tipoMenuEnum = tipoMenuEnum;
+    }
+
+    public ZonedDateTime getDataCreazione() {
+        return dataCreazione;
+    }
+
+    public ZonedDateTime getDataUltimaModifica() {
+        return dataUltimaModifica;
+    }
+
+    public void setDataUltimaModifica(ZonedDateTime dataUltimaModifica) {
+        this.dataUltimaModifica = dataUltimaModifica;
+    }
+
 
     //creazione del metodo per stampare tutto il menu
     public void stampaMenu() {
 
-        //TODO
+        //TODO la lista di portate va aggiunga nel main perchè l'unico posto dove si creano oggetti è li
+        //TODO in questo modo possiamo creare più menu e aggiungere quante portate vogliamo la lista è this.portate
 
-        for (Portate portate: portateList) {
-            if (portate instanceof  Antipasti){
-                portate.stampaDettagli();
-            }
-            if (portate instanceof  PrimiPiatti){
-
+        for (Portate portate : portateList) {
+            if (portate instanceof Antipasti) {
                 portate.stampaDettagli();
             }
         }
-
-
-        System.out.println();
-        System.out.println("~Un Ristorante Qualsiasi~");
-        System.out.println(chef1);
-        System.out.println("Menù a carico del grande chef suricato dell'antica prateria.");
-        System.out.println();
-        System.out.println(TipoMenuEnum.PESCE.getDescrizione());
-        System.out.println();
-
-        System.out.println("Antipasti");
-        insaltaDiMare.stampaDettagli();
-        cruditesDiMare.stampaDettagli();
-        polipettiAffogati.stampaDettagli();
-        System.out.println();
-
-        System.out.println("Primi piatti:");
-        trepoline.stampaDettagli();
-        assassina.stampaDettagli();
-        scoglio.stampaDettagli();
-        System.out.println();
-
-        System.out.println("Secondi piatti:");
-        orata.stampaDettagli();
-        polpo.stampaDettagli();
-        gamberoni.stampaDettagli();
-        System.out.println();
-
-        //commento questa linea di codice perche non funziona correttamente
-        /*
-        System.out.println("Contorni :" + "\n\r" + patate + prodotti.AllergeniEnum.ARACHIDI.getDescrizione() +
-                "\n\r" + carote + prodotti.AllergeniEnum.SENAPE.getDescrizione() + "\n\r" + carciofi +
-                prodotti.AllergeniEnum.SEDANO.getDescrizione());
-        */
-
-        System.out.println("Contorni:");
-        patate.stampaDettagli();
-        carote.stampaDettagli();
-        carciofi.stampaDettagli();
-        System.out.println();
-
-        System.out.println("Dessert:");
-        dessertMango.stampaDettagli();
-        dessertMaracuya.stampaDettagli();
-        dessertNoce.stampaDettagli();
-        System.out.println();
-
-        System.out.println("Bibite:");
-        acqua.stampaDettagli();
-        vino.stampaDettagli();
-        bibite.stampaDettagli();
-        System.out.println();
-
-        System.out.println("Data di creazione : " + dataCreazione);
-        System.out.println("Data Ultima modifica : " + dataUltimaModifica);
+        for (Portate portate : portateList) {
+            if (portate instanceof PrimiPiatti) {
+                portate.stampaDettagli();
+            }
+        }
+        for (Portate portate : portateList) {
+            if (portate instanceof SecondiPiatti) {
+                portate.stampaDettagli();
+            }
+        }
+        for (Portate portate : portateList) {
+            if (portate instanceof Contorni) {
+                portate.stampaDettagli();
+            }
+        }
+        for (Portate portate : portateList) {
+            if (portate instanceof Dessert) {
+                portate.stampaDettagli();
+            }
+        }
+    }
+    public void addPortata (Portate portata) throws Exception {
+        if (!portateList.contains(portata)) {
+            portateList.add(portata);
+        } else {
+            throw new Exception("Portata già presente nel menù");
+        }
+    }
+    public void removePortata (Portate portata) {
+        portateList.remove(portata);
     }
 }

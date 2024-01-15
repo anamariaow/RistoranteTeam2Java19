@@ -1,5 +1,6 @@
 package prodotti;
 
+//TODO anche bevanda deve estendere portata
 public abstract class Bevanda {
     private String nome;
     private Double prezzo;
