@@ -55,11 +55,11 @@ public abstract class Portata {
 
     public void stampaAllergeni() {
         if (!allergeniEnumArrayList.isEmpty()) {
-            System.out.print("(");
+            System.out.print("\u001B[31m" + "(");
             for (AllergeneEnum allergeniEnum : allergeniEnumArrayList) {
-                System.out.print(allergeniEnum.getDescrizione() + ",");
+                System.out.print(allergeniEnum.getDescrizione() + ", ");
             }
-            System.out.println(")");
+            System.out.println(")" + "\u001B[0m");
         }
     }
 }
