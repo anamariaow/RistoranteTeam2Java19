@@ -4,9 +4,11 @@ import java.util.ArrayList;
 
 public class Antipasto extends Portata {
 
-//TODO inserire altri field a piacere
-    public Antipasto(Double prezzo, String nomePiatto, ArrayList<AllergeneEnum> allergeneEnumArrayList) {
+    private boolean perDuePersone;
+
+    public Antipasto(Double prezzo, String nomePiatto, ArrayList<AllergeneEnum> allergeneEnumArrayList,boolean perDuePersone) {
         super(prezzo, nomePiatto, allergeneEnumArrayList);
+        this.perDuePersone=perDuePersone;
     }
 
     @Override
