@@ -2,16 +2,16 @@ package prodotti;
 
 import java.util.ArrayList;
 
-public abstract class Portata {
+public abstract class Portate {
     private Double prezzo;
     private String nomePiatto;
-    private ArrayList<AllergeneEnum> allergeneEnumArrayList;
+    private ArrayList<AllergeniEnum> allergeniEnumArrayList;
 
 
-    public Portata(Double prezzo, String nomePiatto, ArrayList<AllergeneEnum> allergeneEnumArrayList) {
+    public Portate(Double prezzo, String nomePiatto, ArrayList<AllergeniEnum> allergeniEnumArrayList) {
         this.prezzo = prezzo;
         this.nomePiatto = nomePiatto;
-        this.allergeneEnumArrayList = allergeneEnumArrayList;
+        this.allergeniEnumArrayList = allergeniEnumArrayList;
 
     }
 
@@ -31,12 +31,12 @@ public abstract class Portata {
         this.nomePiatto = nomePiatto;
     }
 
-    public ArrayList<AllergeneEnum> getAllergeniEnumArrayList() {
-        return allergeneEnumArrayList;
+    public ArrayList<AllergeniEnum> getAllergeniEnumArrayList() {
+        return allergeniEnumArrayList;
     }
 
-    public void setAllergeniEnumArrayList(ArrayList<AllergeneEnum> allergeneEnumArrayList) {
-        this.allergeneEnumArrayList = allergeneEnumArrayList;
+    public void setAllergeniEnumArrayList(ArrayList<AllergeniEnum> allergeniEnumArrayList) {
+        this.allergeniEnumArrayList = allergeniEnumArrayList;
     }
 
     public void stampaDettagli() {
@@ -54,10 +54,10 @@ public abstract class Portata {
     }
 
     public void stampaAllergeni() {
-        if (!allergeneEnumArrayList.isEmpty()) {
+        if (!allergeniEnumArrayList.isEmpty()) {
             System.out.print("(");
-            for (AllergeneEnum allergeneEnum : allergeneEnumArrayList) {
-                System.out.print(allergeneEnum.getDescrizione() + ",");
+            for (AllergeniEnum allergeniEnum : allergeniEnumArrayList) {
+                System.out.print(allergeniEnum.getDescrizione() + ",");
             }
             System.out.println(")");
         }
