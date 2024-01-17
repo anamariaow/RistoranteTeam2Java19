@@ -5,8 +5,6 @@ import java.util.*;
 
 public class Menu {
 
-    //TODO ma questo oggetto come viene istanziato? quindi io non posso creare più menù
-    //TODO abbiamo bisogno di un nome  e tipo (p.e. "Menu invernale di pesce" con ENUM) e di una lista di portate, quindi costruttore getter e settere e i suoi metodi
     private List<Portata> portataList;
     private TipoMenuEnum tipoMenuEnum;
     private final ZonedDateTime dataCreazione;
