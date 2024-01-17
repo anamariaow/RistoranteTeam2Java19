@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        //TODO e ora tutta questa logica dove la mettiamo? va creata una classe menu che avrà tutti i campi e le funzionalità per stampare un menu
+
         Ristorante ristorante = new Ristorante("11:00",10,new ArrayList<>(List.of(TipoMenuEnum.PESCE)),new ArrayList<>());
 
         Chef chef1 = new Chef("Simon Timon", 45, 3);
