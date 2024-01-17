@@ -5,11 +5,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Ristorante ristorante = new Ristorante("Un ristorante qualsiasi","11:00",10,new ArrayList<>(List.of(TipoMenuEnum.PESCE)),new ArrayList<>());
-        Recensione recensione = new Recensione("Ana","Il ristorante ha superato le mie aspettative, il cibo era davvero ottimo e anche l'accostamento dei vini proposto dal sommelier era perfetto. Il personale davvero gentile e l'ambiente bellissimo, perfetto anche per una cena romantica. Tornerò sicuramente.",5.0);
-        ristorante.addRecensione(recensione);
-
         Chef chef1 = new Chef("Simon Timon", 45, 3);
+
         Portata insalataDiMare = new Antipasto("Insalata di mare",10.0, new ArrayList<>(List.of(AllergeneEnum.MOLLUSCHI, AllergeneEnum.CROSTACEI)),true);
         Portata cruditesDiMare = new Antipasto("Crudités di mare",11.0, new ArrayList<>(List.of(AllergeneEnum.CROSTACEI, AllergeneEnum.LUPINI, AllergeneEnum.MOLLUSCHI)),false);
         Portata polipettiAffogati = new Antipasto("Polipetti affogati",9.0, new ArrayList<>(List.of(AllergeneEnum.FRUTTAAGUSCIO)),true);
@@ -76,7 +73,11 @@ public class Main {
         Drink myExperience = new Drink("My Experience", 10.00, new ArrayList<>(),"Fresh Cucumber, Lemon & Lime Juice, Mastiha, Americano Bianco, Kaffir Leaves Gin", true);
         Drink goldie = new Drink("Goldie", 13.00, new ArrayList<>(),"Hennessy VS Cognac, Rye Whiskey, Pear distillate, Chartreuse Jaune, Agave, Cardamom Bitters, Palo Santo", true);
 
+
         Menu menu = new Menu(TipoMenuEnum.PESCE);
+
+        Ristorante ristorante = new Ristorante("Un ristorante qualsiasi","11:00",10,chef1);
+        Recensione recensione = new Recensione("Ana","Il ristorante ha superato le mie aspettative, il cibo era davvero ottimo e anche l'accostamento dei vini proposto dal sommelier era perfetto. Il personale davvero gentile e l'ambiente bellissimo, perfetto anche per una cena romantica. Tornerò sicuramente.",5.0);
 
         //Antipasti
         menu.addPortata(insalataDiMare);
@@ -148,8 +149,10 @@ public class Main {
         menu.addPortata(myExperience);
         menu.addPortata(goldie);
 
-        menu.stampaMenu();
-        System.out.println(ristorante);
+        ristorante.addRecensione(recensione);
+
+        ristorante.aggiungiMenu(menu);
+        ristorante.stampaMenu(TipoMenuEnum.PESCE);
 
 
     }
