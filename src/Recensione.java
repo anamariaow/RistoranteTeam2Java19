@@ -9,6 +9,7 @@ public class Recensione {
         this.voto = voto;
     }
 
+
     public String getNome() {
         return nome;
     }
