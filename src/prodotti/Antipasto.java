@@ -11,9 +11,11 @@ public class Antipasto extends Portata {
         this.perDuePersone = perDuePersone;
     }
 
+    //TODO se vuoi un field così va fatto un enumerato e lo chiamiamo mezza porzione, porzione intera, famiglia
     @Override
     public void stampaDettagli() {
         super.stampaDettagli();
+        System.out.println(perDuePersone);
     }
 }
 

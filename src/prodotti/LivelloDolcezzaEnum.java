@@ -1,11 +1,11 @@
 package prodotti;
 
-public enum LivelloDiDolcezzaEnum {
+public enum LivelloDolcezzaEnum {
     ALTO("Alto"),
     MEDIO("Medio"),
     BASSO("Basso");
     private String livelli;
-    LivelloDiDolcezzaEnum (String livelli){
+    LivelloDolcezzaEnum(String livelli){
         this.livelli=livelli;
     }
 

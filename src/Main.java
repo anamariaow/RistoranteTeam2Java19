@@ -23,9 +23,9 @@ public class Main {
         Portata carote = new Contorno("Carote alla vinaigrette",6.0, new ArrayList<>(List.of(AllergeneEnum.SESAMO)),true,false);
         Portata carciofi = new Contorno("Carciofi allo zest d'arancia",6.5, new ArrayList<>(),true,true);
 
-        Portata dessertMango = new Dessert("Mousse di Mango",10.50, new ArrayList<>(List.of(AllergeneEnum.LATTE)),LivelloDiDolcezzaEnum.MEDIO, CalorieEnum.CENTO);
-        Portata dessertMaracuya = new Dessert("Mousse di Maracuya",8.50, new ArrayList<>(List.of(AllergeneEnum.LATTE)),LivelloDiDolcezzaEnum.ALTO, CalorieEnum.SESSANTA);
-        Portata dessertNoce = new Dessert("Mousse di Noce",5.50, new ArrayList<>(List.of(AllergeneEnum.LATTE, AllergeneEnum.FRUTTAAGUSCIO)),LivelloDiDolcezzaEnum.BASSO, CalorieEnum.OTTANTA);
+        Portata dessertMango = new Dessert("Mousse di Mango",10.50, new ArrayList<>(List.of(AllergeneEnum.LATTE)), LivelloDolcezzaEnum.MEDIO, CalorieEnum.CENTO);
+        Portata dessertMaracuya = new Dessert("Mousse di Maracuya",8.50, new ArrayList<>(List.of(AllergeneEnum.LATTE)), LivelloDolcezzaEnum.ALTO, CalorieEnum.SESSANTA);
+        Portata dessertNoce = new Dessert("Mousse di Noce",5.50, new ArrayList<>(List.of(AllergeneEnum.LATTE, AllergeneEnum.FRUTTAAGUSCIO)), LivelloDolcezzaEnum.BASSO, CalorieEnum.OTTANTA);
 
 
         //selezione di bevande non alcoliche
@@ -74,7 +74,7 @@ public class Main {
         Drink goldie = new Drink("Goldie", 13.00, new ArrayList<>(),"Hennessy VS Cognac, Rye Whiskey, Pear distillate, Chartreuse Jaune, Agave, Cardamom Bitters, Palo Santo", true);
 
 
-        Menu menu = new Menu(TipoMenuEnum.PESCE);
+        Menu menu = new Menu(TipoEnum.PESCE);
 
         Ristorante ristorante = new Ristorante("Un ristorante qualsiasi","11:00",10,chef1);
         Recensione recensione = new Recensione("Ana","Il ristorante ha superato le mie aspettative, il cibo era davvero ottimo e anche l'accostamento dei vini proposto dal sommelier era perfetto. Il personale davvero gentile e l'ambiente bellissimo, perfetto anche per una cena romantica. Tornerò sicuramente.",5.0);
@@ -152,7 +152,9 @@ public class Main {
         ristorante.addRecensione(recensione);
 
         ristorante.aggiungiMenu(menu);
-        ristorante.stampaMenu(TipoMenuEnum.PESCE);
+        ristorante.stampaMenu(TipoEnum.PESCE);
+
+
 
 
     }

@@ -6,10 +6,10 @@ import java.util.*;
 public class Menu {
 
     private List<Portata> portataList;
-    private TipoMenuEnum tipoMenuEnum;
+    private TipoEnum tipoMenuEnum;
     private final ZonedDateTime dataCreazione;
     private ZonedDateTime dataUltimaModifica;
-    public Menu (TipoMenuEnum tipoMenuEnum) {
+    public Menu (TipoEnum tipoMenuEnum) {
         this.tipoMenuEnum = tipoMenuEnum;
         this.portataList = new ArrayList<>();
         this.dataCreazione = ZonedDateTime.now();
@@ -24,11 +24,11 @@ public class Menu {
         this.portataList = portataList;
     }
 
-    public TipoMenuEnum getTipoMenuEnum() {
+    public TipoEnum getTipoMenuEnum() {
         return tipoMenuEnum;
     }
 
-    public void setTipoMenuEnum(TipoMenuEnum tipoMenuEnum) {
+    public void setTipoMenuEnum(TipoEnum tipoMenuEnum) {
         this.tipoMenuEnum = tipoMenuEnum;
     }
 
