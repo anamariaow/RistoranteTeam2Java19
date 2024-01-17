@@ -47,10 +47,6 @@ public class Menu {
 
     //creazione del metodo per stampare tutto il menu
     public void stampaMenu() {
-
-        //TODO la lista di portate va aggiunga nel main perchè l'unico posto dove si creano oggetti è li
-        //TODO in questo modo possiamo creare più menu e aggiungere quante portate vogliamo la lista è this.portate
-
         for (Portata portata : portataList) {
             if (portata instanceof Antipasto) {
                 portata.stampaDettagli();
@@ -73,6 +69,21 @@ public class Menu {
         }
         for (Portata portata : portataList) {
             if (portata instanceof Dessert) {
+                portata.stampaDettagli();
+            }
+        }
+        for (Portata portata : portataList) {
+            if (portata instanceof Vino) {
+                portata.stampaDettagli();
+            }
+        }
+        for (Portata portata : portataList) {
+            if (portata instanceof SoftDrink) {
+                portata.stampaDettagli();
+            }
+        }
+        for (Portata portata : portataList) {
+            if (portata instanceof Drink) {
                 portata.stampaDettagli();
             }
         }
