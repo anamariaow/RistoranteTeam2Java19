@@ -47,6 +47,9 @@ public class Ristorante {
     public void setRecensioneArrayList(ArrayList<Recensione> recensioneArrayList) {
         this.recensioneArrayList = recensioneArrayList;
     }
+    public void addRecensione(Recensione recensione){
+        recensioneArrayList.add(recensione);
+    }
 
     @Override
     public String toString() {

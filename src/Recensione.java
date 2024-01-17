@@ -33,8 +33,11 @@ public class Recensione {
     public void setVoto(Double voto) {
         this.voto = voto;
     }
+
     @Override
     public String toString() {
-        return "Recensione: "  + nome + "-" + voto ;
+        return "nome='" + nome + '\'' +
+                " recensione= '" + recensione + '\'' +
+                " voto= " + voto;
     }
 }
