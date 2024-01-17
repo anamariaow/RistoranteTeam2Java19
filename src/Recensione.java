@@ -40,4 +40,9 @@ public class Recensione {
                 " Recensione: '" + recensione + '\'' +
                 " Voto su 5: " + voto;
     }
+    public void stampaDettagli(){
+        System.out.println("Nome utente: '" + nome + '\'' +
+                " Recensione: '" + recensione + '\'' +
+                " Voto su 5: " + voto);
+    }
 }

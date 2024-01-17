@@ -100,7 +100,10 @@ public class Ristorante {
                 menuVar.stampaMenu();
             }
         }
-
+        System.out.println("Recensioni: ");
+        for(Recensione recensione:recensioneArrayList){
+            recensione.stampaDettagli();
+        }
     }
 }
 
