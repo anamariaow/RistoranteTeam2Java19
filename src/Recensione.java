@@ -36,8 +36,8 @@ public class Recensione {
 
     @Override
     public String toString() {
-        return "Nome :'" + nome + '\'' +
-                " Recensione : '" + recensione + '\'' +
-                " Voto : " + voto;
+        return "Nome: '" + nome + '\'' +
+                " Recensione: '" + recensione + '\'' +
+                " Voto su 5: " + voto;
     }
 }
