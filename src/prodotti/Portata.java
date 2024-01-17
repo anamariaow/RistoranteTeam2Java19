@@ -56,8 +56,11 @@ public abstract class Portata {
     public void stampaAllergeni() {
         if (!allergeniEnumArrayList.isEmpty()) {
             System.out.print("\u001B[31m" + "(");
-            for (AllergeneEnum allergeniEnum : allergeniEnumArrayList) {
-                System.out.print(allergeniEnum.getDescrizione() + ", "); // usare stringbuilder per questa cazz di virgola
+            for (int i = 0; i < allergeniEnumArrayList.size(); i++) {
+                System.out.print(allergeniEnumArrayList.get(i).getDescrizione());
+                if(i < allergeniEnumArrayList.size()-1) {
+                    System.out.println(", ");
+                }
             }
             System.out.println(")" + "\u001B[0m");
         }
