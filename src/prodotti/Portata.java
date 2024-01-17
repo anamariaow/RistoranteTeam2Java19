@@ -3,32 +3,32 @@ package prodotti;
 import java.util.ArrayList;
 
 public abstract class Portata {
+    private String nome;
     private Double prezzo;
-    private String nomePiatto;
+
     private ArrayList<AllergeneEnum> allergeniEnumArrayList;
 
 
-    public Portata(Double prezzo, String nomePiatto, ArrayList<AllergeneEnum> allergeniEnumArrayList) {
+    public Portata(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList) {
+        this.nome = nome;
         this.prezzo = prezzo;
-        this.nomePiatto = nomePiatto;
         this.allergeniEnumArrayList = allergeniEnumArrayList;
 
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
     public Double getPrezzo() {
         return prezzo;
     }
 
     public void setPrezzo(Double prezzo) {
         this.prezzo = prezzo;
-    }
-
-    public String getNomePiatto() {
-        return nomePiatto;
-    }
-
-    public void setNomePiatto(String nomePiatto) {
-        this.nomePiatto = nomePiatto;
     }
 
     public ArrayList<AllergeneEnum> getAllergeniEnumArrayList() {
@@ -42,8 +42,8 @@ public abstract class Portata {
     public void stampaDettagli() {
         Integer lineLength = 40;
         StringBuilder sb = new StringBuilder(lineLength);
-        sb.append(nomePiatto);
-        for (int i = 0; i + nomePiatto.length() + prezzo < lineLength; i++) {
+        sb.append(nome);
+        for (int i = 0; i + nome.length() + prezzo < lineLength; i++) {
             sb.append(".");
         }
         sb.append(prezzo);

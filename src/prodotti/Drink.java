@@ -1,12 +1,14 @@
 package prodotti;
 
-public class Drink extends Bevanda {
+import java.util.ArrayList;
+
+public class Drink extends Portata {
     //aggiunta sottoclasse Drink con i suoi fields
     private String ingredienti;
     private Boolean isAlcoholic;
 
-    public Drink(String nome, Double prezzo, String ingredienti, Boolean isAlcoholic) {
-        super(nome, prezzo);
+    public Drink(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList, String ingredienti, Boolean isAlcoholic) {
+        super(nome, prezzo, allergeniEnumArrayList);
         this.ingredienti = ingredienti;
         this.isAlcoholic = isAlcoholic;
     }

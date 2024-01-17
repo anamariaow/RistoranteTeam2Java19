@@ -6,9 +6,9 @@ public class Antipasto extends Portata {
 
     private boolean perDuePersone;
 
-    public Antipasto(Double prezzo, String nomePiatto, ArrayList<AllergeneEnum> allergeneEnumArrayList,boolean perDuePersone) {
-        super(prezzo, nomePiatto, allergeneEnumArrayList);
-        this.perDuePersone=perDuePersone;
+    public Antipasto(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList, boolean perDuePersone) {
+        super(nome, prezzo, allergeniEnumArrayList);
+        this.perDuePersone = perDuePersone;
     }
 
     @Override

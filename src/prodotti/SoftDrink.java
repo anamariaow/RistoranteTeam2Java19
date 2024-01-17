@@ -1,11 +1,13 @@
 package prodotti;
 
-public class SoftDrink extends Bevanda {
+import java.util.ArrayList;
+
+public class SoftDrink extends Portata {
     //aggiunta sottoclasse SoftDrink con un field
     private Integer centilitri;
 
-    public SoftDrink(String nome, Double prezzo, Integer centilitri) {
-        super(nome, prezzo);
+    public SoftDrink(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList, Integer centilitri) {
+        super(nome, prezzo, allergeniEnumArrayList);
         this.centilitri = centilitri;
     }
 

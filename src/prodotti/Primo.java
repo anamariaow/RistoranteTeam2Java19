@@ -5,10 +5,9 @@ import java.util.ArrayList;
 public class Primo extends Portata {
     private CalorieEnum calorieEnum;
 
-
-    public Primo(Double prezzo, String nomePiatto, ArrayList<AllergeneEnum> allergeneEnumArrayList,CalorieEnum calorieEnum) {
-        super(prezzo, nomePiatto, allergeneEnumArrayList);
-        this.calorieEnum=calorieEnum;
+    public Primo(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList, prodotti.CalorieEnum calorieEnum) {
+        super(nome, prezzo, allergeniEnumArrayList);
+        this.calorieEnum = calorieEnum;
     }
 
 

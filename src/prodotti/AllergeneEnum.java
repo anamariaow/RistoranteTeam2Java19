@@ -14,7 +14,9 @@ public enum AllergeneEnum {
     LUPINI ("contiene lupini"),
     SENAPE ("contiene senape"),
     SEDANO ("contiene sedano"),
-    SESAMO ("contiene sesamo");
+    SESAMO ("contiene sesamo"),
+    SOLFITI("contiene solfiti"),
+    PEPE("contiene pepe");
     private String descrizione;
 
     AllergeneEnum(String descrizione){

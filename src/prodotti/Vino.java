@@ -1,14 +1,16 @@
 package prodotti;
 
-public class Vino extends Bevanda {
+import java.util.ArrayList;
+
+public class Vino extends Portata {
     //aggiunta sottoclasse Vino con i suoi fields
     private String tipologia;
     private String descrizione;
     private String provenienza;
     private Integer annoProduzione;
 
-    public Vino(String nome, Double prezzo, String tipologia, String descrizione, String provenienza, Integer annoProduzione) {
-        super(nome, prezzo);
+    public Vino(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList, String tipologia, String descrizione, String provenienza, Integer annoProduzione) {
+        super(nome, prezzo, allergeniEnumArrayList);
         this.tipologia = tipologia;
         this.descrizione = descrizione;
         this.provenienza = provenienza;

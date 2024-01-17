@@ -6,10 +6,10 @@ public class Contorno extends Portata {
     private boolean isVegano;
     private boolean isBiologico;
 
-    public Contorno(Double prezzo, String nomePiatto, ArrayList<AllergeneEnum> allergeneEnumArrayList,boolean isVegano,boolean isBiologico) {
-        super(prezzo, nomePiatto, allergeneEnumArrayList);
-        this.isVegano=isVegano;
-        this.isBiologico=isBiologico;
+    public Contorno(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList, boolean isVegano, boolean isBiologico) {
+        super(nome, prezzo, allergeniEnumArrayList);
+        this.isVegano = isVegano;
+        this.isBiologico = isBiologico;
     }
 
     @Override

@@ -1,11 +1,11 @@
 package prodotti;
 
 public enum CalorieEnum {
-   CENTOCALORI("100 KL"),
+   CENTO("100 KL"),
     OTTANTA("80 KL"),
     SESSANTA("60 KL"),
    CINQUECENTO("550 KL"),
-    CENTOVENTE("120 KL"),
+    CENTOVENTI("120 KL"),
     NOVANTA("90 KL");
    private String calorie;
    CalorieEnum(String calorie){
