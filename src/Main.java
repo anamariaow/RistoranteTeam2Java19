@@ -6,7 +6,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws Exception {
         Ristorante ristorante = new Ristorante("Un ristorante qualsiasi","11:00",10,new ArrayList<>(List.of(TipoMenuEnum.PESCE)),new ArrayList<>());
-        Recensione recensione = new Recensione("Ana","Il ristorante ha superato le mie aspettative, il cibo era davvero ottimo e anche l'accostamento dei vini proposto dal sommelier era perfetto. Il personale davvero gentile e l'ambiente bellissimo, perfetto anche per una cena romantica. Tornerò sicuramente.",5.0);
+        Recensione recensione = new Recensione("Ana B.","Il ristorante ha superato le mie aspettative, il cibo era davvero ottimo e anche l'accostamento dei vini proposto dal sommelier era perfetto. Il personale davvero gentile e l'ambiente bellissimo, perfetto anche per una cena romantica. Tornerò sicuramente.",5.0);
         ristorante.addRecensione(recensione);
 
         Chef chef1 = new Chef("Simon Timon", 45, 3);
@@ -78,6 +78,7 @@ public class Main {
 
         Menu menu = new Menu(TipoMenuEnum.PESCE);
 
+        System.out.println("Menù:");
         //Antipasti
         menu.addPortata(insalataDiMare);
         menu.addPortata(cruditesDiMare);

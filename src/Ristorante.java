@@ -54,8 +54,8 @@ public class Ristorante {
     @Override
     public String toString() {
         return  "Ristorante: " + "\u001B[36m" + nomeRistorante + "\u001B[0m" + ", " +
-                "\u001B[32m" + "orarioApertura = " + orarioApertura + "\u001B[0m" +
-                ", numeroPosti = " + numeroPosti +
+                "\u001B[32m" + "Orario apertura: " + orarioApertura + "\u001B[0m" +
+                ", Numero posti = " + numeroPosti +
                 ", " + "\u001B[34m" + "Ristorante di " + menuEnumArrayList + "\u001B[0m" +
                 ", " + "\n" + "Recensioni: " + recensioneArrayList +
                 '.';
