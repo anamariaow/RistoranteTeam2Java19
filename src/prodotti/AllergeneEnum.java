@@ -1,4 +1,6 @@
-public enum AllergeniEnum {
+package prodotti;
+
+public enum AllergeneEnum {
     SOIA ("contiene soia"),
     UOVA ("contiene uova"),
     LATTE ("contiene latte"),
@@ -12,10 +14,12 @@ public enum AllergeniEnum {
     LUPINI ("contiene lupini"),
     SENAPE ("contiene senape"),
     SEDANO ("contiene sedano"),
-    SESAMO ("contiene sesamo");
+    SESAMO ("contiene sesamo"),
+    SOLFITI("contiene solfiti"),
+    PEPE("contiene pepe");
     private String descrizione;
 
-    AllergeniEnum(String descrizione){
+    AllergeneEnum(String descrizione){
         this.descrizione = descrizione;
     }
     public String getDescrizione(){

@@ -1,8 +1,8 @@
 Nome ristorante: Un Ristorante qualsiasi
 Menù: Pesce
-prodotti.Bevande: Acqua naturale, Acqua frizzante, Vino della casa, Bibite analcoliche
+prodotti.Bevanda: Acqua naturale, Acqua frizzante, Vino della casa, Bibite analcoliche
 
-prodotti.Antipasti :
+prodotti.Antipasto :
 insalta di mare
 crudites di mare
 Polipetti affogati
@@ -23,7 +23,7 @@ Orata al cartoccio
 Polpo alla luciana
 Gamberoni al forno
 
-prodotti.Contorni:
+prodotti.Contorno:
 Patate al limone
 Carote in vinaigrette
 Carciofi allo zest d'arancia

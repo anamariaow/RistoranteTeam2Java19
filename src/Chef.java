@@ -32,9 +32,12 @@ public class Chef {
     public void setStelleMichelin(Integer stelleMichelin) {
         this.stelleMichelin = stelleMichelin;
     }
+    public void stamaDettagliChef() {
+        System.out.println("\u001B[33mYellow" + nome + ", " +  eta + "anni, " + stelleMichelin + " stelle Michelin" + "\u001B[0m");
+    }
 
-    //TODO stampa dettagli, override
-//TODO metodo overloaded per stampare con un colore diverso
+
+
     @Override
     public String toString() {
         return "Chef: " + '\n' +

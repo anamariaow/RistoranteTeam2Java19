@@ -1,13 +1,16 @@
 package prodotti;
 
-public class Dessert extends Portate {
-//TODO tutte le classi figlio devono esistere per incrementare l'applicazione, ci può essere un enum calorie o livello dolcezza (medio, alto, basso)
+import java.util.ArrayList;
 
+public class Dessert extends Portata {
+    private LivelloDiDolcezzaEnum livelloDiDolcezzaEnum;
+    private CalorieEnum calorieEnum;
 
-    public Dessert(Double prezzo, String nomePiatto) {
-        super(prezzo, nomePiatto);
+    public Dessert(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList, prodotti.LivelloDiDolcezzaEnum livelloDiDolcezzaEnum, prodotti.CalorieEnum calorieEnum) {
+        super(nome, prezzo, allergeniEnumArrayList);
+        this.livelloDiDolcezzaEnum = livelloDiDolcezzaEnum;
+        this.calorieEnum = calorieEnum;
     }
-
     @Override
     public void stampaDettagli() {
         super.stampaDettagli();
