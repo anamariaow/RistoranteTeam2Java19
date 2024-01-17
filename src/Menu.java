@@ -47,41 +47,49 @@ public class Menu {
 
     //creazione del metodo per stampare tutto il menu
     public void stampaMenu() {
+        System.out.println("\u001B[35m"+"\nAntipasti:\n"+"\u001B[0m");
         for (Portata portata : portataList) {
             if (portata instanceof Antipasto) {
                 portata.stampaDettagli();
             }
         }
+        System.out.println("\u001B[35m"+"\nPrimi:\n"+"\u001B[0m");
         for (Portata portata : portataList) {
             if (portata instanceof Primo) {
                 portata.stampaDettagli();
             }
         }
+        System.out.println("\u001B[35m"+"\nSecondi:\n"+"\u001B[0m");
         for (Portata portata : portataList) {
             if (portata instanceof Secondo) {
                 portata.stampaDettagli();
             }
         }
+        System.out.println("\u001B[35m"+"\nContorni:\n"+"\u001B[0m");
         for (Portata portata : portataList) {
             if (portata instanceof Contorno) {
                 portata.stampaDettagli();
             }
         }
+        System.out.println("\u001B[35m"+"\nDessert:\n"+"\u001B[0m");
         for (Portata portata : portataList) {
             if (portata instanceof Dessert) {
                 portata.stampaDettagli();
             }
         }
+        System.out.println("\u001B[35m"+"\nCarta Dei Vini:\n"+"\u001B[0m");
         for (Portata portata : portataList) {
             if (portata instanceof Vino) {
                 portata.stampaDettagli();
             }
         }
+        System.out.println("\u001B[35m"+"\nSoft Drinks:\n"+"\u001B[0m");
         for (Portata portata : portataList) {
             if (portata instanceof SoftDrink) {
                 portata.stampaDettagli();
             }
         }
+        System.out.println("\u001B[35m"+"\nDrinks:\n"+"\u001B[0m");
         for (Portata portata : portataList) {
             if (portata instanceof Drink) {
                 portata.stampaDettagli();

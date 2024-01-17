@@ -40,7 +40,7 @@ public abstract class Portata {
     }
 
     public void stampaDettagli() {
-        Integer lineLength = 180;
+        Integer lineLength = 160;
         StringBuilder sb = new StringBuilder(lineLength);
         sb.append(nome);
         for (int i = 0; i + nome.length() + prezzo < lineLength; i++) {

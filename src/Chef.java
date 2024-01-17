@@ -32,17 +32,7 @@ public class Chef {
     public void setStelleMichelin(Integer stelleMichelin) {
         this.stelleMichelin = stelleMichelin;
     }
-    public void stamaDettagliChef() {
-        System.out.println("\u001B[33mYellow" + nome + ", " +  eta + "anni, " + stelleMichelin + " stelle Michelin" + "\u001B[0m");
-    }
-
-
-
-    @Override
-    public String toString() {
-        return "Chef: " + '\n' +
-                nome + ", " +
-                eta +
-                ", Stelle Michelin: " + stelleMichelin;
+    public void stampaDettagliChef() {
+        System.out.println("\u001B[33m" + nome + ", " +  eta + "anni, " + stelleMichelin + " stelle Michelin" + "\u001B[0m");
     }
 }
