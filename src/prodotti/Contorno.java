@@ -12,6 +12,7 @@ public class Contorno extends Portata {
         this.isBiologico = isBiologico;
     }
 
+    //TODO tutti i campi in grigio devono essere usati sennò che li mettiamo a fare, quindi nella stampa vanno inseriti
     @Override
     public void stampaDettagli() {
         super.stampaDettagli();

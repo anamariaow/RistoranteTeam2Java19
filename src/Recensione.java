@@ -1,4 +1,6 @@
 public class Recensione {
+
+    //TODO abbiamo l'oggetto a sto punto
     private String nome;
     private String recensione;
     private Double voto;

@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Ristorante {
     private String nomeRistorante;
@@ -8,6 +7,8 @@ public class Ristorante {
     private Chef chef;
     private ArrayList<Menu> menuArrayList;
     private ArrayList<Recensione> recensioneArrayList;
+
+
 
 
     public Ristorante(String nomeRistorante, String orarioApertura, Integer numeroPosti,Chef chef) {
@@ -91,7 +92,8 @@ public class Ristorante {
     public void rimuoviMenu(Menu menu){
         menuArrayList.remove(menu);
     }
-    public void stampaMenu(TipoMenuEnum tipoMenu){
+
+    public void stampaMenu(TipoEnum tipoMenu){
         System.out.println("Ristorante: " + "\u001B[36m" + nomeRistorante + "\u001B[0m \n");
         System.out.println("Menu a cura del grande chef suricato: ");
         chef.stampaDettagliChef();
