@@ -75,14 +75,80 @@ public class Main {
         Drink myExperience = new Drink("My Experience", 10.00, new ArrayList<>(),"Fresh Cucumber, Lemon & Lime Juice, Mastiha, Americano Bianco, Kaffir Leaves Gin", true);
         Drink goldie = new Drink("Goldie", 13.00, new ArrayList<>(),"Hennessy VS Cognac, Rye Whiskey, Pear distillate, Chartreuse Jaune, Agave, Cardamom Bitters, Palo Santo", true);
 
-       Menu menu = new Menu(TipoMenuEnum.PESCE);
+        Menu menu = new Menu(TipoMenuEnum.PESCE);
 
-       menu.addPortata(carciofi);
-       menu.addPortata(insalataDiMare);
-       menu.addPortata(domPerignon);
+        //Antipasti
+        menu.addPortata(insalataDiMare);
+        menu.addPortata(cruditesDiMare);
+        menu.addPortata(polipettiAffogati);
 
-       menu.stampaMenu();
-       System.out.println(ristorante);
+        //Primi
+        menu.addPortata(trepoline);
+        menu.addPortata(assassina);
+        menu.addPortata(scoglio);
+
+        //Secondi
+        menu.addPortata(orata);
+        menu.addPortata(polpo);
+        menu.addPortata(gamberoni);
+
+        //Contorni
+        menu.addPortata(patate);
+        menu.addPortata(carote);
+        menu.addPortata(carciofi);
+
+        //Dessert
+        menu.addPortata(dessertMango);
+        menu.addPortata(dessertMaracuya);
+        menu.addPortata(dessertNoce);
+
+        //Soft Drink
+        menu.addPortata(acquaNaturale);
+        menu.addPortata(acquaFrizzante);
+        menu.addPortata(cocaCola);
+        menu.addPortata(fanta);
+        menu.addPortata(sprite);
+        menu.addPortata(lipton);
+        menu.addPortata(teCaldo);
+
+        //Vini Spumanti
+        menu.addPortata(domPerignon);
+        menu.addPortata(deVilmont);
+        menu.addPortata(veuveClicquot);
+        menu.addPortata(serenaWines);
+        menu.addPortata(francoisDiligent);
+        menu.addPortata(colVetoraz);
+
+        //Vini Bianchi
+        menu.addPortata(hofstatter);
+        menu.addPortata(vignetiMassa);
+        menu.addPortata(bossanova);
+        menu.addPortata(tascaDAlmerita);
+        menu.addPortata(damijan);
+        menu.addPortata(girlan);
+
+        //Vini Rossi
+        menu.addPortata(bennati);
+        menu.addPortata(donnafugata);
+        menu.addPortata(pandolfa);
+        menu.addPortata(montepulciano);
+        menu.addPortata(cavalchina);
+        menu.addPortata(villaSpinosa);
+
+        //Drink
+        menu.addPortata(bloodyMary);
+        menu.addPortata(camilla);
+        menu.addPortata(flo);
+        menu.addPortata(myTie);
+        menu.addPortata(beatMe);
+        menu.addPortata(sayMyName);
+        menu.addPortata(fermento);
+        menu.addPortata(purpleRain);
+        menu.addPortata(myExperience);
+        menu.addPortata(goldie);
+
+        menu.stampaMenu();
+        System.out.println(ristorante);
 
 
     }
