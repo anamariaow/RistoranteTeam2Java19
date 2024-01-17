@@ -57,7 +57,7 @@ public class Ristorante {
                 "\u001B[32m" + "orarioApertura = " + orarioApertura + "\u001B[0m" +
                 ", numeroPosti = " + numeroPosti +
                 ", " + "\u001B[34m" + "Ristorante di " + menuEnumArrayList + "\u001B[0m" +
-                ", " + "\n" + "recensioni: " + recensioneArrayList +
+                ", " + "\n" + "Recensioni: " + recensioneArrayList +
                 '.';
     }
 }
