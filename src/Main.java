@@ -39,7 +39,7 @@ public class Main {
         SoftDrink teCaldo = new SoftDrink("Té caldo", 4.00, new ArrayList<>(),400);
 
         //delezione di vini spumanti
-        Vino domPerignong = new Vino("Champagne Brut Vintage - Dom Pérignon", 300.00, new ArrayList<>(List.of(AllergeneEnum.SOLFITI)),"Bollicina", "Uve: Pinot Nero Chardonnay, Abbinamento: Pesce e crostacei, Alcool: 12.5%", "Champagne, Francia", 2013);
+        Vino domPerignon = new Vino("Champagne Brut Vintage - Dom Pérignon", 300.00, new ArrayList<>(List.of(AllergeneEnum.SOLFITI)),"Bollicina", "Uve: Pinot Nero Chardonnay, Abbinamento: Pesce e crostacei, Alcool: 12.5%", "Champagne, Francia", 2013);
         Vino deVilmont = new Vino("Champagne Brut Réserve Premier Cru - De Vilmont", 50.00, new ArrayList<>(List.of(AllergeneEnum.SOLFITI)),"Bollicina", "Uve: Chardonnay Pinot Nero Meunier, Abbinamento: Pesce e crostacei, Alcool: 12.5%", "Champagne, Francia", 2020);
         Vino veuveClicquot = new Vino("Champagne Brut Cuvée Saint Petersbourg - Veuve Clicquot", 70.00, new ArrayList<>(List.of(AllergeneEnum.SOLFITI)),"Bollicina", "Uve: Pinot Nero Chardonnay Meunier, Abbinamento: Pesce e crostacei, Alcool: 12%", "Champagne, Francia", 2020);
         Vino serenaWines = new Vino("Prosecco Rosé Vigner - Serena Wines", 25.00, new ArrayList<>(List.of(AllergeneEnum.SOLFITI)),"Bollicina", "Uve: Glera Pinot Nero, Abbinamento: Salumi, Alcool: 11%", "Veneto, Italia", 2022);
@@ -78,6 +78,7 @@ public class Main {
 
        menu.addPortata(carciofi);
        menu.addPortata(insalataDiMare);
+       menu.addPortata(domPerignon);
 
        menu.stampaMenu();
 

@@ -20,7 +20,7 @@ public class SoftDrink extends Portata {
     }
 
     @Override
-    public String toString() {
-        return getNome() + ", " + getPrezzo() + "€, " + centilitri + " cl";
+    public void stampaDettagli() {
+        super.stampaDettagli();
     }
 }

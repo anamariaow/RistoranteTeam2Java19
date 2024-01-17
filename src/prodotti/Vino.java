@@ -50,11 +50,8 @@ public class Vino extends Portata {
     }
 
     @Override
-    public String toString() {
-        return "Vino: " + getNome() + ", " + getPrezzo() + "€" +
-                ", Tipologia: " + tipologia +
-                ", Descrizione: " + descrizione +
-                ", Provenienza: " + provenienza +
-                ", Anno di produzione: " + annoProduzione;
+    public void stampaDettagli() {
+        super.stampaDettagli();
     }
+
 }

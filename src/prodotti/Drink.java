@@ -30,9 +30,7 @@ public class Drink extends Portata {
     }
 
     @Override
-    public String toString() {
-        return "Drink: " + getNome() + ", " + getPrezzo() + "€" +
-                ", Ingredienti: " + ingredienti +
-                ", Alcolico: " + isAlcoholic;
+    public void stampaDettagli() {
+        super.stampaDettagli();
     }
 }
