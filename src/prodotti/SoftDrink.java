@@ -22,5 +22,6 @@ public class SoftDrink extends Portata {
     @Override
     public void stampaDettagli() {
         super.stampaDettagli();
+        System.out.println("grandezza :");
     }
 }

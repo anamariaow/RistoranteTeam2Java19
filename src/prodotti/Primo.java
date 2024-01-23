@@ -14,6 +14,7 @@ public class Primo extends Portata {
     @Override
     public void stampaDettagli() {
         super.stampaDettagli();
+        System.out.println(calorieEnum.getCalorie());
     }
 }
 
