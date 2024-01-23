@@ -13,6 +13,9 @@ public class Secondo extends Portata {
     @Override
     public void stampaDettagli() {
         super.stampaDettagli();
+        if(isProdottoStagionale){
+            System.out.println("\u001B[47m"+"\u001B[30m"+"piatto di Stagione" + "\u001B[0m");
+        }
     }
 }
 
