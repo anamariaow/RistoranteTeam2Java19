@@ -40,7 +40,7 @@ public abstract class Portata {
     }
 
     public void stampaDettagli() {
-        Integer lineLength = 60;
+        Integer lineLength = 80;
         StringBuilder sb = new StringBuilder(lineLength);
         sb.append(nome);
         //TODO da debbuggare

@@ -154,9 +154,5 @@ public class Main {
         ristorante.aggiungiMenu(menu);
         ristorante.stampaMenu(TipoEnum.PESCE);
 
-
-
-
-
     }
 }
