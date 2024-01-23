@@ -1,6 +1,7 @@
 import prodotti.*;
 
 import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
@@ -11,13 +12,11 @@ public class Menu {
 
     private List<Portata> portataList;
     private TipoEnum tipoMenuEnum;
-    private final ZonedDateTime dataCreazione;
-    private ZonedDateTime dataUltimaModifica;
+    private OffsetDateTime dataCreazione;
     public Menu (TipoEnum tipoMenuEnum) {
         this.tipoMenuEnum = tipoMenuEnum;
         this.portataList = new ArrayList<>();
-        this.dataCreazione = ZonedDateTime.now();
-        this.dataUltimaModifica = ZonedDateTime.now();
+        this.dataCreazione = OffsetDateTime.parse("2023-12-04T13:00:00Z");
         }
 
     public List<Portata> getPortateList() {
@@ -36,16 +35,8 @@ public class Menu {
         this.tipoMenuEnum = tipoMenuEnum;
     }
 
-    public ZonedDateTime getDataCreazione() {
+    public OffsetDateTime getDataCreazione() {
         return dataCreazione;
-    }
-
-    public ZonedDateTime getDataUltimaModifica() {
-        return dataUltimaModifica;
-    }
-
-    public void setDataUltimaModifica(ZonedDateTime dataUltimaModifica) {
-        this.dataUltimaModifica = dataUltimaModifica;
     }
 
 
@@ -101,17 +92,14 @@ public class Menu {
         }
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("EEEE dd MMMM yyyy", Locale.ITALY);
         String dataCreazioneFormat = dataCreazione.format(dateTimeFormatter);
-        String dataUltimaModificaFormat = dataUltimaModifica.format(dateTimeFormatter);
-        System.out.println(" ");
         System.out.println("\u001B[32m" + "Questo menù è stato creato " + dataCreazioneFormat);
-        System.out.println("Ultima modifica effettuata " + dataUltimaModificaFormat + "\u001B[0m");
         System.out.println(" ");
     }
     public void addPortata (Portata portata) throws Exception {
         if (!portataList.contains(portata)) {
             portataList.add(portata);
         } else {
-            throw new Exception("Portata già presente nel menù");
+            throw new Exception(portata + "già presente nel menù");
         }
     }
     public void removePortata (Portata portata) {
