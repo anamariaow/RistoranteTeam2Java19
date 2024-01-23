@@ -1,22 +1,23 @@
 package prodotti;
 
 public enum AllergeneEnum {
-    SOIA ("contiene soia"),
-    UOVA ("contiene uova"),
-    LATTE ("contiene latte"),
-    GLUTINE ("contiene glutine"),
-    FRUTTAAGUSCIO ("contiene frutta a guscio"),
-    ARACHIDI ("contiene arachidi"),
-    CROSTACEI ("contiene crostacei"),
-    MOLLUSCHI ("contiene molluschi"),
-    CEREALI ("contiene cereali"),
-    FAVE ("contiene fave"),
-    LUPINI ("contiene lupini"),
-    SENAPE ("contiene senape"),
-    SEDANO ("contiene sedano"),
-    SESAMO ("contiene sesamo"),
-    SOLFITI("contiene solfiti"),
-    PEPE("contiene pepe");
+    SOIA ("soia"),
+    UOVA ("uova"),
+    LATTE ("latte"),
+    GLUTINE ("glutine"),
+    FRUTTAAGUSCIO ("frutta a guscio"),
+    ARACHIDI ("arachidi"),
+    CROSTACEI ("crostacei"),
+    MOLLUSCHI ("molluschi"),
+    CEREALI ("cereali"),
+    FAVE ("fave"),
+    LUPINI ("lupini"),
+    SENAPE ("senape"),
+    SEDANO ("sedano"),
+    SESAMO ("sesamo"),
+    SOLFITI("solfiti"),
+    PEPE("pepe"),
+    CONGELATO ("prodotto congelato a bordo");
     private String descrizione;
 
     AllergeneEnum(String descrizione){

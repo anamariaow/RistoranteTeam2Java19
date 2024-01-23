@@ -33,11 +33,11 @@ public class Cliente {
    public void setMenuScelto(TipoEnum menuScelto) {
       this.menuScelto = menuScelto;
    }
-   public void stampaDettagliCliente(){
-      System.out.println("* Il Cliente " + nome + " ha scelto il " + menuScelto.getDescrizione() + " per " + numeroPersone + " persone *" );
+   public String stampaDettagliCliente(){
+      return("* Il Cliente " + nome + " ha scelto il " + menuScelto.getDescrizione() + " per " + numeroPersone + " persone *" );
    }
    public void vizualizzaMenuConsigliti(Ristorante portata){
-      System.out.println(" * Il menù consiglito per voi è *");
+      System.out.println(" * Il menù consiglito per voi è: *");
       for(Menu menu :portata.getMenuArrayList()){
          if(menu.getTipoMenuEnum().equals(menuScelto)){
             menu.stampaMenu();

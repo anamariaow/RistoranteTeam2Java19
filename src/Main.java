@@ -15,7 +15,7 @@ public class Main {
         Portata assassina = new Primo("Spaghetti all'assassina con polpo",14.0, new ArrayList<>(List.of(AllergeneEnum.GLUTINE, AllergeneEnum.FRUTTAAGUSCIO)),CalorieEnum.CENTOVENTI);
         Portata scoglio = new Primo("Spaghetti allo scoglio",12.0, new ArrayList<>(List.of(AllergeneEnum.MOLLUSCHI, AllergeneEnum.CROSTACEI, AllergeneEnum.GLUTINE)),CalorieEnum.CINQUECENTO);
 
-        Portata orata = new Secondo("Orata al cartoccio",17.0, new ArrayList<>(List.of(AllergeneEnum.SENAPE)),true);
+        Portata orata = new Secondo("Orata al cartoccio",17.0, new ArrayList<>(List.of(AllergeneEnum.SENAPE, AllergeneEnum.CONGELATO)),true);
         Portata polpo = new Secondo("Polpo alla luciana",12.0, new ArrayList<>(List.of(AllergeneEnum.SEDANO)),true);
         Portata gamberoni = new Secondo("Gamberoni al forno",15.0, new ArrayList<>(List.of(AllergeneEnum.CROSTACEI)),false);
 
@@ -76,8 +76,15 @@ public class Main {
 
         Menu menu = new Menu(TipoEnum.PESCE);
 
+        Cliente cliente1= new Cliente("Mario",4,TipoEnum.PESCE);
+        Cliente cliente2= new Cliente("Antonio",4,TipoEnum.ALL);
+        Cliente cliente3= new Cliente("Michele",2,TipoEnum.VEGETARIANO);
+        Cliente cliente4 = new Cliente("Ana",2,TipoEnum.ALL);
+
+
         Ristorante ristorante = new Ristorante("Un ristorante qualsiasi","11:00",10,chef1);
-        Recensione recensione = new Recensione("Ana","Il ristorante ha superato le mie aspettative, il cibo era davvero ottimo e anche l'accostamento dei vini proposto dal sommelier era perfetto. Il personale davvero gentile e l'ambiente bellissimo, perfetto anche per una cena romantica. Tornerò sicuramente.",5.0);
+        Recensione recensione1 = new Recensione(cliente4, "Il ristorante ha superato le mie aspettative, il cibo era davvero ottimo e anche l'accostamento dei vini proposto dal sommelier era perfetto. Il personale davvero gentile e l'ambiente bellissimo, perfetto anche per una cena romantica. Tornerò sicuramente.",5.0);
+        Recensione recensione2 = new Recensione(cliente1, "Ottimo cibo e ottimo ambiente, io e la mia famiglia abbiamo scelto il menù di Pesce ed era spettacolare.", 5.0);
 
         //Antipasti
         menu.addPortata(insalataDiMare);
@@ -149,14 +156,12 @@ public class Main {
         menu.addPortata(myExperience);
         menu.addPortata(goldie);
 
-        ristorante.addRecensione(recensione);
+        ristorante.addRecensione(recensione1);
 
         ristorante.aggiungiMenu(menu);
         ristorante.stampaMenu(TipoEnum.PESCE);
 
-        Cliente cliente1= new Cliente("Mario",2,TipoEnum.PESCE);
-        Cliente cliente2= new Cliente("Antonio",4,TipoEnum.ALL);
-        Cliente cliente3= new Cliente("Michele",2,TipoEnum.VEGETARIANO);
+
         cliente1.stampaDettagliCliente();
         cliente1.vizualizzaMenuConsigliti(ristorante);
 
