@@ -1,6 +1,10 @@
 import prodotti.*;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.*;
 
 public class Menu {
@@ -95,6 +99,13 @@ public class Menu {
                 portata.stampaDettagli();
             }
         }
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("EEEE dd MMMM yyyy", Locale.ITALY);
+        String dataCreazioneFormat = dataCreazione.format(dateTimeFormatter);
+        String dataUltimaModificaFormat = dataUltimaModifica.format(dateTimeFormatter);
+        System.out.println(" ");
+        System.out.println("\u001B[32m" + "Questo menù è stato creato " + dataCreazioneFormat);
+        System.out.println("Ultima modifica effettuata " + dataUltimaModificaFormat + "\u001B[0m");
+        System.out.println(" ");
     }
     public void addPortata (Portata portata) throws Exception {
         if (!portataList.contains(portata)) {
