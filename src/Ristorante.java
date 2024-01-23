@@ -43,12 +43,12 @@ public class Ristorante {
         this.numeroPosti = numeroPosti;
     }
 
-    public ArrayList<Menu> getMenuEnumArrayList() {
+    public ArrayList<Menu> getMenuArrayList() {
         return menuArrayList;
     }
 
-    public void setMenuEnumArrayList(ArrayList<Menu> menuEnumArrayList) {
-        this.menuArrayList = menuEnumArrayList;
+    public void setMenuArrayList(ArrayList<Menu> menuArrayList) {
+        this.menuArrayList = menuArrayList;
     }
 
     public ArrayList<Recensione> getRecensioneArrayList() {

@@ -43,7 +43,6 @@ public abstract class Portata {
         Integer lineLength = 80;
         StringBuilder sb = new StringBuilder(lineLength);
         sb.append(nome);
-        //TODO da debbuggare
         for (int i = 0; i + nome.length() < lineLength; i++) {
             sb.append(".");
         }
