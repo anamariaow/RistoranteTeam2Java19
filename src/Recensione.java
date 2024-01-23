@@ -1,19 +1,18 @@
 public class Recensione {
 
     //TODO abbiamo l'oggetto a sto punto
-    private String nome;
+    private Cliente cliente;
     private String recensione;
     private Double voto;
 
-    public Recensione(String nome, String recensione, Double voto) {
-        this.nome = nome;
+    public Recensione(Cliente cliente, String recensione, Double voto) {
+        this.cliente = cliente;
         this.recensione = recensione;
         this.voto = voto;
     }
 
-
-    public String getNome() {
-        return nome;
+    public Cliente getCliente() {
+        return cliente;
     }
 
     public String getRecensione() {
@@ -24,8 +23,8 @@ public class Recensione {
         return voto;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     public void setRecensione(String recensione) {
@@ -38,12 +37,12 @@ public class Recensione {
 
     @Override
     public String toString() {
-        return "Nome utente: '" + nome + '\'' +
+        return "Nome cliente: '" + cliente.getNome() + '\'' +
                 " Recensione: '" + recensione + '\'' +
                 " Voto su 5: " + voto;
     }
     public void stampaDettagli(){
-        System.out.println("Nome utente: '" + nome + '\'' +
+        System.out.println("Nome cliente: '" + cliente.getNome() + '\'' +
                 " Recensione: '" + recensione + '\'' +
                 " Voto su 5: " + voto);
     }
