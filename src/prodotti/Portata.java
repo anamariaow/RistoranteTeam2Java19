@@ -40,11 +40,11 @@ public abstract class Portata {
     }
 
     public void stampaDettagli() {
-        Integer lineLength = 160;
+        Integer lineLength = 60;
         StringBuilder sb = new StringBuilder(lineLength);
         sb.append(nome);
         //TODO da debbuggare
-        for (int i = 0; i + nome.length() + prezzo < lineLength; i++) {
+        for (int i = 0; i + nome.length() < lineLength; i++) {
             sb.append(".");
         }
         sb.append(prezzo);
