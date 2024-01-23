@@ -154,5 +154,11 @@ public class Main {
         ristorante.aggiungiMenu(menu);
         ristorante.stampaMenu(TipoEnum.PESCE);
 
+        Cliente cliente1= new Cliente("Mario",2,TipoEnum.PESCE);
+        Cliente cliente2= new Cliente("Antonio",4,TipoEnum.ALL);
+        Cliente cliente3= new Cliente("Michele",2,TipoEnum.VEGETARIANO);
+        cliente1.stampaDettagliCliente();
+        cliente1.vizualizzaMenuConsigliti(ristorante);
+
     }
 }
