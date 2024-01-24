@@ -124,6 +124,8 @@ public class Ristorante {
         System.out.println('\n'+"Ristorante: " + "\u001B[36m"  + "||" + nomeRistorante  + "||" + "\u001B[0m \n" + "Indirizzo: " +  "\u001B[33m" + " -- " + indirizzoRistorante + " --" + "\u001B[0m \n" );
         isRistoranteAperto();
     }
+
+    //TODO ogni metodo deve fare solo il suo, quandi fare un metodo che stampi le prenotazioni
     public void stampaMenu(TipoEnum tipoMenu){
         System.out.println();
         System.out.println("Menù a cura del grande Chef suricato: ");
@@ -154,5 +156,8 @@ public class Ristorante {
         }
         System.out.println(" ");
     }
+
+    //TODO qui ci deve essere un metodo in overloaded che suggerisce i menu preferiti
+    // ciclare sulle prenotazioni per recuperare la preferenza del cliente
 }
 

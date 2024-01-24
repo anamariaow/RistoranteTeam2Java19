@@ -1,7 +1,7 @@
 public class Prenotazione {
     private String orarioPrenotazione;
     private Cliente cliente;
-    private int postiRiservati;
+    private Integer postiRiservati;
 
     public Prenotazione(String orarioPrenotazione, Cliente cliente, int postiRiservati) {
         this.orarioPrenotazione = orarioPrenotazione;

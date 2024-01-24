@@ -34,6 +34,8 @@ public class Cliente {
    public void stampaDettagliCliente(){
       System.out.println("☆ Il Cliente " + nome + " ha scelto il " + menuScelto.getDescrizione() + " per " + numeroPersone + " persone ☆" );
    }
+
+   //TODO spostare
    public void sceltaMenu(Ristorante portata){
       for(Menu menu : portata.getMenuArrayList()){
          if(menu.getTipoMenuEnum().equals(menuScelto)){
