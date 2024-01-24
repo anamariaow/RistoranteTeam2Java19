@@ -11,7 +11,8 @@ nome VARCHAR(100) NOT NULL,
 prezzo DOUBLE NOT NULL,
 allergeniEnumArrayList LONG VARCHAR,
 calorieEnum LONG VARCHAR NOT NULL,
-id_menu FOREIGN KEY REFERENCES menu(id)
+id_menu INT,
+FOREIGN KEY (id_menu) REFERENCES menu(id)
 );
 CREATE TABLE ristorante_team2.antipasto(
 id INT PRIMARY KEY AUTO_INCREMENT,
@@ -20,7 +21,8 @@ prezzo DOUBLE NOT NULL,
 allergeniEnumArrayList LONG VARCHAR,
 calorieEnum LONG VARCHAR NOT NULL,
 perDuePersone BOOL,
-id_menu FOREIGN KEY REFERENCES menu(id)
+id_menu INT,
+FOREIGN KEY (id_menu) REFERENCES menu(id)
 );
 
 CREATE TABLE ristorante.secondo (
@@ -29,7 +31,8 @@ nome VARCHAR (255) NOT NULL,
 prezzo DOUBLE NOT NULL,
 lista_allergeni_enum VARCHAR (255),
 calorie_enum VARCHAR (100),
-FOREIGN KEY (id_menu) REFERENCES menu (id)
+id_menu INT,
+FOREIGN KEY (id_menu) REFERENCES menu(id)
 );
 
 CREATE TABLE ristorante_team2.contorno (
@@ -38,5 +41,6 @@ nome VARCHAR (255) NOT NULL,
 prezzo DOUBLE NOT NULL,
 lista_allergeni_enum VARCHAR (255),
 calorie_enum VARCHAR (100),
-FOREIGN KEY (id_menu) REFERENCES menu (id)
+id_menu INT,
+FOREIGN KEY (id_menu) REFERENCES menu(id)
 );
