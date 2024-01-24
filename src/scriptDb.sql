@@ -23,20 +23,20 @@ perDuePersone BOOL,
 id_menu FOREIGN KEY
 );
 
-create table ristorante.secondo (
-id int auto_increment not null primary key,
-nome varchar not null,
-prezzo double not null,
-lista_allergeni_enum varchar,
-calorie_enum varchar,
-id_menu int foreign key
+CREATE TABLE ristorante.secondo (
+id INT auto_increment NOT NULL PRIMARY KEY,
+nome VARCHAR (255) NOT NULL,
+prezzo DOUBLE NOT NULL,
+lista_allergeni_enum VARCHAR (255),
+calorie_enum VARCHAR (100),
+FOREIGN KEY (id_menu) REFERENCES menu (id)
 );
 
-create table ristorante_team2.contorno (
-id int auto_increment not null primary key,
-nome varchar not null,
-prezzo double not null,
-lista_allergeni_enum varchar,
-calorie_enum varchar,
-id_menu int foreign key
+CREATE TABLE ristorante_team2.contorno (
+id INT auto_increment NOT NULL PRIMARY KEY,
+nome VARCHAR (255) NOT NULL,
+prezzo DOUBLE NOT NULL,
+lista_allergeni_enum VARCHAR (255),
+calorie_enum VARCHAR (100),
+FOREIGN KEY (id_menu) REFERENCES menu (id)
 );
