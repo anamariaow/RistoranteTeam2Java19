@@ -2,6 +2,7 @@ import prodotti.*;
 
 import java.time.DayOfWeek;
 import java.time.LocalTime;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -75,8 +76,9 @@ public class Main {
         Drink myExperience = new Drink("My Experience", 10.00, new ArrayList<>(),CalorieEnum.DUECENTO,"Fresh Cucumber, Lemon & Lime Juice, Mastiha, Americano Bianco, Kaffir Leaves Gin");
         Drink goldie = new Drink("Goldie", 13.00, new ArrayList<>(),CalorieEnum.QUATTROCENTO,"Hennessy VS Cognac, Rye Whiskey, Pear distillate, Chartreuse Jaune, Agave, Cardamom Bitters, Palo Santo");
 
-
-        Menu menu = new Menu(TipoEnum.PESCE);
+        MenuBuilder builder = new MenuBuilder();
+        builder.setTipoMenuEnum(TipoEnum.PESCE).setDataCreazione(OffsetDateTime.parse("2023-12-04T13:00:00Z"));
+        Menu menu = builder.build();
 
         Cliente cliente1 = new Cliente("Ana B.",2,TipoEnum.ALL);
         Cliente cliente2 = new Cliente("Mario F.",4,TipoEnum.PESCE);
