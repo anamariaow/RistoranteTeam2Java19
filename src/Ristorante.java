@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Ristorante {
     private String nomeRistorante;
@@ -7,6 +8,7 @@ public class Ristorante {
     private Chef chef;
     private ArrayList<Menu> menuArrayList;
     private ArrayList<Recensione> recensioneArrayList;
+    private LinkedList<Prenotazione> prenotazioneLinkedList;
 
     public Ristorante(String nomeRistorante, String orarioApertura, Integer numeroPosti,Chef chef) {
         this.nomeRistorante = nomeRistorante;
@@ -15,6 +17,7 @@ public class Ristorante {
         this.chef = chef;
         this.menuArrayList = new ArrayList<>();
         this.recensioneArrayList = new ArrayList<>();
+        this.prenotazioneLinkedList = new LinkedList<>();
     }
 
     public String getNomeRistorante() {
@@ -58,6 +61,9 @@ public class Ristorante {
     public void addRecensione(Recensione recensione){
         recensioneArrayList.add(recensione);
     }
+    public void addPrenotazione(Prenotazione prenotazione){
+        prenotazioneLinkedList.add(prenotazione);
+    }
 
 
     public void aggiungiMenu(Menu menu){
@@ -97,6 +103,11 @@ public class Ristorante {
         System.out.println("\u001B[32m"+"Recensioni: "+"\u001B[0m");
         for(Recensione recensione:recensioneArrayList){
             recensione.stampaDettagli();
+        }
+        System.out.println();
+        System.out.println("\u001B[32m"+"Recensioni: "+"\u001B[0m");
+        for(Prenotazione prenotazione:prenotazioneLinkedList){
+            prenotazione.stampaDettagli();
         }
     }
 }

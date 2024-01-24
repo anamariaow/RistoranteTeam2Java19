@@ -88,6 +88,11 @@ public class Main {
         Recensione recensione3 = new Recensione(cliente3, "Io e la mia compagna siamo stati a cena qui qualche sera fa e abbiamo mangiato bene, ci è piaciuta la vasta scelta di menù. Noi abbiamo mangiato un po' di tutto", 4.0);
         Recensione recensione4 = new Recensione(cliente4, "Uno dei pochi ristoranti che hanno una scelta così varia di piatti vegani e vegetariani. Torneremo presto", 4.5);
 
+        Prenotazione prenotazione1 = new Prenotazione("2024-03-17 20:00",cliente1,4);
+        Prenotazione prenotazione2 = new Prenotazione("2024-03-16 20:00",cliente2,3);
+        Prenotazione prenotazione3 = new Prenotazione("2024-03-19 20:00",cliente3,2);
+        Prenotazione prenotazione4 = new Prenotazione("2024-03-11 20:00",cliente4,5);
+
 
         ristorante.stampaRistorante();
 
@@ -165,6 +170,11 @@ public class Main {
         ristorante.addRecensione(recensione2);
         ristorante.addRecensione(recensione3);
         ristorante.addRecensione(recensione4);
+
+        ristorante.addPrenotazione(prenotazione1);
+        ristorante.addPrenotazione(prenotazione2);
+        ristorante.addPrenotazione(prenotazione3);
+        ristorante.addPrenotazione(prenotazione4);
 
         ristorante.aggiungiMenu(menu);
         cliente1.stampaDettagliCliente();
