@@ -14,16 +14,35 @@ public class Menu {
     private TipoEnum tipoMenuEnum;
     private OffsetDateTime dataCreazione;
 
-    public Menu (TipoEnum tipoMenuEnum) {
+    public Menu (TipoEnum tipoMenuEnum,OffsetDateTime dataCreazione) {
         this.tipoMenuEnum = tipoMenuEnum;
         this.portataList = new ArrayList<>();
-        this.dataCreazione = OffsetDateTime.parse("2023-12-04T13:00:00Z");
+        this.dataCreazione = dataCreazione;
+    }
+
+    public List<Portata> getPortataList() {
+        return portataList;
+    }
+
+    public void setPortataList(List<Portata> portataList) {
+        this.portataList = portataList;
     }
 
     public TipoEnum getTipoMenuEnum() {
         return tipoMenuEnum;
     }
 
+    public void setTipoMenuEnum(TipoEnum tipoMenuEnum) {
+        this.tipoMenuEnum = tipoMenuEnum;
+    }
+
+    public OffsetDateTime getDataCreazione() {
+        return dataCreazione;
+    }
+
+    public void setDataCreazione(OffsetDateTime dataCreazione) {
+        this.dataCreazione = dataCreazione;
+    }
 
     //creazione del metodo per stampare tutto il menu
     public void stampaMenu() {
