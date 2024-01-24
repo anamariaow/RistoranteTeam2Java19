@@ -1,0 +1,7 @@
+CREATE DATABASE ristorante_team2
+CREATE TABLE menu(
+id INT PRIMARY KEY AUTO_INCREMENT,
+portata_list VARCHAR(100000) NOT NULL,
+tipo_enum VARCHAR(50) NOT NULL,
+data_creazione DATETIME NOT NULL
+);
