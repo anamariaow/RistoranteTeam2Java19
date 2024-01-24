@@ -1,9 +1,9 @@
 public class Chef {
     private String nome;
     private Integer eta;
-    private Integer stelleMichelin;
+    private String stelleMichelin;
 
-    public Chef(String nome, Integer eta, Integer stelleMichelin) {
+    public Chef(String nome, Integer eta, String stelleMichelin) {
         this.nome = nome;
         this.eta = eta;
         this.stelleMichelin = stelleMichelin;
@@ -25,14 +25,16 @@ public class Chef {
         this.eta = eta;
     }
 
-    public Integer getStelleMichelin() {
+    public String getStelleMichelin() {
         return stelleMichelin;
     }
 
-    public void setStelleMichelin(Integer stelleMichelin) {
+    public void setStelleMichelin(String stelleMichelin) {
         this.stelleMichelin = stelleMichelin;
     }
     public void stampaDettagliChef() {
-        System.out.println("\u001B[33m" + nome + ", " +  eta + "anni, " + stelleMichelin + " stelle Michelin" + "\u001B[0m");
+        System.out.println("\u001B[33m" + nome + " - " +  eta + " anni - " + stelleMichelin + " Stelle Michelin" + "\u001B[0m");
+        System.out.println();
     }
+
 }

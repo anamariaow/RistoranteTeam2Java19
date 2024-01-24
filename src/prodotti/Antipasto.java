@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 public class Antipasto extends Portata {
 
-    private boolean perDuePersone;
+    private Boolean perDuePersone;
 
-    public Antipasto(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList, boolean perDuePersone) {
-        super(nome, prezzo, allergeniEnumArrayList);
+    public Antipasto(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList, CalorieEnum calorieEnum, Boolean perDuePersone) {
+        super(nome, prezzo, allergeniEnumArrayList, calorieEnum);
         this.perDuePersone = perDuePersone;
     }
 
-    //TODO se vuoi un field così va fatto un enumerato e lo chiamiamo mezza porzione, porzione intera, famiglia
+
     @Override
     public void stampaDettagli() {
         Integer lineLength = 80;
@@ -28,7 +28,7 @@ public class Antipasto extends Portata {
         System.out.println(sb);
 
         stampaAllergeni();
-
+        System.out.println();
     }
 }
 

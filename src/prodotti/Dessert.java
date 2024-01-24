@@ -4,13 +4,14 @@ import java.util.ArrayList;
 
 public class Dessert extends Portata {
     private LivelloDolcezzaEnum livelloDiDolcezzaEnum;
-    private CalorieEnum calorieEnum;
 
-    public Dessert(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList, LivelloDolcezzaEnum livelloDiDolcezzaEnum, prodotti.CalorieEnum calorieEnum) {
-        super(nome, prezzo, allergeniEnumArrayList);
+
+    public Dessert(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList, CalorieEnum calorieEnum, LivelloDolcezzaEnum livelloDiDolcezzaEnum) {
+        super(nome, prezzo, allergeniEnumArrayList, calorieEnum);
         this.livelloDiDolcezzaEnum = livelloDiDolcezzaEnum;
-        this.calorieEnum = calorieEnum;
     }
+
+
     @Override
     public void stampaDettagli() {
         Integer lineLength = 80;
@@ -25,7 +26,5 @@ public class Dessert extends Portata {
         System.out.println(sb);
 
         stampaAllergeni();
-
-        System.out.println(calorieEnum.getCalorie());
     }
 }

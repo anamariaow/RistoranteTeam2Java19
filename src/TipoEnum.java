@@ -1,12 +1,10 @@
 public enum TipoEnum {
-
-
-    ALL("Menu"),
+    ALL("Menù completo"),
     CARNE("Menù di carne"),
     PESCE("Menù di pesce"),
     VEGETARIANO("Menù vegetariano"),
     BABY("Menù Baby"),
-    Vegano("Menù Vegano"),
+    VEGANO("Menù Vegano"),
     APERITIVO("Menù Aperitivo");
     private String descrizione;
 

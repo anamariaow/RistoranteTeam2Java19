@@ -8,9 +8,6 @@ public class Ristorante {
     private ArrayList<Menu> menuArrayList;
     private ArrayList<Recensione> recensioneArrayList;
 
-
-
-
     public Ristorante(String nomeRistorante, String orarioApertura, Integer numeroPosti,Chef chef) {
         this.nomeRistorante = nomeRistorante;
         this.orarioApertura = orarioApertura;
@@ -62,15 +59,6 @@ public class Ristorante {
         recensioneArrayList.add(recensione);
     }
 
-    @Override
-    public String toString() {
-        return  "Ristorante: " + "\u001B[36m" + nomeRistorante + "\u001B[0m" + ", " +
-                "\u001B[32m" + "orarioApertura = " + orarioApertura + "\u001B[0m" +
-                ", numeroPosti = " + numeroPosti +
-                ", " + "\u001B[34m" + "Ristorante di " + menuArrayList + "\u001B[0m" +
-                ", " + "\n" + "Recensioni: " + recensioneArrayList +
-                '.';
-    }
 
     public void aggiungiMenu(Menu menu){
         boolean nonPresente = false;
@@ -93,16 +81,20 @@ public class Ristorante {
         menuArrayList.remove(menu);
     }
 
+    public void stampaRistorante() {
+        System.out.println('\n'+"Ristorante: " + "\u001B[36m" + nomeRistorante + "\u001B[0m \n");
+
+    }
     public void stampaMenu(TipoEnum tipoMenu){
-        System.out.println("Ristorante: " + "\u001B[36m" + nomeRistorante + "\u001B[0m \n");
-        System.out.println("Menu a cura del grande chef suricato: ");
+        System.out.println();
+        System.out.println("Menù a cura del grande Chef suricato: ");
         chef.stampaDettagliChef();
         for(Menu menuVar : menuArrayList){
             if(menuVar.getTipoMenuEnum().equals(tipoMenu) ){
                 menuVar.stampaMenu();
             }
         }
-        System.out.println("Recensioni: ");
+        System.out.println("\u001B[32m"+"Recensioni: "+"\u001B[0m");
         for(Recensione recensione:recensioneArrayList){
             recensione.stampaDettagli();
         }

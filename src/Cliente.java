@@ -1,5 +1,3 @@
-import prodotti.Portata;
-
 public class Cliente {
    private String nome;
    private Integer numeroPersone;
@@ -33,12 +31,11 @@ public class Cliente {
    public void setMenuScelto(TipoEnum menuScelto) {
       this.menuScelto = menuScelto;
    }
-   public String stampaDettagliCliente(){
-      return("* Il Cliente " + nome + " ha scelto il " + menuScelto.getDescrizione() + " per " + numeroPersone + " persone *" );
+   public void stampaDettagliCliente(){
+      System.out.println("☆ Il Cliente " + nome + " ha scelto il " + menuScelto.getDescrizione() + " per " + numeroPersone + " persone ☆" );
    }
-   public void vizualizzaMenuConsigliti(Ristorante portata){
-      System.out.println(" * Il menù consiglito per voi è: *");
-      for(Menu menu :portata.getMenuArrayList()){
+   public void sceltaMenu(Ristorante portata){
+      for(Menu menu : portata.getMenuArrayList()){
          if(menu.getTipoMenuEnum().equals(menuScelto)){
             menu.stampaMenu();
          }

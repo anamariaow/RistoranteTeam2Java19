@@ -3,10 +3,10 @@ package prodotti;
 import java.util.ArrayList;
 
 public class Secondo extends Portata {
-    private boolean isProdottoStagionale;
+    private Boolean isProdottoStagionale;
 
-    public Secondo(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList, boolean isProdottoStagionale) {
-        super(nome, prezzo, allergeniEnumArrayList);
+    public Secondo(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList, CalorieEnum calorieEnum, Boolean isProdottoStagionale) {
+        super(nome, prezzo, allergeniEnumArrayList, calorieEnum);
         this.isProdottoStagionale = isProdottoStagionale;
     }
 
@@ -14,7 +14,7 @@ public class Secondo extends Portata {
     public void stampaDettagli() {
         super.stampaDettagli();
         if(isProdottoStagionale){
-            System.out.println("\u001B[47m"+"\u001B[30m"+"piatto di Stagione" + "\u001B[0m");
+            System.out.println("\u001B[37m"+" ~ Piatto di stagione ~ " + "\u001B[0m");
         }
     }
 }
