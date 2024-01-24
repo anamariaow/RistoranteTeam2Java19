@@ -1,4 +1,4 @@
-CREATE DATABASE ristorante_team2
+CREATE DATABASE ristorante_team2;
 CREATE TABLE menu(
 id INT PRIMARY KEY AUTO_INCREMENT,
 portata_list LONG VARCHAR NOT NULL,
