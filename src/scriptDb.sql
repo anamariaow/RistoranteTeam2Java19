@@ -40,3 +40,12 @@ lista_allergeni_enum varchar(100),
 calorie_enum varchar,
 id_menu int foreign key REFERENCES menu(id)
 );
+create table dessert_team2.ristorante(
+id int primary key auto_increment,
+nome varchar (500) not null,
+prezzo double not null,
+allergeniEnumArrayList long varchar,
+calorieEnum long varchar not null,
+livelloDolcezzaEnum long varchar not null,
+id_menu foreign key REFERENCES menu(id)
+);
