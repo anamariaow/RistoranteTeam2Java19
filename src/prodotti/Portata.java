@@ -51,7 +51,7 @@ public abstract class Portata {
             for (int i = 0; i < allergeniEnumArrayList.size(); i++) {
                 System.out.print(allergeniEnumArrayList.get(i).getDescrizione());
                 if(i < allergeniEnumArrayList.size()-1) {
-                    System.out.println(", ");
+                    System.out.print(", ");
                 }
             }
             System.out.println(")" + "\u001B[0m");

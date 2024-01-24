@@ -1,5 +1,8 @@
 import prodotti.*;
 
+import java.time.DayOfWeek;
+import java.time.LocalTime;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -73,8 +76,9 @@ public class Main {
         Drink myExperience = new Drink("My Experience", 10.00, new ArrayList<>(),CalorieEnum.DUECENTO,"Fresh Cucumber, Lemon & Lime Juice, Mastiha, Americano Bianco, Kaffir Leaves Gin");
         Drink goldie = new Drink("Goldie", 13.00, new ArrayList<>(),CalorieEnum.QUATTROCENTO,"Hennessy VS Cognac, Rye Whiskey, Pear distillate, Chartreuse Jaune, Agave, Cardamom Bitters, Palo Santo");
 
-
-        Menu menu = new Menu(TipoEnum.PESCE);
+        MenuBuilder builder = new MenuBuilder();
+        builder.setTipoMenuEnum(TipoEnum.PESCE).setDataCreazione(OffsetDateTime.parse("2023-12-04T13:00:00Z"));
+        Menu menu = builder.build();
 
         Cliente cliente1 = new Cliente("Ana B.",2,TipoEnum.ALL);
         Cliente cliente2 = new Cliente("Mario F.",4,TipoEnum.PESCE);
@@ -82,11 +86,16 @@ public class Main {
         Cliente cliente4 = new Cliente("Michele V.",2,TipoEnum.VEGETARIANO);
 
 
-        Ristorante ristorante = new Ristorante("Un ristorante qualsiasi","11:00",10,chef1);
+        Ristorante ristorante = new Ristorante("Un ristorante qualsiasi","Via dei Ricchi 100", LocalTime.of(11, 00),LocalTime.of(23, 30), DayOfWeek.SUNDAY, 10,chef1);
         Recensione recensione1 = new Recensione(cliente1, "Il ristorante ha superato le mie aspettative, il cibo era davvero ottimo e anche l'accostamento dei vini proposto dal sommelier era perfetto. Il personale davvero gentile e l'ambiente bellissimo, perfetto anche per una cena romantica. Tornerò sicuramente.",5.0);
         Recensione recensione2 = new Recensione(cliente2, "Ottimo cibo e ottimo ambiente, io e la mia famiglia abbiamo scelto il menù di Pesce ed era spettacolare.", 5.0);
         Recensione recensione3 = new Recensione(cliente3, "Io e la mia compagna siamo stati a cena qui qualche sera fa e abbiamo mangiato bene, ci è piaciuta la vasta scelta di menù. Noi abbiamo mangiato un po' di tutto", 4.0);
         Recensione recensione4 = new Recensione(cliente4, "Uno dei pochi ristoranti che hanno una scelta così varia di piatti vegani e vegetariani. Torneremo presto", 4.5);
+
+        Prenotazione prenotazione1 = new Prenotazione("2024-03-17 20:00",cliente1,4);
+        Prenotazione prenotazione2 = new Prenotazione("2024-03-16 20:00",cliente2,3);
+        Prenotazione prenotazione3 = new Prenotazione("2024-03-19 20:00",cliente3,2);
+        Prenotazione prenotazione4 = new Prenotazione("2024-03-11 20:00",cliente4,5);
 
 
         ristorante.stampaRistorante();
@@ -165,6 +174,11 @@ public class Main {
         ristorante.addRecensione(recensione2);
         ristorante.addRecensione(recensione3);
         ristorante.addRecensione(recensione4);
+
+        ristorante.addPrenotazione(prenotazione1);
+        ristorante.addPrenotazione(prenotazione2);
+        ristorante.addPrenotazione(prenotazione3);
+        ristorante.addPrenotazione(prenotazione4);
 
         ristorante.aggiungiMenu(menu);
         cliente1.stampaDettagliCliente();
