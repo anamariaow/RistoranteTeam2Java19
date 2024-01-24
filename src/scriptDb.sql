@@ -1,5 +1,5 @@
 CREATE DATABASE ristorante_team2;
-CREATE TABLE menu(
+CREATE TABLE ristorante_team2.menu(
 id INT PRIMARY KEY AUTO_INCREMENT,
 portata_list LONG VARCHAR NOT NULL,
 tipo_enum LONG VARCHAR NOT NULL,
@@ -7,20 +7,20 @@ data_creazione DATETIME NOT NULL
 );
 CREATE TABLE ristorante_team2.primo(
 id INT PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR NOT NULL,
+nome VARCHAR(100) NOT NULL,
 prezzo DOUBLE NOT NULL,
 allergeniEnumArrayList LONG VARCHAR,
 calorieEnum LONG VARCHAR NOT NULL,
-id_menu FOREIGN KEY
+id_menu FOREIGN KEY REFERENCES menu(id)
 );
 CREATE TABLE ristorante_team2.antipasto(
 id INT PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR NOT NULL,
+nome VARCHAR(100) NOT NULL,
 prezzo DOUBLE NOT NULL,
 allergeniEnumArrayList LONG VARCHAR,
 calorieEnum LONG VARCHAR NOT NULL,
 perDuePersone BOOL,
-id_menu FOREIGN KEY
+id_menu FOREIGN KEY REFERENCES menu(id)
 );
 
 CREATE TABLE ristorante.secondo (
