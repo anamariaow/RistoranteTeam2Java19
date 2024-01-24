@@ -19,5 +19,6 @@ nome VARCHAR NOT NULL,
 prezzo DOUBLE NOT NULL,
 allergeniEnumArrayList LONG VARCHAR,
 calorieEnum LONG VARCHAR NOT NULL,
+perDuePersone BOOL,
 id_menu FOREIGN KEY
 );
