@@ -22,3 +22,21 @@ calorieEnum LONG VARCHAR NOT NULL,
 perDuePersone BOOL,
 id_menu FOREIGN KEY
 );
+
+create table ristorante.secondo (
+id int auto_increment not null primary key,
+nome varchar not null,
+prezzo double not null,
+lista_allergeni_enum varchar,
+calorie_enum varchar,
+id_menu int foreign key
+);
+
+create table ristorante_team2.contorno (
+id int auto_increment not null primary key,
+nome varchar not null,
+prezzo double not null,
+lista_allergeni_enum varchar,
+calorie_enum varchar,
+id_menu int foreign key
+);
