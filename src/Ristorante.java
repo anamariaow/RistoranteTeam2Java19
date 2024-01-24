@@ -105,7 +105,7 @@ public class Ristorante {
             recensione.stampaDettagli();
         }
         System.out.println();
-        System.out.println("\u001B[32m"+"Recensioni: "+"\u001B[0m");
+        System.out.println("\u001B[32m"+"Prenotazioni: "+"\u001B[0m");
         for(Prenotazione prenotazione:prenotazioneLinkedList){
             prenotazione.stampaDettagli();
         }
