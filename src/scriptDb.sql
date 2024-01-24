@@ -11,7 +11,8 @@ nome VARCHAR(100) NOT NULL,
 prezzo DOUBLE NOT NULL,
 allergeniEnumArrayList LONG VARCHAR,
 calorieEnum LONG VARCHAR NOT NULL,
-id_menu FOREIGN KEY REFERENCES menu(id)
+id_menu INT,
+FOREIGN KEY (id_menu) REFERENCES menu(id)
 );
 CREATE TABLE ristorante_team2.antipasto(
 id INT PRIMARY KEY AUTO_INCREMENT,
@@ -20,32 +21,73 @@ prezzo DOUBLE NOT NULL,
 allergeniEnumArrayList LONG VARCHAR,
 calorieEnum LONG VARCHAR NOT NULL,
 perDuePersone BOOL,
-id_menu FOREIGN KEY REFERENCES menu(id)
+id_menu INT,
+FOREIGN KEY (id_menu) REFERENCES menu(id)
 );
 
-create table ristorante.secondo (
-id int auto_increment not null primary key,
-nome varchar(100) not null,
-prezzo double not null,
-lista_allergeni_enum varchar,
-calorie_enum varchar,
-id_menu int foreign key REFERENCES menu(id)
+CREATE TABLE ristorante.secondo (
+id INT auto_increment NOT NULL PRIMARY KEY,
+nome VARCHAR (255) NOT NULL,
+prezzo DOUBLE NOT NULL,
+lista_allergeni_enum VARCHAR (255),
+calorie_enum VARCHAR (100),
+id_menu INT,
+FOREIGN KEY (id_menu) REFERENCES menu(id)
 );
 
-create table ristorante_team2.contorno (
-id int auto_increment not null primary key,
-nome varchar(100) not null,
-prezzo double not null,
-lista_allergeni_enum varchar(100),
-calorie_enum varchar,
-id_menu int foreign key REFERENCES menu(id)
+CREATE TABLE ristorante_team2.contorno (
+id INT auto_increment NOT NULL PRIMARY KEY,
+nome VARCHAR (255) NOT NULL,
+prezzo DOUBLE NOT NULL,
+lista_allergeni_enum VARCHAR (255),
+calorie_enum VARCHAR (100),
+id_menu INT,
+FOREIGN KEY (id_menu) REFERENCES menu(id)
 );
-create table dessert_team2.ristorante(
-id int primary key auto_increment,
-nome varchar (500) not null,
-prezzo double not null,
-allergeniEnumArrayList long varchar,
-calorieEnum long varchar not null,
-livelloDolcezzaEnum long varchar not null,
-id_menu foreign key REFERENCES menu(id)
+
+CREATE TABLE ristorante_team2.dessert (
+id INT auto_increment NOT NULL PRIMARY KEY,
+nome VARCHAR (255) NOT NULL,
+prezzo DOUBLE NOT NULL,
+lista_allergeni_enum VARCHAR (255),
+calorie_enum VARCHAR (100),
+livello_dolcezza_enum LONG VARCHAR NOT NULL,
+id_menu INT,
+FOREIGN KEY (id_menu) REFERENCES menu(id)
+);
+
+CREATE TABLE ristorante_team2.vino (
+id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+prezzo DOUBLE NOT NULL,
+lista_allergeni_enum VARCHAR NOT NULL,
+calorie_enum VARCHAR NOT NULL,
+tipologia VARCHAR NOT NULL,
+descrizione VARCHAR NOT NULL,
+provenienza VARCHAR NOT NULL,
+anno_produzione INT,
+id_menu INT,
+FOREIGN KEY (id_menu) REFERENCES menu(id)
+);
+
+CREATE TABLE ristorante_team2.drink (
+id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+prezzo DOUBLE NOT NULL,
+lista_allergeni_enum VARCHAR NOT NULL,
+calorie_enum VARCHAR NOT NULL,
+ingredienti VARCHAR NOT NULL,
+id_menu INT,
+FOREIGN KEY (id_menu) REFERENCES menu(id)
+);
+
+CREATE TABLE ristorante_team2.soft_drink (
+id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+nome VARCHAR(100) NOT NULL,
+prezzo DOUBLE NOT NULL,
+lista_allergeni_enum VARCHAR NOT NULL,
+calorie_enum VARCHAR NOT NULL,
+centilitri VARCHAR NOT NULL,
+id_menu INT,
+FOREIGN KEY (id_menu) REFERENCES menu(id)
 );
