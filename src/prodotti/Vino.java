@@ -9,49 +9,18 @@ public class Vino extends Portata {
     private String provenienza;
     private Integer annoProduzione;
 
-    public Vino(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList, String tipologia, String descrizione, String provenienza, Integer annoProduzione) {
-        super(nome, prezzo, allergeniEnumArrayList);
+    public Vino(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList, CalorieEnum calorieEnum, String tipologia, String descrizione, String provenienza, Integer annoProduzione) {
+        super(nome, prezzo, allergeniEnumArrayList, calorieEnum);
         this.tipologia = tipologia;
         this.descrizione = descrizione;
         this.provenienza = provenienza;
-        this.annoProduzione = annoProduzione;
-    }
-
-    public String getTipologia() {
-        return tipologia;
-    }
-
-    public String getDescrizione() {
-        return descrizione;
-    }
-
-    public String getProvenienza() {
-        return provenienza;
-    }
-
-    public Integer getAnnoProduzione() {
-        return annoProduzione;
-    }
-
-    public void setTipologia(String tipologia) {
-        this.tipologia = tipologia;
-    }
-
-    public void setDescrizione(String descrizione) {
-        this.descrizione = descrizione;
-    }
-
-    public void setProvenienza(String provenienza) {
-        this.provenienza = provenienza;
-    }
-
-    public void setAnnoProduzione(Integer annoProduzione) {
         this.annoProduzione = annoProduzione;
     }
 
     @Override
     public void stampaDettagli() {
         super.stampaDettagli();
+        System.out.println("\u001B[36m" + "Tipologia: "+"\u001B[0m" + tipologia + '\n' + "Descrizione: " + descrizione + '\n' + "Provenienza: " + provenienza + '\n' + "Anno di produzione: " + annoProduzione + '\n');
     }
 
 }

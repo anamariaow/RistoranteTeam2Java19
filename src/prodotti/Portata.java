@@ -5,15 +5,15 @@ import java.util.ArrayList;
 public abstract class Portata {
     private String nome;
     private Double prezzo;
-
     private ArrayList<AllergeneEnum> allergeniEnumArrayList;
+    private CalorieEnum calorieEnum;
 
 
-    public Portata(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList) {
+    public Portata(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList, CalorieEnum calorieEnum) {
         this.nome = nome;
         this.prezzo = prezzo;
         this.allergeniEnumArrayList = allergeniEnumArrayList;
-
+        this.calorieEnum = calorieEnum;
     }
 
     public String getNome() {
@@ -27,24 +27,15 @@ public abstract class Portata {
         return prezzo;
     }
 
-    public void setPrezzo(Double prezzo) {
-        this.prezzo = prezzo;
-    }
-
-    public ArrayList<AllergeneEnum> getAllergeniEnumArrayList() {
-        return allergeniEnumArrayList;
-    }
-
-    public void setAllergeniEnumArrayList(ArrayList<AllergeneEnum> allergeniEnumArrayList) {
-        this.allergeniEnumArrayList = allergeniEnumArrayList;
+    public CalorieEnum getCalorieEnum() {
+        return calorieEnum;
     }
 
     public void stampaDettagli() {
-        Integer lineLength = 160;
+        Integer lineLength = 80;
         StringBuilder sb = new StringBuilder(lineLength);
         sb.append(nome);
-        //TODO da debbuggare
-        for (int i = 0; i + nome.length() + prezzo < lineLength; i++) {
+        for (int i = 0; i + nome.length() < lineLength; i++) {
             sb.append(".");
         }
         sb.append(prezzo);

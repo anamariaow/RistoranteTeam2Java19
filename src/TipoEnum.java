@@ -1,11 +1,11 @@
 public enum TipoEnum {
-
-    //TODO in base a come viene creato il cliente noi gli diamo la possibilità di visualizzare solo i menù di sua prederenza
-
-    ALL("Menu"),
+    ALL("Menù completo"),
     CARNE("Menù di carne"),
     PESCE("Menù di pesce"),
-    VEGETARIANO("Menù vegetariano");
+    VEGETARIANO("Menù vegetariano"),
+    BABY("Menù Baby"),
+    VEGANO("Menù Vegano"),
+    APERITIVO("Menù Aperitivo");
     private String descrizione;
 
     TipoEnum(String descrizione) {
