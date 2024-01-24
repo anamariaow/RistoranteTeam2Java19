@@ -1,18 +1,27 @@
+import java.time.DayOfWeek;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Ristorante {
     private String nomeRistorante;
-    private String orarioApertura;
+    private String indirizzoRistorante;
+    private LocalTime orarioApertura;
+    private LocalTime orarioChiusura;
+    private DayOfWeek giornoChiusura;
     private Integer numeroPosti;
     private Chef chef;
     private ArrayList<Menu> menuArrayList;
     private ArrayList<Recensione> recensioneArrayList;
     private LinkedList<Prenotazione> prenotazioneLinkedList;
 
-    public Ristorante(String nomeRistorante, String orarioApertura, Integer numeroPosti,Chef chef) {
+    public Ristorante(String nomeRistorante, String indirizzoRistorante, LocalTime orarioApertura, LocalTime orarioChiusura, DayOfWeek giornoChiusura, Integer numeroPosti, Chef chef) {
         this.nomeRistorante = nomeRistorante;
+        this.indirizzoRistorante = indirizzoRistorante;
         this.orarioApertura = orarioApertura;
+        this.orarioChiusura = orarioChiusura;
+        this.giornoChiusura = giornoChiusura;
         this.numeroPosti = numeroPosti;
         this.chef = chef;
         this.menuArrayList = new ArrayList<>();
@@ -24,15 +33,39 @@ public class Ristorante {
         return nomeRistorante;
     }
 
+    public String getIndirizzoRistorante() {
+        return indirizzoRistorante;
+    }
+
+    public void setIndirizzoRistorante(String indirizzoRistorante) {
+        this.indirizzoRistorante = indirizzoRistorante;
+    }
+
     public void setNomeRistorante(String nomeRistorante) {
         this.nomeRistorante = nomeRistorante;
     }
-    public String getOrarioApertura() {
+    public LocalTime getOrarioApertura() {
         return orarioApertura;
     }
 
-    public void setOrarioApertura(String orarioApertura) {
+    public void setOrarioApertura(LocalTime orarioApertura) {
         this.orarioApertura = orarioApertura;
+    }
+
+    public LocalTime getOrarioChiusura() {
+        return orarioChiusura;
+    }
+
+    public void setOrarioChiusura(LocalTime orariChiusura) {
+        this.orarioChiusura = orariChiusura;
+    }
+
+    public DayOfWeek getGiornoChiusura() {
+        return giornoChiusura;
+    }
+
+    public void setGiornoChiusura(DayOfWeek giornoChiusura) {
+        this.giornoChiusura = giornoChiusura;
     }
 
     public Integer getNumeroPosti() {
@@ -88,8 +121,8 @@ public class Ristorante {
     }
 
     public void stampaRistorante() {
-        System.out.println('\n'+"Ristorante: " + "\u001B[36m" + nomeRistorante + "\u001B[0m \n");
-
+        System.out.println('\n'+"Ristorante: " + "\u001B[36m"  + "||" + nomeRistorante  + "||" + "\u001B[0m \n" + "Indirizzo: " +  "\u001B[33m" + " -- " + indirizzoRistorante + " --" + "\u001B[0m \n" );
+        isRistoranteAperto();
     }
     public void stampaMenu(TipoEnum tipoMenu){
         System.out.println();
@@ -109,6 +142,17 @@ public class Ristorante {
         for(Prenotazione prenotazione:prenotazioneLinkedList){
             prenotazione.stampaDettagli();
         }
+    }
+    public void isRistoranteAperto() {
+        LocalTime oraAttuale = LocalTime.now();
+        LocalDateTime oggi = LocalDateTime.now();
+        DayOfWeek giornoOggi = oggi.getDayOfWeek();
+        if (oraAttuale.isAfter(orarioApertura) && giornoOggi != giornoChiusura) {
+            System.out.println("\u001B[32m" + "Oggi il ristorante è aperto dalle " + orarioApertura + " alle " + orarioChiusura + "\u001B[0m");
+        } else if (oraAttuale.isBefore(orarioApertura) || giornoOggi == giornoChiusura){
+            System.out.println("\u001B[31m" + "Il ristorante è chiuso. Aprirà domani alle " + orarioApertura + "\u001B[0m");
+        }
+        System.out.println(" ");
     }
 }
 

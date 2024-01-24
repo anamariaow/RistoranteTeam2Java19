@@ -1,5 +1,7 @@
 import prodotti.*;
 
+import java.time.DayOfWeek;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -82,7 +84,7 @@ public class Main {
         Cliente cliente4 = new Cliente("Michele V.",2,TipoEnum.VEGETARIANO);
 
 
-        Ristorante ristorante = new Ristorante("Un ristorante qualsiasi","11:00",10,chef1);
+        Ristorante ristorante = new Ristorante("Un ristorante qualsiasi","Via dei Ricchi 100", LocalTime.of(11, 00),LocalTime.of(23, 30), DayOfWeek.SUNDAY, 10,chef1);
         Recensione recensione1 = new Recensione(cliente1, "Il ristorante ha superato le mie aspettative, il cibo era davvero ottimo e anche l'accostamento dei vini proposto dal sommelier era perfetto. Il personale davvero gentile e l'ambiente bellissimo, perfetto anche per una cena romantica. Tornerò sicuramente.",5.0);
         Recensione recensione2 = new Recensione(cliente2, "Ottimo cibo e ottimo ambiente, io e la mia famiglia abbiamo scelto il menù di Pesce ed era spettacolare.", 5.0);
         Recensione recensione3 = new Recensione(cliente3, "Io e la mia compagna siamo stati a cena qui qualche sera fa e abbiamo mangiato bene, ci è piaciuta la vasta scelta di menù. Noi abbiamo mangiato un po' di tutto", 4.0);
