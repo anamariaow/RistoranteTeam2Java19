@@ -25,7 +25,7 @@ id_menu INT,
 FOREIGN KEY (id_menu) REFERENCES menu(id)
 );
 
-CREATE TABLE ristorante.secondo (
+CREATE TABLE ristorante_team2.secondo (
 id INT auto_increment NOT NULL PRIMARY KEY,
 nome VARCHAR (255) NOT NULL,
 prezzo DOUBLE NOT NULL,
