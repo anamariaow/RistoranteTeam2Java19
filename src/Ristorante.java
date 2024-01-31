@@ -215,11 +215,6 @@ public class Ristorante {
                     stampaMenu(prenotazione.getCliente().getMenuScelto());
                 }
             }
-        }
-
-
-
-    //TODO qui ci deve essere un metodo in overloaded che suggerisce i menu preferiti
-    // ciclare sulle prenotazioni per recuperare la preferenza del cliente
+}
 
 

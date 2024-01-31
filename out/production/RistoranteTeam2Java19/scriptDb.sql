@@ -1,10 +1,33 @@
 CREATE DATABASE ristorante_team2;
+
+CREATE TABLE ristorante_team2.chef (
+id INT auto_increment NOT NULL PRIMARY KEY,
+nome VARCHAR (255) NOT NULL,
+eta INT NOT NULL,
+stelle_michelin VARCHAR (255)
+);
+
+CREATE TABLE ristorante_team2.cliente (
+id INT auto_increment NOT NULL PRIMARY KEY,
+nome VARCHAR (255) NOT NULL,
+numero_persone INT NOT NULL,
+menu_scelto VARCHAR (255) NOT NULL
+);
+
+CREATE TABLE ristorante_team2.prenotazione (
+id INT auto_increment NOT NULL PRIMARY KEY,
+orario_prenotazione VARCHAR (255) NOT NULL,
+cliente VARCHAR (255) NOT NULL,
+posti_riservati INT NOT NULL
+);
+
 CREATE TABLE ristorante_team2.menu(
 id INT PRIMARY KEY AUTO_INCREMENT,
 portata_list LONG VARCHAR NOT NULL,
 tipo_enum LONG VARCHAR NOT NULL,
 data_creazione DATETIME NOT NULL
 );
+
 CREATE TABLE ristorante_team2.primo(
 id INT PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR(100) NOT NULL,
@@ -14,6 +37,7 @@ calorieEnum LONG VARCHAR NOT NULL,
 id_menu INT,
 FOREIGN KEY (id_menu) REFERENCES menu(id)
 );
+
 CREATE TABLE ristorante_team2.antipasto(
 id INT PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR(100) NOT NULL,
@@ -91,6 +115,21 @@ centilitri VARCHAR NOT NULL,
 id_menu INT,
 FOREIGN KEY (id_menu) REFERENCES menu(id)
 );
+
+INSERT INTO ristorante_team2.chef(nome,eta,stelle_michelin)
+VALUES ('insalataDiMare',10.0,'MOLLUSCHI,CROSTACEI','TRECENTO',TRUE,1),
+       ('cruditesDiMare',11.0,'MOLLUSCHI,CROSTACEI,LUPINI','DUECENTOCINQUANTA',TRUE,1),
+       ('polipettiAffogati',9.0,'FRUTTAAGUSCIO','DUECENTO',TRUE,1);
+
+INSERT INTO ristorante_team2.cliente(nome,numero_persone,menu_scelto)
+VALUES ('insalataDiMare',10.0,'MOLLUSCHI,CROSTACEI','TRECENTO',TRUE,1),
+       ('cruditesDiMare',11.0,'MOLLUSCHI,CROSTACEI,LUPINI','DUECENTOCINQUANTA',TRUE,1),
+       ('polipettiAffogati',9.0,'FRUTTAAGUSCIO','DUECENTO',TRUE,1);
+
+INSERT INTO ristorante_team2.prenotazione(orario_prenotazione,cliente,posti_riservati)
+VALUES ('insalataDiMare',10.0,'MOLLUSCHI,CROSTACEI','TRECENTO',TRUE,1),
+       ('cruditesDiMare',11.0,'MOLLUSCHI,CROSTACEI,LUPINI','DUECENTOCINQUANTA',TRUE,1),
+       ('polipettiAffogati',9.0,'FRUTTAAGUSCIO','DUECENTO',TRUE,1);
 
 INSERT INTO ristorante_team2.primo(nome,prezzo,allergeniEnumArrayList,calorie_enum,id_menu)
 VALUES ('trepoline',10.0,'MOLLUSCHI','CINQUECENTO',1),
