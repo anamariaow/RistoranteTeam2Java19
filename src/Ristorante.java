@@ -44,6 +44,7 @@ public class Ristorante {
     public void setNomeRistorante(String nomeRistorante) {
         this.nomeRistorante = nomeRistorante;
     }
+
     public LocalTime getOrarioApertura() {
         return orarioApertura;
     }
@@ -91,67 +92,78 @@ public class Ristorante {
     public void setRecensioneArrayList(ArrayList<Recensione> recensioneArrayList) {
         this.recensioneArrayList = recensioneArrayList;
     }
-    public void addRecensione(Recensione recensione){
+
+    public void addRecensione(Recensione recensione) {
         recensioneArrayList.add(recensione);
     }
-    public void addPrenotazione(Prenotazione prenotazione){
+
+    public void addPrenotazione(Prenotazione prenotazione) {
         prenotazioneLinkedList.add(prenotazione);
     }
 
 
-    public void aggiungiMenu(Menu menu){
+    public void aggiungiMenu(Menu menu) {
         boolean nonPresente = false;
-        if(menuArrayList.isEmpty()) {
+        if (menuArrayList.isEmpty()) {
             nonPresente = true;
-        }else{
-            for(Menu menuVar : menuArrayList){
-                if(!menuVar.getTipoMenuEnum().equals(menu.getTipoMenuEnum())){
+        } else {
+            for (Menu menuVar : menuArrayList) {
+                if (!menuVar.getTipoMenuEnum().equals(menu.getTipoMenuEnum())) {
                     nonPresente = true;
                 }
             }
         }
 
-        if(nonPresente){
+        if (nonPresente) {
             menuArrayList.add(menu);
         }
     }
 
-    public void rimuoviMenu(Menu menu){
+    public void rimuoviMenu(Menu menu) {
         menuArrayList.remove(menu);
     }
 
     public void stampaRistorante() {
-        System.out.println('\n'+"Ristorante: " + "\u001B[36m"  + "||" + nomeRistorante  + "||" + "\u001B[0m \n" + "Indirizzo: " +  "\u001B[33m" + " -- " + indirizzoRistorante + " --" + "\u001B[0m \n" );
+        System.out.println('\n' + "Ristorante: " + "\u001B[36m" + "||" + nomeRistorante + "||" + "\u001B[0m \n" + "Indirizzo: " + "\u001B[33m" + " -- " + indirizzoRistorante + " --" + "\u001B[0m \n");
         isRistoranteAperto();
     }
 
     //TODO ogni metodo deve fare solo il suo, quandi fare un metodo che stampi le prenotazioni
-    public void stampaMenu(TipoEnum tipoMenu){
+    public void stampaMenu(TipoEnum tipoMenu) {
         System.out.println();
         System.out.println("Menù a cura del grande Chef suricato: ");
         chef.stampaDettagliChef();
-        for(Menu menuVar : menuArrayList){
-            if(menuVar.getTipoMenuEnum().equals(tipoMenu) ){
+        for (Menu menuVar : menuArrayList) {
+            if (menuVar.getTipoMenuEnum().equals(tipoMenu)) {
                 menuVar.stampaMenu();
             }
         }
-        System.out.println("\u001B[32m"+"Recensioni: "+"\u001B[0m");
-        for(Recensione recensione:recensioneArrayList){
+        System.out.println();
+    }
+
+    public void stampaRecensione() {
+        System.out.println("\u001B[32m" + "Recensioni: " + "\u001B[0m");
+        for (Recensione recensione : recensioneArrayList) {
             recensione.stampaDettagli();
         }
         System.out.println();
-        System.out.println("\u001B[32m"+"Prenotazioni: "+"\u001B[0m");
-        for(Prenotazione prenotazione:prenotazioneLinkedList){
+    }
+
+    public void stampaPrenotazione() {
+        System.out.println("\u001B[32m" + "Prenotazioni: " + "\u001B[0m");
+        for (Prenotazione prenotazione : prenotazioneLinkedList) {
             prenotazione.stampaDettagli();
         }
+        System.out.println();
     }
+
     public void isRistoranteAperto() {
         LocalTime oraAttuale = LocalTime.now();
         LocalDateTime oggi = LocalDateTime.now();
         DayOfWeek giornoOggi = oggi.getDayOfWeek();
         if (oraAttuale.isAfter(orarioApertura) && giornoOggi != giornoChiusura) {
             System.out.println("\u001B[32m" + "Oggi il ristorante è aperto dalle " + orarioApertura + " alle " + orarioChiusura + "\u001B[0m");
-        } else if (oraAttuale.isBefore(orarioApertura) || giornoOggi == giornoChiusura){
+        } else if (oraAttuale.isBefore(orarioApertura) || giornoOggi == giornoChiusura) {
             System.out.println("\u001B[31m" + "Il ristorante è chiuso. Aprirà domani alle " + orarioApertura + "\u001B[0m");
         }
         System.out.println(" ");
