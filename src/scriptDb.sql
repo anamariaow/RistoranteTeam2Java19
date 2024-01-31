@@ -115,6 +115,21 @@ centilitri VARCHAR(255) NOT NULL,
 id_menu INT,
 FOREIGN KEY (id_menu) REFERENCES menu(id)
 );
+
+INSERT INTO ristorante_team2.chef(nome,eta,stelle_michelin)
+VALUES ('Simon Timon',45,'☆☆☆');
+
+INSERT INTO ristorante_team2.cliente(nome,numero_persone,menu_scelto)
+VALUES ('Ana B.', 2, 'Menù completo'),
+       ('Mario F.', 4, 'Menù di pesce'),
+       ('Antonio T.', 4, 'Menù completo')
+       ('Michele V.', 4, 'Menù vegetariano');
+
+INSERT INTO ristorante_team2.prenotazione(orario_prenotazione,cliente,posti_riservati)
+VALUES ('2024-03-17 20:00', cliente1, 4),
+       ('2024-03-16 20:00', cliente2, 3),
+       ('2024-03-19 20:00', cliente3, 2),
+       ('2024-03-19 20:00', cliente3, 2);
 INSERT INTO ristorante_team2.menu (portata_list,tipo_enum,data_creazione)
 VALUES ('
 
@@ -335,22 +350,6 @@ Goldie..........................................................................
 Hennessy VS Cognac, Rye Whiskey, Pear distillate, Chartreuse Jaune, Agave, Cardamom Bitters, Palo Santo
 
 Menù creato in data: lunedì 04 dicembre 2023','Menù di pesce','2023-12-04')
-
-INSERT INTO ristorante_team2.chef(nome,eta,stelle_michelin)
-VALUES ('Simon Timon',45,'☆☆☆');
-
-INSERT INTO ristorante_team2.cliente(nome,numero_persone,menu_scelto)
-VALUES ('Ana B.', 2, 'Menù completo'),
-       ('Mario F.', 4, 'Menù di pesce'),
-       ('Antonio T.', 4, 'Menù completo')
-       ('Michele V.', 4, 'Menù vegetariano');
-
-INSERT INTO ristorante_team2.prenotazione(orario_prenotazione,cliente,posti_riservati)
-VALUES ('2024-03-17 20:00', cliente1, 4),
-       ('2024-03-16 20:00', cliente2, 3),
-       ('2024-03-19 20:00', cliente3, 2),
-       ('2024-03-19 20:00', cliente3, 2);
-
 INSERT INTO ristorante_team2.antipasto(nome,prezzo,lista_allergeni_enum,calorie_enum,perDuePersone,id_menu)
 VALUES ('Insalata di mare',10.0,'molluschi,crostacei','300 Kcal',TRUE,1),
        ('Crudites di mare',11.0,'molluschi,crostacei,lupini','250 Kcal',TRUE,1),
