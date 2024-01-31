@@ -360,6 +360,16 @@ VALUES ('Trepoline',10.0,'molluschi','500 Kcal',1),
        ('Assassina',14.0,'glutine,frutta a guscio','550 Kcal',1),
        ('Scoglio',12.0,'molluschi,crostacei,glutine','600 Kcal',1);
 
+INSERT INTO ristorante_team2.secondo(nome,prezzo,lista_allergeni_enum,calorie_enum,id_menu)
+VALUES ('Orata al cartoccio',17.0,'senape, prodotto congelato a bordo','350 Kcal',1),
+       ('Polpo alla Luciana',12.0,'sedano','450 Kcal',1),
+       ('Gamberoni al forno',15.0,'crostacei','400 Kcal',1);
+
+INSERT INTO ristorante_team2.contorno(nome,prezzo,lista_allergeni_enum,calorie_enum,id_menu)
+VALUES ('Patate al limone',7.0,'molluschi','150 Kcal',1),
+       ('Carote alla vinaigrette',6.0,'sesamo','150 Kcal',1),
+       ('Carciofi allo zest di arancia',6.5,'100 Kcal',1);
+
 INSERT INTO ristorante_team2.dessert(nome,prezzo,allergeniEnumArrayList,calorie_enum,livello_dolcezza_enum,id_menu)
 VALUES ('Mousse di Mango',10.50,'latte','100 Kcal','medio',1),
        ('Mousse di Maracuya',8.50,'latte','150 Kcal','alto',1),
