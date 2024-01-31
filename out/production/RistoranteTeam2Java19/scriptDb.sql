@@ -91,3 +91,13 @@ centilitri VARCHAR NOT NULL,
 id_menu INT,
 FOREIGN KEY (id_menu) REFERENCES menu(id)
 );
+
+INSERT INTO ristorante_team2.primo(nome,prezzo,allergeniEnumArrayList,calorie_enum,id_menu)
+VALUES ('trepoline',10.0,'MOLLUSCHI','CINQUECENTO',1),
+       ('assassina',14.0,'GLUTINE,FRUTTAAGUSCIO','CINQUECENTOCINQUANTA',1),
+       ('scoglio',12.0,'MOLLUSCHI,CROSTACEI,GLUTINE','SEICENTO',1);
+
+INSERT INTO ristorante_team2.antipasto(nome,prezzo,allergeniEnumArrayList,calorie_enum,perDuePersone,id_menu)
+VALUES ('insalataDiMare',10.0,'MOLLUSCHI,CROSTACEI','TRECENTO',TRUE,1),
+       ('cruditesDiMare',11.0,'MOLLUSCHI,CROSTACEI,LUPINI','DUECENTOCINQUANTA',TRUE,1),
+       ('polipettiAffogati',9.0,'FRUTTAAGUSCIO','DUECENTO',TRUE,1);
