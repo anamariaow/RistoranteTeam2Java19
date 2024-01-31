@@ -368,7 +368,7 @@ VALUES ('Orata al cartoccio',17.0,'senape, prodotto congelato a bordo','350 Kcal
 INSERT INTO ristorante_team2.contorno(nome,prezzo,lista_allergeni_enum,calorie_enum,id_menu)
 VALUES ('Patate al limone',7.0,'molluschi','150 Kcal',1),
        ('Carote alla vinaigrette',6.0,'sesamo','150 Kcal',1),
-       ('Carciofi allo zest di arancia',6.5,'100 Kcal',1);
+       ('Carciofi allo Zest di arancia',6.5,'100 Kcal',1);
 
 INSERT INTO ristorante_team2.dessert(nome,prezzo,allergeniEnumArrayList,calorie_enum,livello_dolcezza_enum,id_menu)
 VALUES ('Mousse di Mango',10.50,'latte','100 Kcal','medio',1),
