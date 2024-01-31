@@ -32,7 +32,26 @@ public class Cliente {
       this.menuScelto = menuScelto;
    }
    public void stampaDettagliCliente(){
+      /**
+       * questo metodo stampa i dettagli (fields: nome, menuScelto, numeroPersone) della classe Cliente e inserisce stellne per rendere la stampa più accattivante
+       * @author Ana
+       */
       System.out.println("☆ Il Cliente " + nome + " ha scelto il " + menuScelto.getDescrizione() + " per " + numeroPersone + " persone ☆" );
+   }
+
+   //TODO spostare
+   /**
+    * questo metodo permette di visualizzare il menu scelto dal cliente (un field presente in ogni oggetto di tipo Cliente) a scelta tra quelli presenti nel TipoMenuEnum
+    * @author Samira
+    * @param portata: cicla sull'array manuArrayList (in classe Ristorante) che contiene tutte le portate
+    */
+   public void sceltaMenu(Ristorante portata){
+      for(Menu menu : portata.getMenuArrayList()){
+         if(menu.getTipoMenuEnum().equals(menuScelto)){
+            menu.stampaMenu();
+         }
+      }
+
    }
 
    @Override

@@ -97,15 +97,29 @@ public class Ristorante {
         this.recensioneArrayList = recensioneArrayList;
     }
 
+    /**
+     * questo metodo permette di aggiungere una recensione
+     * @auhor Mattia
+     * @param recensione: quando chiamato, questo metodo necessita dell'inserimento di un oggetto di tipo Recensione
+     */
     public void addRecensione(Recensione recensione) {
         recensioneArrayList.add(recensione);
     }
 
+    /**
+     * questo metodo permette di aggiungere una prenotazione
+     * @auhor Mattia
+     * @param prenotazione: quando chiamato, questo metodo necessita dell'inserimento di un oggetto di tipo Prenotazione
+     */
     public void addPrenotazione(Prenotazione prenotazione) {
         prenotazioneLinkedList.add(prenotazione);
     }
 
-
+    /**
+     * questo metodo permette di aggiungere un menu
+     * @auhor Antonio
+     * @param menu: quando chiamato, questo metodo necessita dell'inserimento di un oggetto di tipo Menu.
+     */
     public void aggiungiMenu(Menu menu) {
         boolean nonPresente = false;
         if (menuArrayList.isEmpty()) {
@@ -122,11 +136,20 @@ public class Ristorante {
             menuArrayList.add(menu);
         }
     }
-
+    /**
+     * questo metodo permette di rimuovere un menu
+     * @auhor Antonio
+     * @param menu: quando chiamato, questo metodo necessita dell'inserimento di un oggetto di tipo Menu.
+     */
     public void rimuoviMenu(Menu menu) {
         menuArrayList.remove(menu);
     }
 
+    /**
+     * questo metodo stampa i dettagli (fields: nomeRistorante, indirizzo) della classe Ristorante e aggiunge colori per rendere la stampa più accattivante.
+     * Nel metodo viene chiamato il metodo isRistoranteAperto()
+     * @auhor Elisabetta
+     */
     public void stampaRistorante() {
         System.out.println('\n' + "Ristorante: " + "\u001B[36m" + "||" + nomeRistorante + "||" + "\u001B[0m \n" + "Indirizzo: " + "\u001B[33m" + " -- " + indirizzoRistorante + " --" + "\u001B[0m \n");
         isRistoranteAperto();
