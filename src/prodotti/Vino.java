@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public class Vino extends Portata {
     //aggiunta sottoclasse Vino con i suoi fields
-    private String tipologia;
+    private CartaViniEnum tipologia;
     private String descrizione;
     private String provenienza;
     private Integer annoProduzione;
 
-    public Vino(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList, CalorieEnum calorieEnum, String tipologia, String descrizione, String provenienza, Integer annoProduzione) {
+    public Vino(String nome, Double prezzo, ArrayList<AllergeneEnum> allergeniEnumArrayList, CalorieEnum calorieEnum, CartaViniEnum tipologia, String descrizione, String provenienza, Integer annoProduzione) {
         super(nome, prezzo, allergeniEnumArrayList, calorieEnum);
         this.tipologia = tipologia;
         this.descrizione = descrizione;
@@ -17,11 +17,11 @@ public class Vino extends Portata {
         this.annoProduzione = annoProduzione;
     }
 
-    public String getTipologia() {
+    public CartaViniEnum getTipologia() {
         return tipologia;
     }
 
-    public void setTipologia(String tipologia) {
+    public void setTipologia(CartaViniEnum tipologia) {
         this.tipologia = tipologia;
     }
 
