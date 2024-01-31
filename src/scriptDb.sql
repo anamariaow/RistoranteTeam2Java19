@@ -101,3 +101,7 @@ INSERT INTO ristorante_team2.antipasto(nome,prezzo,allergeniEnumArrayList,calori
 VALUES ('insalataDiMare',10.0,'MOLLUSCHI,CROSTACEI','TRECENTO',TRUE,1),
        ('cruditesDiMare',11.0,'MOLLUSCHI,CROSTACEI,LUPINI','DUECENTOCINQUANTA',TRUE,1),
        ('polipettiAffogati',9.0,'FRUTTAAGUSCIO','DUECENTO',TRUE,1);
+INSERT INTO ristorante_team2.dessert(nome,prezzo,allergeniEnumArrayList,calorie_enum,livello_dolcezza_enum,id_menu)
+VALUES ('Mousse di Mango',10.50,'LATTE','CENTO','MEDIO',1),
+       ('Mousse di Maracuya',8.50,'LATTE','CENTOCINQUANTA','ALTO',1),
+       ('Mousse di Noce',5.50,'FRUTTAAGUSCIO','LATTE','DUECENTO','BASSO',1);
