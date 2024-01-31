@@ -33,6 +33,7 @@ public class Chef {
         this.stelleMichelin = stelleMichelin;
     }
     public void stampaDettagliChef() {
+        
         System.out.println("\u001B[33m" + nome + " - " +  eta + " anni - " + stelleMichelin + " Stelle Michelin" + "\u001B[0m");
         System.out.println();
     }
