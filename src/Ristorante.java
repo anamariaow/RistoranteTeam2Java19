@@ -1,5 +1,7 @@
 import prodotti.*;
 
+import prodotti.Portata;
+
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -207,7 +209,17 @@ public class Ristorante {
             }
         }
     }
+    public void stampaMenuConsigliati() {
+        System.out.println("Menu consigliati:");
+        for (Prenotazione prenotazione: prenotazioneLinkedList) {
+                    stampaMenu(prenotazione.getCliente().getMenuScelto());
+                }
+            }
+        }
+
+
+
     //TODO qui ci deve essere un metodo in overloaded che suggerisce i menu preferiti
     // ciclare sulle prenotazioni per recuperare la preferenza del cliente
-}
+
 
