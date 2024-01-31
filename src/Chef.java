@@ -35,7 +35,7 @@ public class Chef {
 
     /**
      * questo metodo stampa i dettagli (fields: nome, eta, stelleMichelin) della classe Chef e attribuisce un colore
-     * @auhor Ana
+     * @author Ana
      */
     public void stampaDettagliChef() {
         

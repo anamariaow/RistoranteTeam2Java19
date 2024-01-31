@@ -138,7 +138,7 @@ public class Ristorante {
     }
     /**
      * questo metodo permette di rimuovere un menu
-     * @auhor Antonio
+     * @author Antonio
      * @param menu: quando chiamato, questo metodo necessita dell'inserimento di un oggetto di tipo Menu.
      */
     public void rimuoviMenu(Menu menu) {
@@ -148,7 +148,7 @@ public class Ristorante {
     /**
      * questo metodo stampa i dettagli (fields: nomeRistorante, indirizzo) della classe Ristorante e aggiunge colori per rendere la stampa più accattivante.
      * Nel metodo viene chiamato il metodo isRistoranteAperto()
-     * @auhor Elisabetta
+     * @author Elisabetta
      */
     public void stampaRistorante() {
         System.out.println('\n' + "Ristorante: " + "\u001B[36m" + "||" + nomeRistorante + "||" + "\u001B[0m \n" + "Indirizzo: " + "\u001B[33m" + " -- " + indirizzoRistorante + " --" + "\u001B[0m \n");
