@@ -155,12 +155,15 @@ public class Ristorante {
         isRistoranteAperto();
     }
 
+    /**
+     * questo metodo stampa tutto il contenuto del menù (sulla base del tipo scelto dall'enum TipoMenuEnum) e contiene il metodo stampaDettagliChef() che stampa i fields dell'oggetto Chef
+     * @author Antonio
+     * @param tipoMenu: prende come parametro il tipo di menu scelto dall'enum
+     */
     public void stampaMenu(TipoEnum tipoMenu) {
         System.out.println();
         System.out.println("Menù a cura del grande Chef suricato: ");
         chef.stampaDettagliChef();
-        piattiConsigliati(tipoMenu);
-        System.out.println("\n\u001B[44m"+" ~  ☆ " +tipoMenu.getDescrizione().toUpperCase()+ " ☆  ~ "+"\u001B[0m \n");
         for (Menu menuVar : menuArrayList) {
             if (menuVar.getTipoMenuEnum().equals(tipoMenu)) {
                 menuVar.stampaMenu();
@@ -169,6 +172,10 @@ public class Ristorante {
         System.out.println();
     }
 
+    /**
+     * questo metodo stampa le recensioni dei clienti ciclando sull'Arraylist delle recensioni, aggiungendo un colore per rendere la stampa accattivante
+     * @author Antonio
+     */
     public void stampaRecensione() {
         System.out.println("\u001B[32m" + "Recensioni: " + "\u001B[0m");
         for (Recensione recensione : recensioneArrayList) {
@@ -177,6 +184,10 @@ public class Ristorante {
         System.out.println();
     }
 
+    /**
+     * questo metodo stampa le prenotazioni dei clienti ciclando sulla Linkedlist delle prenotazioni, aggiungendo un colore per rendere la stampa accattivante
+     * @author Mattia
+     */
     public void stampaPrenotazione() {
         System.out.println("\u001B[32m" + "Prenotazioni: " + "\u001B[0m");
         for (Prenotazione prenotazione : prenotazioneLinkedList) {
@@ -185,6 +196,11 @@ public class Ristorante {
         System.out.println();
     }
 
+    /**
+     * questo metodo mostra in tempo reale se il ristorante è aperto, usando gli operatori logici. Se al momento della consultazione del menù il ristorante risulta chiuso, mostra gli orari di apertura.
+     * I colori rendono la stampa più chiara.
+     * @author Elisabetta
+     */
     public void isRistoranteAperto() {
         LocalTime oraAttuale = LocalTime.now();
         LocalDateTime oggi = LocalDateTime.now();
