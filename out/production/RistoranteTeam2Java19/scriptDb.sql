@@ -115,6 +115,8 @@ centilitri VARCHAR NOT NULL,
 id_menu INT,
 FOREIGN KEY (id_menu) REFERENCES menu(id)
 );
+INSERT INTO ristorante_team2.menu (portata_list,tipo_enum,data_creazione)
+VALUES ('','Menù di pesce','2023-12-04')
 
 INSERT INTO ristorante_team2.chef(nome,eta,stelle_michelin)
 VALUES ('insalataDiMare',10.0,'MOLLUSCHI,CROSTACEI','TRECENTO',TRUE,1),
@@ -132,11 +134,11 @@ VALUES ('insalataDiMare',10.0,'MOLLUSCHI,CROSTACEI','TRECENTO',TRUE,1),
        ('polipettiAffogati',9.0,'FRUTTAAGUSCIO','DUECENTO',TRUE,1);
 
 INSERT INTO ristorante_team2.primo(nome,prezzo,allergeniEnumArrayList,calorie_enum,id_menu)
-VALUES ('trepoline',10.0,'MOLLUSCHI','CINQUECENTO',1),
-       ('assassina',14.0,'GLUTINE,FRUTTAAGUSCIO','CINQUECENTOCINQUANTA',1),
-       ('scoglio',12.0,'MOLLUSCHI,CROSTACEI,GLUTINE','SEICENTO',1);
+VALUES ('Trepoline',10.0,'molluschi','500 Kcal',1),
+       ('Assassina',14.0,'glutine,frutta a guscio','550 Kcal',1),
+       ('Scoglio',12.0,'molluschi,crostacei,glutine','600 Kcal',1);
 
 INSERT INTO ristorante_team2.antipasto(nome,prezzo,allergeniEnumArrayList,calorie_enum,perDuePersone,id_menu)
-VALUES ('insalataDiMare',10.0,'MOLLUSCHI,CROSTACEI','TRECENTO',TRUE,1),
-       ('cruditesDiMare',11.0,'MOLLUSCHI,CROSTACEI,LUPINI','DUECENTOCINQUANTA',TRUE,1),
-       ('polipettiAffogati',9.0,'FRUTTAAGUSCIO','DUECENTO',TRUE,1);
+VALUES ('Insalata Di Mare',10.0,'molluschi,crostacei','300 Kcal',false,1),
+       ('Crudites Di Mare',11.0,'molluschi,crostacei,lupini','250 Kcal',true,1),
+       ('Polipetti Affogati',9.0,'frutta a guscio','200 Kcal',false,1);
