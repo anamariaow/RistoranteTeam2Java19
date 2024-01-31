@@ -183,8 +183,8 @@ public class Main {
         ristorante.aggiungiMenu(menu);
         cliente1.stampaDettagliCliente();
 
-        cliente1.sceltaMenu(ristorante);
         ristorante.stampaMenu(TipoEnum.PESCE);
+        ristorante.stampaMenuConsigliati();
 
 
 
