@@ -17,6 +17,38 @@ public class Vino extends Portata {
         this.annoProduzione = annoProduzione;
     }
 
+    public String getTipologia() {
+        return tipologia;
+    }
+
+    public void setTipologia(String tipologia) {
+        this.tipologia = tipologia;
+    }
+
+    public String getDescrizione() {
+        return descrizione;
+    }
+
+    public void setDescrizione(String descrizione) {
+        this.descrizione = descrizione;
+    }
+
+    public String getProvenienza() {
+        return provenienza;
+    }
+
+    public void setProvenienza(String provenienza) {
+        this.provenienza = provenienza;
+    }
+
+    public Integer getAnnoProduzione() {
+        return annoProduzione;
+    }
+
+    public void setAnnoProduzione(Integer annoProduzione) {
+        this.annoProduzione = annoProduzione;
+    }
+
     @Override
     public void stampaDettagli() {
         super.stampaDettagli();

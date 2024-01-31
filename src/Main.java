@@ -10,9 +10,9 @@ public class Main {
     public static void main(String[] args) throws Exception {
         Chef chef1 = new Chef("Simon Timon", 45, "☆☆☆");
 
-        Portata insalataDiMare = new Antipasto("Insalata di mare", 10.0, new ArrayList<>(List.of(AllergeneEnum.MOLLUSCHI, AllergeneEnum.CROSTACEI)), CalorieEnum.TRECENTO, Boolean.TRUE);
-        Portata cruditesDiMare = new Antipasto("Crudités di mare", 11.0, new ArrayList<>(List.of(AllergeneEnum.CROSTACEI, AllergeneEnum.LUPINI, AllergeneEnum.MOLLUSCHI)), CalorieEnum.DUECENTOCINQUANTA, Boolean.TRUE);
-        Portata polipettiAffogati = new Antipasto("Polipetti affogati", 9.0, new ArrayList<>(List.of(AllergeneEnum.FRUTTAAGUSCIO)), CalorieEnum.DUECENTO, Boolean.TRUE);
+        Portata insalataDiMare = new Antipasto("Insalata di mare", 10.0, new ArrayList<>(List.of(AllergeneEnum.MOLLUSCHI, AllergeneEnum.CROSTACEI)), CalorieEnum.TRECENTO, false);
+        Portata cruditesDiMare = new Antipasto("Crudités di mare", 11.0, new ArrayList<>(List.of(AllergeneEnum.CROSTACEI, AllergeneEnum.LUPINI, AllergeneEnum.MOLLUSCHI)), CalorieEnum.DUECENTOCINQUANTA, true);
+        Portata polipettiAffogati = new Antipasto("Polipetti affogati", 9.0, new ArrayList<>(List.of(AllergeneEnum.FRUTTAAGUSCIO)), CalorieEnum.DUECENTO, false);
 
         Portata trepoline = new Primo("Trepoline con rape e cozze", 10.0, new ArrayList<>(List.of(AllergeneEnum.MOLLUSCHI)), CalorieEnum.CINQUECENTO);
         Portata assassina = new Primo("Spaghetti all'assassina con polpo", 14.0, new ArrayList<>(List.of(AllergeneEnum.GLUTINE, AllergeneEnum.FRUTTAAGUSCIO)), CalorieEnum.CINQUECENTOCINQUANTA);

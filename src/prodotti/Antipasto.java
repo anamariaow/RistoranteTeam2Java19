@@ -11,6 +11,13 @@ public class Antipasto extends Portata {
         this.perDuePersone = perDuePersone;
     }
 
+    public Boolean getPerDuePersone() {
+        return perDuePersone;
+    }
+
+    public void setPerDuePersone(Boolean perDuePersone) {
+        this.perDuePersone = perDuePersone;
+    }
 
     @Override
     public void stampaDettagli() {

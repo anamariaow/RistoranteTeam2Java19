@@ -11,6 +11,13 @@ public class Dessert extends Portata {
         this.livelloDiDolcezzaEnum = livelloDiDolcezzaEnum;
     }
 
+    public LivelloDolcezzaEnum getLivelloDiDolcezzaEnum() {
+        return livelloDiDolcezzaEnum;
+    }
+
+    public void setLivelloDiDolcezzaEnum(LivelloDolcezzaEnum livelloDiDolcezzaEnum) {
+        this.livelloDiDolcezzaEnum = livelloDiDolcezzaEnum;
+    }
 
     @Override
     public void stampaDettagli() {

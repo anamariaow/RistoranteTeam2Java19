@@ -11,6 +11,14 @@ public class Drink extends Portata {
         this.ingredienti = ingredienti;
     }
 
+    public String getIngredienti() {
+        return ingredienti;
+    }
+
+    public void setIngredienti(String ingredienti) {
+        this.ingredienti = ingredienti;
+    }
+
     @Override
     public void stampaDettagli() {
         super.stampaDettagli();

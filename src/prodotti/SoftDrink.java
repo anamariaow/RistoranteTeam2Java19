@@ -11,6 +11,14 @@ public class SoftDrink extends Portata {
         this.centilitri = centilitri;
     }
 
+    public Integer getCentilitri() {
+        return centilitri;
+    }
+
+    public void setCentilitri(Integer centilitri) {
+        this.centilitri = centilitri;
+    }
+
     @Override
     public void stampaDettagli() {
         super.stampaDettagli();

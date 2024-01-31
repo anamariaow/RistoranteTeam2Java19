@@ -1,3 +1,5 @@
+import prodotti.*;
+
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -128,11 +130,12 @@ public class Ristorante {
         isRistoranteAperto();
     }
 
-    //TODO ogni metodo deve fare solo il suo, quandi fare un metodo che stampi le prenotazioni
     public void stampaMenu(TipoEnum tipoMenu) {
         System.out.println();
         System.out.println("Menù a cura del grande Chef suricato: ");
         chef.stampaDettagliChef();
+        piattiConsigliati(tipoMenu);
+        System.out.println("\n\u001B[44m"+" ~  ☆ " +tipoMenu.getDescrizione().toUpperCase()+ " ☆  ~ "+"\u001B[0m \n");
         for (Menu menuVar : menuArrayList) {
             if (menuVar.getTipoMenuEnum().equals(tipoMenu)) {
                 menuVar.stampaMenu();
@@ -169,6 +172,41 @@ public class Ristorante {
         System.out.println(" ");
     }
 
+    public void piattiConsigliati(TipoEnum tipoMenu){
+        System.out.println("\u001B[43m"+" ~  ☆ PIATTI CONSIGLIATI DALLO CHEF ☆  ~ "+"\u001B[0m");
+        System.out.println();
+        for (Menu menuVar : menuArrayList) {
+            if (menuVar.getTipoMenuEnum().equals(tipoMenu)) {
+                for(Portata portata : menuVar.getPortataList()){
+                    if (portata instanceof Antipasto) {
+                        if(!((Antipasto) portata).getPerDuePersone()){
+                            System.out.println("\u001B[43m"+" ~  ☆ ANTIPASTO ☆  ~ "+"\u001B[0m");
+                            portata.stampaDettagli();
+                            break;
+                        }
+                    }
+                }
+                for(Portata portata : menuVar.getPortataList()){
+                    if (portata instanceof Primo) {
+                        if(!portata.getAllergeniEnumArrayList().contains(AllergeneEnum.GLUTINE)){
+                            System.out.println("\u001B[43m"+" ~    ☆ PRIMO ☆    ~ "+"\u001B[0m");
+                            portata.stampaDettagli();
+                            break;
+                        }
+                    }
+                }
+                for(Portata portata : menuVar.getPortataList()){
+                    if (portata instanceof Secondo) {
+                        if(((Secondo) portata).getProdottoStagionale()){
+                            System.out.println("\u001B[43m"+" ~    ☆ SECONDO ☆    ~ "+"\u001B[0m");
+                            portata.stampaDettagli();
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
     //TODO qui ci deve essere un metodo in overloaded che suggerisce i menu preferiti
     // ciclare sulle prenotazioni per recuperare la preferenza del cliente
 }

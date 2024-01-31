@@ -23,12 +23,29 @@ public abstract class Portata {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
     public Double getPrezzo() {
         return prezzo;
     }
 
+    public void setPrezzo(Double prezzo) {
+        this.prezzo = prezzo;
+    }
+
+    public ArrayList<AllergeneEnum> getAllergeniEnumArrayList() {
+        return allergeniEnumArrayList;
+    }
+
+    public void setAllergeniEnumArrayList(ArrayList<AllergeneEnum> allergeniEnumArrayList) {
+        this.allergeniEnumArrayList = allergeniEnumArrayList;
+    }
+
     public CalorieEnum getCalorieEnum() {
         return calorieEnum;
+    }
+
+    public void setCalorieEnum(CalorieEnum calorieEnum) {
+        this.calorieEnum = calorieEnum;
     }
 
     public void stampaDettagli() {

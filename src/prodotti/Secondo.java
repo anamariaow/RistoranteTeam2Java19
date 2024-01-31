@@ -10,6 +10,14 @@ public class Secondo extends Portata {
         this.isProdottoStagionale = isProdottoStagionale;
     }
 
+    public Boolean getProdottoStagionale() {
+        return isProdottoStagionale;
+    }
+
+    public void setProdottoStagionale(Boolean prodottoStagionale) {
+        isProdottoStagionale = prodottoStagionale;
+    }
+
     @Override
     public void stampaDettagli() {
         super.stampaDettagli();
