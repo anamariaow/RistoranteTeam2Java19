@@ -2,10 +2,12 @@ public class Cliente {
    private String nome;
    private Integer numeroPersone;
    private TipoEnum menuScelto;
+   private FidelityCard fidelityCard;
    public Cliente(String nome,Integer numeroPersone,TipoEnum menuScelto){
       this.nome=nome;
       this.numeroPersone=numeroPersone;
       this.menuScelto=menuScelto;
+      this.fidelityCard = new FidelityCard();
    }
 
    public String getNome() {
@@ -31,6 +33,15 @@ public class Cliente {
    public void setMenuScelto(TipoEnum menuScelto) {
       this.menuScelto = menuScelto;
    }
+
+   public FidelityCard getFidelityCard() {
+      return fidelityCard;
+   }
+
+   public void setFidelityCard(FidelityCard fidelityCard) {
+      this.fidelityCard = fidelityCard;
+   }
+
    public void stampaDettagliCliente(){
       /**
        * questo metodo stampa i dettagli (fields: nome, menuScelto, numeroPersone) della classe Cliente e inserisce stellne per rendere la stampa più accattivante

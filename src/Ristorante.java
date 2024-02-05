@@ -270,6 +270,11 @@ public class Ristorante {
             }
         }
     }
+    public void addPuntiFidelityCard(Cliente cliente,Integer punti){
+        cliente.getFidelityCard().setPunti(punti);
+    }
+
+
 }
 
 
