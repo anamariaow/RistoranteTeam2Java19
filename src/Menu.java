@@ -105,4 +105,5 @@ public class Menu {
     public void removePortata (Portata portata) {
         portataList.remove(portata);
     }
+
 }

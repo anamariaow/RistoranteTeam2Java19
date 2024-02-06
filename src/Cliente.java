@@ -1,3 +1,5 @@
+import prodotti.Portata;
+
 public class Cliente {
    private String nome;
    private Integer numeroPersone;
@@ -54,7 +56,7 @@ public class Cliente {
    /**
     * questo metodo permette di visualizzare il menu scelto dal cliente (un field presente in ogni oggetto di tipo Cliente) a scelta tra quelli presenti nel TipoMenuEnum
     * @author Samira
-    * @param portata: cicla sull'array manuArrayList (in classe Ristorante) che contiene tutte le portate
+    * @param portata: cicla sull'array menuArrayList (in classe Ristorante) che contiene tutte le portate
     */
    public void sceltaMenu(Ristorante portata){
       for(Menu menu : portata.getMenuArrayList()){
@@ -62,7 +64,6 @@ public class Cliente {
             menu.stampaMenu();
          }
       }
-
    }
 
    @Override

@@ -82,7 +82,7 @@ public class Main {
 
         Cliente cliente1 = new Cliente("Ana B.", 2, TipoEnum.ALL);
         Cliente cliente2 = new Cliente("Mario F.", 4, TipoEnum.PESCE);
-        Cliente cliente3 = new Cliente("Antonio T.", 4, TipoEnum.ALL);
+        Cliente cliente3 = new Cliente("Antonio T.", 4, TipoEnum.APERITIVO);
         Cliente cliente4 = new Cliente("Michele V.", 2, TipoEnum.VEGETARIANO);
 
 
@@ -189,6 +189,48 @@ public class Main {
         ristorante.stampaRecensione();
         ristorante.stampaPrenotazione();
 
+        Comanda comanda1 = new Comanda(cliente1, TipoEnum.ALL, insalataDiMare, scoglio, orata, carciofi, dessertMango, acquaFrizzante, bloodyMary, bossanova, patate, acquaNaturale);
+        Comanda comanda2 = new Comanda(cliente2, TipoEnum.PESCE, cruditesDiMare, assassina, gamberoni, carote, dessertMaracuya, acquaNaturale, null, null, null, null);
+        Comanda comanda3 = new Comanda(cliente3, TipoEnum.APERITIVO, polipettiAffogati, null, null, null, null, null, camilla, montepulciano, null, null);
+        Comanda comanda4 = new Comanda(cliente4, TipoEnum.VEGETARIANO, null, null, null, carote, dessertNoce, acquaNaturale, null, null, carciofi, patate);
+
+
+        ArrayList<Portata> comandaCliente1 = new ArrayList<>();
+        comandaCliente1.add(insalataDiMare);
+        comandaCliente1.add(scoglio);
+        comandaCliente1.add(orata);
+        comandaCliente1.add(carciofi);
+        comandaCliente1.add(dessertMango);
+        comandaCliente1.add(acquaFrizzante);
+        comandaCliente1.add(bloodyMary);
+        comandaCliente1.add(bossanova);
+        comandaCliente1.add(patate);
+        comandaCliente1.add(acquaNaturale);
+
+        ArrayList<Portata> comandaCliente2 = new ArrayList<>();
+        comandaCliente2.add(cruditesDiMare);
+        comandaCliente2.add(assassina);
+        comandaCliente2.add(gamberoni);
+        comandaCliente2.add(carote);
+        comandaCliente2.add(dessertMaracuya);
+        comandaCliente2.add(acquaNaturale);
+
+        ArrayList<Portata> comandaCliente3 = new ArrayList<>();
+        comandaCliente3.add(polipettiAffogati);
+        comandaCliente3.add(camilla);
+        comandaCliente3.add(montepulciano);
+
+        ArrayList<Portata> comandaCliente4 = new ArrayList<>();
+        comandaCliente4.add(carote);
+        comandaCliente4.add(dessertNoce);
+        comandaCliente4.add(acquaNaturale);
+        comandaCliente4.add(carciofi);
+        comandaCliente4.add(patate);
+
+        comanda1.stampaDettagliComanda(comandaCliente1);
+        comanda2.stampaDettagliComanda(comandaCliente2);
+        comanda3.stampaDettagliComanda(comandaCliente3);
+        comanda4.stampaDettagliComanda(comandaCliente4);
 
     }
 }
