@@ -131,7 +131,15 @@ public class Comanda {
     public void stampaDettagliComanda(ArrayList<Portata> ordineCliente) {
         System.out.println("\u001B[33m" + "Comanda cliente " + cliente + ": " + "\u001B[0m" + "\n" + "\u001B[36m" + "Menu scelto: " + cliente.getMenuScelto()  + "\n" + "\u001B[0m");
         for (Portata portata : ordineCliente) {
-            System.out.println(portata.getNome());
+            Integer lineLength = 50;
+            StringBuilder sb = new StringBuilder(lineLength);
+            sb.append(portata.getNome());
+            for (int i = 0; i + portata.getNome().length() < lineLength; i++) {
+                sb.append(".");
+            }
+            sb.append(portata.getPrezzo());
+
+            System.out.println(sb);
         }
         pagamentoConto(ordineCliente);
         System.out.println("");
@@ -145,6 +153,17 @@ public class Comanda {
                 contoTotale += portata.getPrezzo();
             }
         }
-        System.out.println("\u001B[32m" + "Totale: €" + contoTotale + "\u001B[0m");
+        Integer lineLength = 50;
+        System.out.println("\u001B[32m");
+        StringBuilder sb = new StringBuilder(lineLength);
+        String stringaTotale = "Totale:";
+        sb.append(stringaTotale);
+        for (int i = 0; i + stringaTotale.length() < lineLength; i++) {
+            sb.append(".");
+        }
+        sb.append(contoTotale);
+
+        System.out.println(sb);
+        System.out.println("\u001B[0m");
     }
 }

@@ -189,48 +189,93 @@ public class Main {
         ristorante.stampaRecensione();
         ristorante.stampaPrenotazione();
 
-        Comanda comanda1 = new Comanda(cliente1, TipoEnum.ALL, insalataDiMare, scoglio, orata, carciofi, dessertMango, acquaFrizzante, bloodyMary, bossanova, patate, acquaNaturale);
-        Comanda comanda2 = new Comanda(cliente2, TipoEnum.PESCE, cruditesDiMare, assassina, gamberoni, carote, dessertMaracuya, acquaNaturale, null, null, null, null);
-        Comanda comanda3 = new Comanda(cliente3, TipoEnum.APERITIVO, polipettiAffogati, null, null, null, null, null, camilla, montepulciano, null, null);
-        Comanda comanda4 = new Comanda(cliente4, TipoEnum.VEGETARIANO, null, null, null, carote, dessertNoce, acquaNaturale, null, null, carciofi, patate);
+        Comanda comanda1a = new Comanda(cliente1, TipoEnum.ALL, insalataDiMare, scoglio, orata, carciofi, dessertMango, acquaFrizzante, bloodyMary, bossanova, patate, acquaNaturale);
+        Comanda comanda1b = new Comanda(cliente1, TipoEnum.ALL, polipettiAffogati, trepoline, polpo, carote, dessertMaracuya, null, purpleRain, null, null, null);
+
+        Comanda comanda2a = new Comanda(cliente2, TipoEnum.PESCE, cruditesDiMare, assassina, polpo, carote, dessertMaracuya, acquaNaturale, null, null, null, null);
+        Comanda comanda2b = new Comanda(cliente2, TipoEnum.PESCE, polipettiAffogati, assassina, orata, carciofi, dessertMango, null, null, null, null, null);
+        Comanda comanda2c = new Comanda(cliente2, TipoEnum.PESCE, insalataDiMare, trepoline, gamberoni, carote, dessertNoce, acquaNaturale, null, null, null, null);
+        Comanda comanda2d = new Comanda(cliente2, TipoEnum.PESCE, cruditesDiMare, scoglio, gamberoni, patate, dessertMaracuya, null, null, null, null, null);
+
+        Comanda comanda3a = new Comanda(cliente3, TipoEnum.APERITIVO, polipettiAffogati, null, null, null, null, null, camilla, montepulciano, null, null);
+        Comanda comanda3b = new Comanda(cliente3, TipoEnum.APERITIVO, insalataDiMare, null, null, null, null, null, fermento, null, null, null);
+        Comanda comanda3c = new Comanda(cliente3, TipoEnum.APERITIVO, polipettiAffogati, null, null, null, null, null, beatMe, null, null, null);
+        Comanda comanda3d = new Comanda(cliente3, TipoEnum.APERITIVO, cruditesDiMare, null, null, null, null, null, goldie, hofstatter, null, null);
+
+        Comanda comanda4a = new Comanda(cliente4, TipoEnum.VEGETARIANO, null, null, null, carote, dessertNoce, acquaNaturale, null, null, carciofi, null);
+        Comanda comanda4b = new Comanda(cliente4, TipoEnum.VEGETARIANO, null, null, null, patate, dessertNoce, acquaNaturale, null, null, carciofi, carote);
+
 
 
         ArrayList<Portata> comandaCliente1 = new ArrayList<>();
         comandaCliente1.add(insalataDiMare);
+        comandaCliente1.add(polipettiAffogati);
         comandaCliente1.add(scoglio);
+        comandaCliente1.add(trepoline);
         comandaCliente1.add(orata);
+        comandaCliente1.add(polpo);
         comandaCliente1.add(carciofi);
+        comandaCliente1.add(carote);
         comandaCliente1.add(dessertMango);
+        comandaCliente1.add(dessertMaracuya);
         comandaCliente1.add(acquaFrizzante);
         comandaCliente1.add(bloodyMary);
+        comandaCliente1.add(purpleRain);
         comandaCliente1.add(bossanova);
         comandaCliente1.add(patate);
         comandaCliente1.add(acquaNaturale);
 
         ArrayList<Portata> comandaCliente2 = new ArrayList<>();
         comandaCliente2.add(cruditesDiMare);
+        comandaCliente2.add(polipettiAffogati);
+        comandaCliente2.add(cruditesDiMare);
+        comandaCliente2.add(insalataDiMare);
         comandaCliente2.add(assassina);
+        comandaCliente2.add(assassina);
+        comandaCliente2.add(scoglio);
+        comandaCliente2.add(trepoline);
+        comandaCliente2.add(gamberoni);
+        comandaCliente2.add(orata);
+        comandaCliente2.add(polpo);
         comandaCliente2.add(gamberoni);
         comandaCliente2.add(carote);
+        comandaCliente2.add(carciofi);
+        comandaCliente2.add(patate);
+        comandaCliente2.add(carote);
         comandaCliente2.add(dessertMaracuya);
+        comandaCliente2.add(dessertNoce);
+        comandaCliente2.add(dessertMango);
+        comandaCliente2.add(dessertMaracuya);
+        comandaCliente2.add(acquaNaturale);
         comandaCliente2.add(acquaNaturale);
 
         ArrayList<Portata> comandaCliente3 = new ArrayList<>();
         comandaCliente3.add(polipettiAffogati);
+        comandaCliente3.add(polipettiAffogati);
+        comandaCliente2.add(insalataDiMare);
+        comandaCliente2.add(cruditesDiMare);
+        comandaCliente3.add(goldie);
+        comandaCliente3.add(fermento);
+        comandaCliente3.add(camilla);
+        comandaCliente3.add(beatMe);
         comandaCliente3.add(camilla);
         comandaCliente3.add(montepulciano);
+        comandaCliente3.add(hofstatter);
 
         ArrayList<Portata> comandaCliente4 = new ArrayList<>();
         comandaCliente4.add(carote);
+        comandaCliente4.add(patate);
+        comandaCliente4.add(carciofi);
+        comandaCliente4.add(carciofi);
+        comandaCliente4.add(carote);
+        comandaCliente4.add(dessertNoce);
         comandaCliente4.add(dessertNoce);
         comandaCliente4.add(acquaNaturale);
-        comandaCliente4.add(carciofi);
-        comandaCliente4.add(patate);
 
-        comanda1.stampaDettagliComanda(comandaCliente1);
-        comanda2.stampaDettagliComanda(comandaCliente2);
-        comanda3.stampaDettagliComanda(comandaCliente3);
-        comanda4.stampaDettagliComanda(comandaCliente4);
+        comanda1a.stampaDettagliComanda(comandaCliente1);
+        comanda2a.stampaDettagliComanda(comandaCliente2);
+        comanda3a.stampaDettagliComanda(comandaCliente3);
+        comanda4a.stampaDettagliComanda(comandaCliente4);
 
     }
 }
