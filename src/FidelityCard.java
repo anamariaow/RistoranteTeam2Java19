@@ -1,5 +1,6 @@
 public class FidelityCard {
     private Integer punti;
+    private Cliente cliente;
     public FidelityCard(){
         this.punti = 0;
     }

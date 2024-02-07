@@ -19,6 +19,7 @@ public class Ristorante {
     private ArrayList<Menu> menuArrayList;
     private ArrayList<Recensione> recensioneArrayList;
     private LinkedList<Prenotazione> prenotazioneLinkedList;
+    private ArrayList<Comanda> listaComande;
 
     public Ristorante(String nomeRistorante, String indirizzoRistorante, LocalTime orarioApertura, LocalTime orarioChiusura, DayOfWeek giornoChiusura, Integer numeroPosti, Chef chef) {
         this.nomeRistorante = nomeRistorante;
@@ -31,6 +32,7 @@ public class Ristorante {
         this.menuArrayList = new ArrayList<>();
         this.recensioneArrayList = new ArrayList<>();
         this.prenotazioneLinkedList = new LinkedList<>();
+        this.listaComande = new ArrayList<>();
     }
 
     public String getNomeRistorante() {
@@ -259,11 +261,49 @@ public class Ristorante {
             }
         }
     }
-    public void addPuntiFidelityCard(Cliente cliente,Integer punti){
+
+    public void addPuntiFidelityCard(Cliente cliente, Integer punti) {
         cliente.getFidelityCard().setPunti(punti);
     }
 
+    public void creaComanda(Cliente cliente, TipoEnum tipoMenu) {
+        listaComande.add(new Comanda(cliente, tipoMenu));
 
+    }
+
+    public void aggiungiPortateAComanda(Portata portata, Cliente cliente) {
+        for (Comanda comanda : listaComande) {
+            if (comanda.getCliente().equals(cliente)) {
+                comanda.aggiungiPortataAComanda(portata);
+            }
+        }
+    }
+
+    public void stampaDettagliComanda(Cliente cliente) {
+        for (Comanda comanda : listaComande) {
+            if (comanda.getCliente().equals(cliente)) {
+                comanda.stampaDettagliComanda();
+            }
+        }
+    }
+
+    public void pagaContoRistorante(Cliente cliente) {
+        for (Comanda comanda : listaComande) {
+            if (comanda.getCliente().equals(cliente)) {
+                comanda.pagamentoConto();
+                //addPuntiFidelityCard(cliente, 10);
+            }
+        }
+    }
+
+    public void rimuoviComandaChiusa(Cliente cliente) {
+        for (Comanda comanda : listaComande) {
+            if (cliente.equals(comanda.getCliente())) {
+                listaComande.remove(comanda);
+                System.out.println("Comanda " + cliente + " rimossa.");
+            }
+        }
+    }
 }
 
 
