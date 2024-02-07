@@ -12,5 +12,8 @@ public class FidelityCard {
     public void setPunti(Integer punti) {
         this.punti = punti;
     }
+    public void stampaDettagli(){
+        System.out.println("Il cliente: " + cliente.getNome() + " ha " + punti + " punti.");
+    }
 
 }
