@@ -235,7 +235,7 @@ public class Main {
 
         ristorante.stampaDettagliComanda(cliente2);
         ristorante.pagaContoRistorante(cliente2);
-        //ristorante.rimuoviComandaChiusa(cliente2);
+        ristorante.rimuoviComandaChiusa(cliente2);
 
         ristorante.creaComanda(cliente3, TipoEnum.APERITIVO);
         ristorante.aggiungiPortateAComanda(polipettiAffogati, cliente3);
@@ -251,7 +251,7 @@ public class Main {
 
         ristorante.stampaDettagliComanda(cliente3);
         ristorante.pagaContoRistorante(cliente3);
-        //ristorante.rimuoviComandaChiusa(cliente3);
+        ristorante.rimuoviComandaChiusa(cliente3);
 
         ristorante.creaComanda(cliente4, TipoEnum.VEGETARIANO);
         ristorante.aggiungiPortateAComanda(carote, cliente4);
@@ -266,7 +266,7 @@ public class Main {
 
         ristorante.stampaDettagliComanda(cliente4);
         ristorante.pagaContoRistorante(cliente4);
-        //ristorante.rimuoviComandaChiusa(cliente4);
+        ristorante.rimuoviComandaChiusa(cliente4);
 
     }
 }
