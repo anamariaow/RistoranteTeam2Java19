@@ -124,18 +124,7 @@ public class Ristorante {
      * @auhor Antonio
      */
     public void aggiungiMenu(Menu menu) {
-        boolean nonPresente = false;
-        if (menuArrayList.isEmpty()) {
-            nonPresente = true;
-        } else {
-            for (Menu menuVar : menuArrayList) {
-                if (!menuVar.getTipoMenuEnum().equals(menu.getTipoMenuEnum())) {
-                    nonPresente = true;
-                }
-            }
-        }
-
-        if (nonPresente) {
+        if (!menuArrayList.contains(menu.getTipoMenuEnum())){
             menuArrayList.add(menu);
         }
     }
