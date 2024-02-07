@@ -122,7 +122,7 @@ VALUES ('Simon Timon',45,'☆☆☆');
 INSERT INTO ristorante_team2.cliente(nome,numero_persone,menu_scelto)
 VALUES ('Ana B.', 2, 'Menù completo'),
        ('Mario F.', 4, 'Menù di pesce'),
-       ('Antonio T.', 4, 'Menù completo')
+       ('Antonio T.', 4, 'Menù completo'),
        ('Michele V.', 4, 'Menù vegetariano');
 
 INSERT INTO ristorante_team2.prenotazione(orario_prenotazione,cliente,posti_riservati)
@@ -130,18 +130,16 @@ VALUES ('2024-03-17 20:00', cliente1, 4),
        ('2024-03-16 20:00', cliente2, 3),
        ('2024-03-19 20:00', cliente3, 2),
        ('2024-03-19 20:00', cliente3, 2);
+
 INSERT INTO ristorante_team2.menu (portata_list,tipo_enum,data_creazione)
-VALUES ('Antipasto',
-       ('Primo'
-       ('Secondo'
-       ('Contorno'
-       ('Dessert'
-       ('SoftDrink'
-       ('Drink'
-       ('Vino')
-
-
-
+VALUES ('Antipasto','Menù di pesce','lunedì 04 dicembre 2023'),
+       ('Primo','Menù di pesce','lunedì 04 dicembre 2023'),
+       ('Secondo','Menù di pesce','lunedì 04 dicembre 2023'),
+       ('Contorno','Menù di pesce','lunedì 04 dicembre 2023'),
+       ('Dessert','Menù di pesce','lunedì 04 dicembre 2023'),
+       ('SoftDrink','Menù completo','lunedì 04 dicembre 2023'),
+       ('Drink','Menù completo','lunedì 04 dicembre 2023'),
+       ('Vino','Menù completo','lunedì 04 dicembre 2023');
 
 INSERT INTO ristorante_team2.antipasto(nome,prezzo,lista_allergeni_enum,calorie_enum,perDuePersone,id_menu)
 VALUES ('Insalata di mare',10.0,'molluschi,crostacei','300 Kcal',TRUE,1),
