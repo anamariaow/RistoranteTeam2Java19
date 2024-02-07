@@ -209,7 +209,7 @@ public class Main {
 
         ristorante.stampaDettagliComanda(cliente1);
         ristorante.pagaContoRistorante(cliente1);
-        //ristorante.rimuoviComandaChiusa(cliente1);
+        ristorante.rimuoviComandaChiusa(cliente1);
 
         ristorante.creaComanda(cliente2, TipoEnum.PESCE);
         ristorante.aggiungiPortateAComanda(cruditesDiMare, cliente2);

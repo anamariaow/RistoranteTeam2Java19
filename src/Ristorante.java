@@ -291,18 +291,23 @@ public class Ristorante {
         for (Comanda comanda : listaComande) {
             if (comanda.getCliente().equals(cliente)) {
                 comanda.pagamentoConto();
-                //addPuntiFidelityCard(cliente, 10);
+                addPuntiFidelityCard(cliente, 10);
             }
         }
     }
 
     public void rimuoviComandaChiusa(Cliente cliente) {
-        for (Comanda comanda : listaComande) {
-            if (cliente.equals(comanda.getCliente())) {
-                listaComande.remove(comanda);
-                System.out.println("Comanda " + cliente + " rimossa.");
+        Comanda comanda = null;
+        for (Comanda comandaVar : listaComande) {
+            if (cliente.equals(comandaVar.getCliente())) {
+                comanda = comandaVar;
             }
         }
+        if (comanda != null) {
+            listaComande.remove(comanda);
+            System.out.println("Comanda " + cliente + " rimossa.");
+        }
+        System.out.println("");
     }
 }
 
