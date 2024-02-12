@@ -262,9 +262,6 @@ public class Ristorante {
         }
     }
 
-    public void addPuntiFidelityCard(Cliente cliente, Integer punti) {
-        cliente.getFidelityCard().setPunti(punti);
-    }
 
     public void creaComanda(Cliente cliente, TipoEnum tipoMenu) {
         listaComande.add(new Comanda(cliente, tipoMenu));
@@ -291,7 +288,7 @@ public class Ristorante {
         for (Comanda comanda : listaComande) {
             if (comanda.getCliente().equals(cliente)) {
                 comanda.pagamentoConto();
-                addPuntiFidelityCard(cliente, 10);
+                comanda.getCliente().getFidelityCard().addPuntiFidelityCard(comanda.calcoloContoTotale());
             }
         }
     }
@@ -305,7 +302,7 @@ public class Ristorante {
         }
         if (comanda != null) {
             listaComande.remove(comanda);
-            System.out.println("Comanda " + cliente + " rimossa.");
+            System.out.println("Comanda " + cliente.getNome() + " rimossa.");
         }
         System.out.println("");
     }

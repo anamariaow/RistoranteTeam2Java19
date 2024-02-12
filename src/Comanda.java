@@ -1,6 +1,7 @@
 import prodotti.Portata;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Comanda {
     private Cliente cliente;
@@ -44,8 +45,21 @@ public class Comanda {
         ordineCliente.remove(portata);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Comanda comanda = (Comanda) o;
+        return Objects.equals(cliente, comanda.cliente) && tipoMenu == comanda.tipoMenu && Objects.equals(ordineCliente, comanda.ordineCliente);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cliente, tipoMenu, ordineCliente);
+    }
+
     public void stampaDettagliComanda() {
-        System.out.println("\u001B[33m" + "Comanda cliente " + cliente + ": " + "\u001B[0m" + "\n" + "\u001B[36m" + "Menu scelto: " + cliente.getMenuScelto()  + "\n" + "\u001B[0m");
+        System.out.println("\u001B[33m" + "Comanda cliente " + cliente.getNome() + ": " + "\u001B[0m" + "\n" + "\u001B[36m" + "Menu scelto: " + cliente.getMenuScelto()  + "\n" + "\u001B[0m");
         for (Portata portata : ordineCliente) {
             Integer lineLength = 50;
             StringBuilder sb = new StringBuilder(lineLength);
@@ -59,13 +73,18 @@ public class Comanda {
         }
     }
 
-    public void pagamentoConto() {
+    public Double calcoloContoTotale(){
         Double contoTotale = 0.0;
         for (Portata portata : ordineCliente) {
             if (ordineCliente.contains(portata)) {
                 contoTotale += portata.getPrezzo();
             }
         }
+        return  contoTotale;
+    }
+    public void pagamentoConto() {
+        Double contoTotale = calcoloContoTotale();
+
         Integer lineLength = 50;
         System.out.println("\u001B[32m");
         StringBuilder sb = new StringBuilder(lineLength);

@@ -1,6 +1,5 @@
 public class FidelityCard {
     private Integer punti;
-    private Cliente cliente;
     public FidelityCard(){
         this.punti = 0;
     }
@@ -12,8 +11,10 @@ public class FidelityCard {
     public void setPunti(Integer punti) {
         this.punti = punti;
     }
-    public void stampaDettagli(){
-        System.out.println("Il cliente: " + cliente.getNome() + " ha " + punti + " punti.");
+
+    public void addPuntiFidelityCard(double punti) {
+        this.punti += (int) punti;
     }
+
 
 }
