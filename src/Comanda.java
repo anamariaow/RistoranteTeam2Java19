@@ -80,6 +80,12 @@ public class Comanda {
                 contoTotale += portata.getPrezzo();
             }
         }
+        Integer puntiCliente = cliente.getFidelityCard().getPunti();
+        if(puntiCliente>=1000){
+            puntiCliente -= 1000;
+            contoTotale = contoTotale/100*80;
+            cliente.getFidelityCard().setPunti(puntiCliente);
+        }
         return  contoTotale;
     }
     public void pagamentoConto() {
