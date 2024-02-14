@@ -215,6 +215,12 @@ public class Ristorante {
         System.out.println(" ");
     }
 
+    /**
+     * questo metodo compie una selezione tra le portate presenti in ogni classe (Antipasto, Primo Secondo etc.), preferendo piatti di stagione (se presenti) o in base al numero di persone.
+     * fornisce quindi una selezione di piatti consigliati con una stampa personalizzata da font e colori diversi per rendere migliore la leggibilità in console.
+     * @param tipoMenu: prende come parametro il tipo di menu scelto dall'enum.
+     * @author Antonio.
+     */
     public void piattiConsigliati(TipoEnum tipoMenu) {
         System.out.println("\u001B[43m" + " ~  ☆ PIATTI CONSIGLIATI DALLO CHEF ☆  ~ " + "\u001B[0m");
         System.out.println();
@@ -251,6 +257,10 @@ public class Ristorante {
         }
     }
 
+    /**
+     * metodo d stampa per i piatti consigliati.
+     * @author Samira.
+     */
     public void stampaMenuConsigliati() {
         System.out.println("Menu consigliati:");
         for (Prenotazione prenotazione : prenotazioneLinkedList) {
@@ -262,12 +272,23 @@ public class Ristorante {
         }
     }
 
-
+    /**
+     * metodo per creare una nuova comanda e aggiungerla all'Arraylist di comande esistenti.
+     * @param cliente: inserendo un oggetto Cliente, gli si associa direttamente la nuova comanda.
+     * @param tipoMenu: inserendo il tipoMenu come parametro, questo comparirà nella nuova comanda.
+     * @author Elisabetta.
+     */
     public void creaComanda(Cliente cliente, TipoEnum tipoMenu) {
         listaComande.add(new Comanda(cliente, tipoMenu));
 
     }
 
+    /**
+     * metoo per aggiunger una portata alla comanda.
+     * @param portata: la portata da aggiungere.
+     * @param cliente: il cliente a cui è associata la comanda.
+     * @author Elisabetta.
+     */
     public void aggiungiPortateAComanda(Portata portata, Cliente cliente) {
         for (Comanda comanda : listaComande) {
             if (comanda.getCliente().equals(cliente)) {
@@ -276,6 +297,11 @@ public class Ristorante {
         }
     }
 
+    /**
+     * metodo di stampa del contenuto della comanda.
+     * @param cliente: il cliente associato alla comanda permette di selezionare la comanda che si desidera stampare.
+     * @author Elisabetta.
+     */
     public void stampaDettagliComanda(Cliente cliente) {
         for (Comanda comanda : listaComande) {
             if (comanda.getCliente().equals(cliente)) {
@@ -284,6 +310,11 @@ public class Ristorante {
         }
     }
 
+    /**
+     * metodo che permette di pagare il conto, sommando tutti i prezzi di ciascuna portata inserita nella comanda. Aggiung inoltre i punti fidelity in base alla somma pagata.
+     * @param cliente: il cliente associato alla comanda permette di selezionare la comanda di cui si desidera il totale dell'ordine.
+     * @author ELisabetta
+     */
     public void pagaContoRistorante(Cliente cliente) {
         for (Comanda comanda : listaComande) {
             if (comanda.getCliente().equals(cliente)) {
@@ -293,6 +324,11 @@ public class Ristorante {
         }
     }
 
+    /**
+     * metodo che permette di rimuovere le comande chiuse.
+     * @param cliente: il cliente associato alla comanda permette di selezionare la comanda che si desidera eliminare.
+     * @author ELisabetta
+     */
     public void rimuoviComandaChiusa(Cliente cliente) {
         Comanda comanda = null;
         for (Comanda comandaVar : listaComande) {
