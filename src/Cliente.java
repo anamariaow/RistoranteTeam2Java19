@@ -1,5 +1,7 @@
 import prodotti.Portata;
 
+import java.util.Objects;
+
 public class Cliente {
    private String nome;
    private Integer numeroPersone;
@@ -49,7 +51,7 @@ public class Cliente {
        * questo metodo stampa i dettagli (fields: nome, menuScelto, numeroPersone) della classe Cliente e inserisce stellne per rendere la stampa più accattivante
        * @author Ana
        */
-      System.out.println("☆ Il Cliente " + nome + " ha scelto il " + menuScelto.getDescrizione() + " per " + numeroPersone + " persone ☆" );
+      System.out.println("☆ Il Cliente " + nome + " ha scelto il " + menuScelto.getDescrizione() + " per " + numeroPersone + " persone ed ha " + getFidelityCard().getPunti() + " punti sulla sua fidelityCard ☆"  );
    }
 
    //TODO spostare
@@ -67,7 +69,15 @@ public class Cliente {
    }
 
    @Override
-   public String toString() {
-      return " " + nome;
+   public boolean equals(Object o) {
+      if (this == o) return true;
+      if (o == null || getClass() != o.getClass()) return false;
+      Cliente cliente = (Cliente) o;
+      return Objects.equals(nome, cliente.nome) && Objects.equals(numeroPersone, cliente.numeroPersone) && menuScelto == cliente.menuScelto && Objects.equals(fidelityCard, cliente.fidelityCard);
+   }
+
+   @Override
+   public int hashCode() {
+      return Objects.hash(nome, numeroPersone, menuScelto, fidelityCard);
    }
 }

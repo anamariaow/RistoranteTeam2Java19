@@ -267,6 +267,7 @@ public class Main {
         ristorante.stampaDettagliComanda(cliente4);
         ristorante.pagaContoRistorante(cliente4);
         ristorante.rimuoviComandaChiusa(cliente4);
+        cliente4.stampaDettagliCliente();
 
     }
 }
