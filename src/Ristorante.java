@@ -198,7 +198,8 @@ public class Ristorante {
     }
 
     /**
-     * questo metodo mostra in tempo reale se il ristorante è aperto, usando gli operatori logici. Se al momento della consultazione del menù il ristorante risulta chiuso, mostra gli orari di apertura.
+     * questo metodo mostra in tempo reale se il ristorante è aperto, usando gli operatori logici.
+     * Se al momento della consultazione del menù il ristorante risulta chiuso, mostra gli orari di apertura.
      * I colori rendono la stampa più chiara.
      *
      * @author Elisabetta
